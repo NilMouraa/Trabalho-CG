@@ -22,6 +22,7 @@ GLsizei rsize = 20;
 GLfloat windowWidth;
 GLfloat windowHeight;
 
+
 //********************CABEÇALHOS********************
 void Timer				(int value);
 
@@ -79,7 +80,7 @@ void Desenha			(void){
 	glLoadIdentity();
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	t ->desenha();
+	
 	b ->desenha();
 	b1 ->desenha();
 	b2 ->desenha();
@@ -87,6 +88,9 @@ void Desenha			(void){
 	b4 ->desenha();
 	b5 ->desenha();
 	b6 ->desenha();
+	t->desenha();
+
+
 	glFlush();
 
 }

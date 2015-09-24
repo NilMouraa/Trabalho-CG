@@ -1,3 +1,6 @@
+#ifndef BLOCO_H
+#define BLOCO_H
+
 #include <stdio.h>
 #include <string.h>
 #include <GL/glut.h>
@@ -32,6 +35,7 @@ public:
     float getAngulo	();
     float getDimX	();
     float getDimY	();
-    
+     
     
 };
+#endif

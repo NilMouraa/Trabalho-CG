@@ -3,8 +3,9 @@
 #include <GL/glut.h>
 #include <math.h>
 #include <iostream>
-#include "Explosao.h"
 #include "Introducao.h"
+#include "Tela.h"
+#include "TiroEspecial.h"
 #include "Bloco.h"
 
 using namespace std;
@@ -22,22 +23,28 @@ GLsizei rsize = 20;
 GLfloat windowWidth;
 GLfloat windowHeight;
 
-
 //********************CABEÇALHOS********************
 void Timer				(int value);
 
-//**************************************************
-Introducao *intro = new Introducao	();
-Bloco      *b     = new Bloco		(50,50,0,DIM_X_BLOC,DIM_Y_BLOC);
-Bloco      *b1    = new Bloco		(50,68,0,DIM_X_BLOC,DIM_Y_BLOC);
-Bloco      *b2    = new Bloco		(50,86,0,DIM_X_BLOC,DIM_Y_BLOC);
-Bloco      *b3    = new Bloco		(50,104,0,DIM_X_BLOC,DIM_Y_BLOC);
-Bloco      *b4    = new Bloco		(50,122,0,DIM_X_BLOC,DIM_Y_BLOC);
-Bloco      *b5    = new Bloco		(50,140,0,DIM_X_BLOC,DIM_Y_BLOC);
-Bloco      *b6    = new Bloco		(50,158,0,DIM_X_BLOC,DIM_Y_BLOC);
+//*************************************************
 
-Explosao   *explo = new Explosao    (100,100,0,15,3);
-Tank	   *t     = new Tank		(100,100,0,1);
+
+Bloco      *b     = new Bloco		(50,50,0, DIM_X_BLOC, DIM_Y_BLOC);
+Bloco      *b1    = new Bloco		(50,68,0, DIM_X_BLOC, DIM_Y_BLOC);
+Bloco      *b2    = new Bloco		(50,86,0, DIM_X_BLOC, DIM_Y_BLOC);
+Bloco      *b3    = new Bloco		(50,104,0, DIM_X_BLOC, DIM_Y_BLOC);
+Bloco      *b4    = new Bloco		(50,122,0, DIM_X_BLOC, DIM_Y_BLOC);
+Bloco      *b5    = new Bloco		(50,140,0, DIM_X_BLOC, DIM_Y_BLOC);
+Bloco      *b6    = new Bloco		(50,158,0, DIM_X_BLOC, DIM_Y_BLOC);
+
+bool criou = false;
+//Introducao *intro = new Introducao		();
+//TiroEspecial *tiro	= new TiroEspecial	(100,10,0);
+//Explosao   *explo   = new Explosao		(100,100,0,75,2);
+Tank	   *t		= new Tank			(100,100,0,1);
+Tela	   *tela	= new Tela			();
+
+
 bool crtlTecla	  = false;
 
 void keyboardDown		(unsigned char key, int x, int y) {
@@ -74,23 +81,39 @@ void Timer				(int value)
 	glutPostRedisplay();
 	glutTimerFunc(1, Timer, 1);
 }
-void Desenha			(void){
+void Desenha(void) {
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glClear(GL_COLOR_BUFFER_BIT);
-
+	if (!criou){
+		tela->addBloco(b);
+	tela->addBloco(b1);
+	tela->addBloco(b2);
+	tela->addBloco(b3);
+	tela->addBloco(b4);
+	tela->addBloco(b5);
+	tela->addBloco(b6);
+	tela->addTankes(t);
+	criou = true;
+}
+	tela->desenhaBlocos();
+	tela->desenhaTankes();
 	
-	b ->desenha();
-	b1 ->desenha();
-	b2 ->desenha();
-	b3 ->desenha();
-	b4 ->desenha();
-	b5 ->desenha();
-	b6 ->desenha();
-	t->desenha();
+	
+	//introdu->Desenha();
+	//introdu->Incrementa(3);
+	//tiro->desenha(100,250);
 
-
+	/*explo->desenha();
+	explo->incrementaTamanho(1);*/
+	//tela->desenhaTankes();
+	//tela->desenhaBlocos();
+	/*explo->desenha();
+	explo->incrementaTamanho(1);
+	explo-> desenhaParte('g');
+	explo-> desenhaParte('m');
+	explo-> desenhaParte('c');*/
 	glFlush();
 
 }
@@ -114,7 +137,7 @@ int main				(int argc,char **argv){
 	glutInit				(&argc,argv);
 	glutInitWindowSize		(1024,690);
 	glutInitWindowPosition	(0,0);
-	glutCreateWindow		("Quadrado");
+	glutCreateWindow		("Game");
 	glutDisplayFunc			(Desenha);
 	glutKeyboardFunc		(keyboardDown);
 	glutReshapeFunc			(AlteraTamanhoJanela);

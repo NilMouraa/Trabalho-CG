@@ -1,10 +1,13 @@
+#ifndef EXPLOSAO_H
+#define EXPLOSAO_H
+
 #include <stdio.h>
 #include <string.h>
 #include <GL/glut.h>
-#include <math.h>
+#include <math.h> 
 #include <iostream>
 using namespace std;
-
+ 
 class Explosao{
 private:
 	float posiX;
@@ -25,7 +28,7 @@ private:
 public:
 	//Construtores
 	Explosao(float x,float y,float ang, int incM,float cresc);
-
+	void desenhaContornoParte(char parte);
 	void desenhaParte	(char parte);
 	void desenha		();
 
@@ -46,6 +49,8 @@ public:
 
 	void incrementaTamanho	(int inc);
 	void atualizaTamanhos	();
-
+	bool getDiminui();
+	bool getTerminou();
 
 };
+#endif

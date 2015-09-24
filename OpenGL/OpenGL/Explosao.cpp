@@ -1,5 +1,5 @@
 #include "Explosao.h"
-
+#include "Tank.h"
 //Construtores
 Explosao::Explosao(float x,float y,float ang,int incM,float cresc){
 	posiX=x;
@@ -11,13 +11,84 @@ Explosao::Explosao(float x,float y,float ang,int incM,float cresc){
 	terminou=false;
 	diminui=false;
 	fatorCresc=cresc;
-
+	 
 }
-
-void Explosao::desenhaParte(char parte){
+void Explosao::desenhaContornoParte(char parte) {
 	glPushMatrix();
 	glTranslatef(posiX, posiY, 0);
 	glRotatef(angulo, 0, 0, 1);
+	float pontosX[50];
+	float pontosY[50];
+	int qtdPontos = 0;
+	//char url[]="tank1.txt";
+	FILE *arq;
+	float cooX, cooY;
+	float dimXaux;
+	float dimYaux;
+	char tipo;
+	arq = fopen("explosaoLinha.txt", "r");
+	if (parte == 'g') {
+		dimXaux = dimX;
+		dimYaux = dimY;/*
+					   glTranslatef(posiX, posiY, 0);
+					   glRotatef(angulo, 0, 0, 1);*/
+	}
+	else if (parte == 'm') {
+		dimXaux = dimXmedio;
+		dimYaux = dimYmedio;/*
+							glTranslatef(posiX+(dimX/2)-dimXaux/2, posiY+(dimY/2)-dimYaux/2, 0);
+							glRotatef(angulo, 0, 0, 1);*/
+	}
+	else if (parte == 'c') {
+		dimXaux = dimXcentro;
+		dimYaux = dimYcentro;/*
+							 glTranslatef(posiX+(dimX/2)-dimXaux/2, posiY+(dimY/2)-dimYaux/2, 0);
+							 glRotatef(angulo, 0, 0, 1);*/
+	}
+	if (arq == NULL)
+		printf("Erro, nao foi possivel abrir o arquivo\n");
+	else {
+		char tpAnt = 'z';
+		while ((fscanf(arq, "%c %f %f\n", &tipo, &cooX, &cooY)) != EOF)
+		{
+			if (tipo == tpAnt || tpAnt == 'z') {
+				pontosX[qtdPontos] = cooX-0.5;
+				pontosY[qtdPontos] = cooY-0.5;
+				qtdPontos++;
+				tpAnt = tipo;
+
+			}
+			else {
+				
+				glColor3f(1, 1, 1);
+				glBegin(GL_LINE_LOOP);
+				for (int i = 0; i<qtdPontos; i++) {
+					glVertex2f(pontosX[i] * dimXaux, pontosY[i] * dimYaux);
+				}
+				glEnd();
+				tpAnt = tipo;
+				pontosX[0] = cooX-0.5;
+				pontosY[0] = cooY-0.5;
+				qtdPontos = 1;
+			}
+		}
+		glEnd();
+		glColor3f(1, 1, 1);
+		glBegin(GL_LINE_LOOP);
+		for (int i = 0; i<qtdPontos; i++) {
+			glVertex2f(pontosX[i] * dimXaux, pontosY[i] * dimYaux);
+		}
+		glEnd();
+
+	}
+	fclose(arq);
+
+	glPopMatrix();
+}
+void Explosao::desenhaParte(char parte){
+	glPushMatrix();
+	glTranslatef(posiX, posiY, 0);
+	//glRotatef(angulo, 0, 0, 1);
 	float pontosX[50];
 	float pontosY[50];
 	int qtdPontos=0;
@@ -68,15 +139,9 @@ void Explosao::desenhaParte(char parte){
 					glVertex2f(pontosX[i]*dimXaux,pontosY[i]*dimYaux);
 				}
 				glEnd();
-				glColor3f(1,1,1);
-				glBegin(GL_LINE_LOOP);	
-				for(int i=0;i<qtdPontos;i++){
-					glVertex2f(pontosX[i]*dimXaux,pontosY[i]*dimYaux);
-				}
-				glEnd();
 				tpAnt=tipo;
-				pontosX[0]=cooX;
-				pontosY[0]=cooY;
+				pontosX[0]=cooX-0.5;
+				pontosY[0]=cooY-0.5;
 				qtdPontos=1;
 				corRAnt=corR;
 				corGAnt=corG;
@@ -89,20 +154,15 @@ void Explosao::desenhaParte(char parte){
 			glVertex2f(pontosX[i]*dimXaux,pontosY[i]*dimYaux);
 		}
 		glEnd();
-		glColor3f(1,1,1);
-		glBegin(GL_LINE_LOOP);	
-		for(int i=0;i<qtdPontos;i++){
-			glVertex2f(pontosX[i]*dimXaux,pontosY[i]*dimYaux);
-		}
-		glEnd();
 
 	}
 	fclose(arq);
 
-	glPopMatrix();     
+	glPopMatrix();
+	desenhaContornoParte(parte);
 }
 void Explosao::desenha(){
-	cout<<"ENTROU";
+	cout << "ENTROU";
 	desenhaParte('g');
 	desenhaParte('m');
 	desenhaParte('c');
@@ -126,7 +186,7 @@ float Explosao::getDimY		(){  return dimY;   }
 
 
 void Explosao::incrementaTamanho (int inc){
-	if(incAtual==incMax){
+	if(incAtual>=incMax){
 		diminui=true;
 	}
 	if(diminui){
@@ -141,12 +201,15 @@ void Explosao::incrementaTamanho (int inc){
 	atualizaTamanhos();
 
 }
-void Explosao::atualizaTamanhos  (){
-	dimX=incAtual*fatorCresc;
-	dimY=incAtual*fatorCresc;
+void Explosao::atualizaTamanhos(){
+	dimX = incAtual*fatorCresc;
+	dimY = incAtual*fatorCresc;
 	dimXmedio=2*dimX/3;
 	dimYmedio=2*dimY/3;
 	dimXcentro=dimX/3;
 	dimYcentro=dimY/3;	
 
 }
+
+bool Explosao::getDiminui() { return diminui; }
+bool Explosao::getTerminou() { return terminou; }

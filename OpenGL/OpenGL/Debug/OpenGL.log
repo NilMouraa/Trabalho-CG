@@ -1,3 +1,11 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (OpenGL.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  main.cpp
+  Tela.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal\opengl\opengl\tela.cpp(12): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal\opengl\opengl\tela.cpp(12): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal\opengl\opengl\tela.cpp(18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal\opengl\opengl\tela.cpp(37): warning C4018: '<': signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal\opengl\opengl\tela.cpp(73): warning C4018: '<': signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal\opengl\opengl\tela.cpp(78): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal\opengl\opengl\tela.cpp(144): warning C4018: '<': signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal\opengl\opengl\tela.cpp(149): warning C4018: '<': signed/unsigned mismatch
   OpenGL.vcxproj -> C:\Users\Nil Martins\Documents\Visual Studio 2015\Projects\TP01_CGFinal\OpenGL\Debug\TrabalhoCG.exe

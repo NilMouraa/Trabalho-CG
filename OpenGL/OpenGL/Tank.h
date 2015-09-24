@@ -56,6 +56,10 @@ public:
 	
 	float getPosiCentroX();
 	float getPosiCentroY();
+
+	float getPosiOrigemX();
+
+	float getPosiOrigemY();
 	
 	float getPosiX();
 	float getPosiY();
@@ -65,7 +69,7 @@ public:
 	char getStatus();
 	int getTipo();
 	int getVida();
-    
+	void atiraEspecial(float xfinal, float yfinal);
     
 };
 

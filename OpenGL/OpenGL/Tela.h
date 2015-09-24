@@ -8,6 +8,7 @@ class Tela
 {
 private: 
 	vector <Tank* > tankes;
+	Tank *Player;
 	vector <Bloco*> blocos;
 	Explosao			*E;
 public:
@@ -18,7 +19,7 @@ public:
 	void addTankes		(double x, double y, double ang, int tipo);
 	void addTankes		(Tank *t);
 	void aplicaExplosão	(float x, float y, float ang, int incM, float cresc);
-	bool TemColisao		(Tank T);
+	bool semColisao		(Tank *tanque, float incremento, char direcao,int indiceT);
 	int retornaQtdTanks	();
 	int retornaQtdBlocos();
 	void desenhaTankes  ();

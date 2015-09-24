@@ -8,7 +8,7 @@
 #include "TiroEspecial.h"
 #include "Bloco.h"
 
-using namespace std;
+using namespace std; 
 
 #define DIM_X_TANK 15.0
 #define DIM_Y_TANK 15.0

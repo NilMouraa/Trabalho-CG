@@ -10,7 +10,7 @@ Explosao::Explosao(float x,float y,float ang,int incM,float cresc){
 	atualizaTamanhos();
 	terminou=false;
 	diminui=false;
-	fatorCresc=cresc;
+	fatorCresc=cresc; 
 	 
 }
 void Explosao::desenhaContornoParte(char parte) {

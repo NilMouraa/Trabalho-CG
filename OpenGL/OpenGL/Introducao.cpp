@@ -13,7 +13,7 @@ it = tanks.begin() */
 
 Introducao::Introducao(){
     	tan = new Tank(50,50,0,1);
-	DIM_X_TANK=tan->getDimX();
+	DIM_X_TANK=tan->getDimX(); 
 	DIM_Y_TANK=tan->getDimY();
 	incremento=-45;
 	int cont=0;

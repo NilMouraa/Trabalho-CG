@@ -10,7 +10,7 @@ Bloco::Bloco	(float x,float y,float ang,float dimX,float dimY){
 }
 Bloco::Bloco	(){}
 
-void Bloco::desenha	(){ 
+void Bloco::desenha	(){  
 	glPushMatrix();
 	glTranslatef(posiX, posiY, 0);
 	glRotatef(angulo, 0, 0, 1);

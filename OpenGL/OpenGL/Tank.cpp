@@ -14,7 +14,7 @@ Tank::Tank(float x, float y, float ang, int tip) {
 	if (tip == 1) {
 		vida = 250;
 		velocidade = 1;
-	}
+	} 
 	else if (tip == 2) {
 		vida = 250;
 		velocidade = 2;

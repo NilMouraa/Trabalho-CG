@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class Bloco{
+class Bloco{ 
 private:
     float posiX;
     float posiY;

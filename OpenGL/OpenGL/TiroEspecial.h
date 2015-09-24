@@ -8,7 +8,7 @@
 using namespace std;
 
 class TiroEspecial{
-private: 
+private:
     float posiX;
     float posiY;
     float dimX;
@@ -20,7 +20,10 @@ public:
 	TiroEspecial(float x,float y,float ang);
 	TiroEspecial();
     	void desenha(float xFinal, float yFinal);
-    
+    	void desenhaAng0(float xFinal,float yFinal);
+    	void desenhaAng90(float xFinal,float yFinal);
+    	void desenhaAngM90(float xFinal,float yFinal);
+    	void desenhaAng180(float xFinal,float yFinal);
 	void setDimX(float tamanho);
 	void setStatus(char stat);
 	float getPosiX();

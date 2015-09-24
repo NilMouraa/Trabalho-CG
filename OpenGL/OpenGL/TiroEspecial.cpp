@@ -11,6 +11,115 @@ TiroEspecial::TiroEspecial(float x,float y,float ang){
 	decremento=15;
 }
 
+void TiroEspecial::desenhaAng0(float xFinal,float yFinal){
+glPushMatrix();
+	    glBegin(GL_POLYGON);
+	    	glColor3f(1,1,1);
+		glVertex2f(posiX-0.5*dimX,posiY+decremento);
+		glVertex2f(posiX-0.5*dimX,yFinal);
+		glColor3f(0,0,1);
+		glVertex2f(posiX,yFinal);
+		glVertex2f(posiX,posiY+decremento);
+	    glEnd();
+	    glBegin(GL_POLYGON);
+	    	glColor3f(0,0,1);
+		glVertex2f(posiX,posiY+decremento);
+		glVertex2f(posiX,yFinal);
+		glColor3f(1,1,1);
+		glVertex2f(posiX+0.5*dimX,yFinal);
+		glVertex2f(posiX+0.5*dimX,posiY+decremento);
+	    glEnd();
+	    glBegin(GL_POLYGON);
+	    	glColor3f(0.6,0.6,0.9);
+		glVertex2f(posiX-0.5*dimX-1,yFinal-1);
+		glVertex2f(posiX-0.5*dimX,yFinal);
+		glVertex2f(posiX+0.5*dimX,yFinal);
+		glVertex2f(posiX+0.5*dimX+1,yFinal-1);
+	    glEnd();
+    glPopMatrix();   
+}
+void TiroEspecial::desenhaAng90(float xFinal,float yFinal){
+    glPushMatrix();
+	glBegin(GL_POLYGON);
+		glColor3f(1,1,1);
+		glVertex2f(posiX-decremento,posiY-0.5*dimX);
+		glVertex2f(xFinal,posiY-0.5*dimX);
+		glColor3f(0,0,1);
+		glVertex2f(xFinal,posiY);
+		glVertex2f(posiX-decremento,posiY);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glColor3f(0,0,1);
+		glVertex2f(posiX-decremento,posiY);
+		glVertex2f(xFinal,posiY);
+		glColor3f(1,1,1);
+		glVertex2f(xFinal,posiY+0.5*dimX);
+		glVertex2f(posiX-decremento,posiY+0.5*dimX);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glColor3f(0.6,0.6,0.9);
+		glVertex2f(xFinal+1,posiY-0.5*dimX-1);
+		glVertex2f(xFinal,posiY-0.5*dimX);
+		glVertex2f(xFinal,posiY+0.5*dimX);
+		glVertex2f(xFinal+1,posiY+0.5*dimX+1);
+	glEnd();
+    glPopMatrix();
+}
+void TiroEspecial::desenhaAngM90(float xFinal,float yFinal){
+    glPushMatrix();
+	glBegin(GL_POLYGON);
+		glColor3f(1,1,1);
+		glVertex2f(posiX+decremento,posiY+0.5*dimX);
+		glVertex2f(xFinal,posiY+0.5*dimX);
+		glColor3f(0,0,1);
+		glVertex2f(xFinal,posiY);
+		glVertex2f(posiX+decremento,posiY);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glColor3f(0,0,1);
+		glVertex2f(posiX+decremento,posiY);
+		glVertex2f(xFinal,posiY);
+		glColor3f(1,1,1);
+		glVertex2f(xFinal,posiY-0.5*dimX);
+		glVertex2f(posiX+decremento,posiY-0.5*dimX);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glColor3f(0.6,0.6,0.9);
+		glVertex2f(xFinal-1,posiY+0.5*dimX+1);
+		glVertex2f(xFinal,posiY+0.5*dimX);
+		glVertex2f(xFinal,posiY-0.5*dimX);
+		glVertex2f(xFinal-1,posiY-0.5*dimX-1);
+	glEnd();
+    glPopMatrix();
+}
+
+void TiroEspecial::desenhaAng180(float xFinal,float yFinal){
+    glPushMatrix();
+	glBegin(GL_POLYGON);
+		glColor3f(1,1,1);
+		glVertex2f(posiX+0.5*dimX,posiY-decremento);
+		glVertex2f(posiX+0.5*dimX,yFinal);
+		glColor3f(0,0,1);
+		glVertex2f(posiX,yFinal);
+		glVertex2f(posiX,posiY-decremento);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glColor3f(0,0,1);
+		glVertex2f(posiX,posiY-decremento);
+		glVertex2f(posiX,yFinal);
+		glColor3f(1,1,1);
+		glVertex2f(posiX-0.5*dimX,yFinal);
+		glVertex2f(posiX-0.5*dimX,posiY-decremento);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glColor3f(0.6,0.6,0.9);
+		glVertex2f(posiX+0.5*dimX+1,yFinal+1);
+		glVertex2f(posiX+0.5*dimX,yFinal);
+		glVertex2f(posiX-0.5*dimX,yFinal);
+		glVertex2f(posiX-0.5*dimX-1,yFinal+1);
+	glEnd();
+    glPopMatrix();
+}
 void TiroEspecial::desenha(float xFinal,float yFinal){
     glPushMatrix();
 	glTranslatef(posiX, posiY, 0);
@@ -18,45 +127,25 @@ void TiroEspecial::desenha(float xFinal,float yFinal){
 	
 	glColor3f(0,0,1);
 	if(angulo==0){
- 	    glBegin(GL_POLYGON);
-		glVertex2f(posiX-0.5*dimX,posiY+decremento); 
-		glVertex2f(posiX-0.5*dimX,yFinal);
-		glVertex2f(posiX+0.5*dimX,yFinal);
-		glVertex2f(posiX+0.5*dimX,posiY+decremento);
-	    glEnd();
+ 	    desenhaAng0(xFinal,yFinal);
 	    posiY+=decremento;
 	    if(posiY+decremento>=yFinal){
 	    	status='i';
 	    }
     	}else if(angulo==90){
-	    glBegin(GL_POLYGON);
-		glVertex2f(posiX-decremento,posiY-0.5*dimX);
-		glVertex2f(xFinal,posiY-0.5*dimX);
-		glVertex2f(xFinal,posiY+0.5*dimX);
-		glVertex2f(posiX-decremento,posiY+0.5*dimX);
-	    glEnd();
+	    desenhaAng90(xFinal,yFinal);
 	    posiX-=decremento;
 	    if(posiX-decremento<=xFinal){
 	    	status='i';
 	    }
     	}else if(angulo==-90){
-	    glBegin(GL_POLYGON);
-		glVertex2f(posiX+decremento,posiY+0.5*dimX);
-		glVertex2f(xFinal,posiY+0.5*dimX);
-		glVertex2f(xFinal,posiY-0.5*dimX);
-		glVertex2f(posiX+decremento,posiY-0.5*dimX);
-	    glEnd();
+	    desenhaAngM90(xFinal,yFinal);
 		posiX += decremento;
 	    if(posiX+decremento>=xFinal){
 	    	status='i';
 	    }
 	}else if(angulo==180){
-	    glBegin(GL_POLYGON);
-		glVertex2f(posiX+0.5*dimX,posiY-decremento);
-		glVertex2f(posiX+0.5*dimX,yFinal);
-		glVertex2f(posiX-0.5*dimX,yFinal);
-		glVertex2f(posiX-0.5*dimX,posiY-decremento);
-	    glEnd();
+	    desenhaAng180(xFinal,yFinal);
 	    posiY-=decremento;
 	    if(posiY-decremento<=yFinal){
 	    	status='i';

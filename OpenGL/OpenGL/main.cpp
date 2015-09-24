@@ -59,19 +59,19 @@ void keyboardDown		(unsigned char key, int x, int y) {
 			glutReshapeWindow(1024, 690);
 		break;
 	case 'a':
-		t->viraEsquerda(2);
+		t->viraEsquerda(2,true);
 		break;
 
 	case 'd':
-		t->viraDireita(2);
+		t->viraDireita(2,true);
 		break;
 
 	case 'w':
-		t->viraCima(2);
+		t->viraCima(2,true);
 		break;
 
 	case 's':
-		t->viraBaixo(2);
+		t->viraBaixo(2,true);
 		break;
 	}
 }

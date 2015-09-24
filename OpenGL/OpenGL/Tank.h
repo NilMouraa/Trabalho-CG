@@ -9,7 +9,7 @@
 #include "Explosao.h" 
 //#include "TiroEspec.h"
 //#include "TiroComum.h"
-using namespace std; 
+using namespace std;
 
 class Tank{
 private:
@@ -33,13 +33,13 @@ public:
     
     void move(float incremento);
          
-    void viraDireita(float incremento);
+    void viraDireita(float incremento,bool podeAndar);
     
-    void viraEsquerda(float incremento);
+    void viraEsquerda(float incremento,bool podeAndar);
     
-    void viraCima(float incremento);
+    void viraCima(float incremento,bool podeAndar);
     
-    void viraBaixo(float incremento);
+    void viraBaixo(float incremento,bool podeAndar);
        
     void recebeDano(float dano);
     
@@ -53,6 +53,10 @@ public:
 	void setDimX(float tamanho);
 	void setDimY(float tamanho);
 	void setStatus(char stat);
+	
+	float getPosiCentroX();
+	float getPosiCentroY();
+	
 	float getPosiX();
 	float getPosiY();
 	float getAngulo();
@@ -66,5 +70,5 @@ public:
 };
 
 
-#endif	/* NAVE_H */
+#endif
 

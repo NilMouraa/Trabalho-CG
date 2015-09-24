@@ -14,7 +14,7 @@ Tank::Tank(float x, float y, float ang, int tip) {
 	if (tip == 1) {
 		vida = 250;
 		velocidade = 1;
-	} 
+	}
 	else if (tip == 2) {
 		vida = 250;
 		velocidade = 2;
@@ -236,7 +236,7 @@ void  Tank::move(float incremento) {
 	}
 
 }
-void  Tank::viraDireita(float incremento) {
+void  Tank::viraDireita(float incremento,bool podeAndar) {
 
 	if (angulo == 0) {
 		posiY += dimX;
@@ -249,12 +249,12 @@ void  Tank::viraDireita(float incremento) {
 			posiX -= dimY;
 			posiY += dimX;
 		}
-		else if (angulo == -90) {
+		else if (angulo == -90 && podeAndar) {
 			move(incremento);
 		}
 		angulo = -90;
 }
-void  Tank::viraEsquerda(float incremento) {
+void  Tank::viraEsquerda(float incremento,bool podeAndar) {
 	//cout << "ANGULO: " << this->getAngulo();
 	if (angulo == 0) {
 		posiX += dimY;
@@ -266,12 +266,12 @@ void  Tank::viraEsquerda(float incremento) {
 		posiX += dimY;
 		posiY -= dimX;
 	}
-	else if (angulo == 90) {
+	else if (angulo == 90 && podeAndar) {
 		move(incremento);
 	}
 	angulo = 90;
 }
-void  Tank::viraCima(float incremento) {
+void  Tank::viraCima(float incremento,bool podeAndar) {
 	//cout << "ANGULO: " << this->getAngulo();
 	if (angulo == 90) {
 		posiX -= dimY;
@@ -285,12 +285,12 @@ void  Tank::viraCima(float incremento) {
 		posiX -= dimX;
 		posiY -= dimY;
 	}
-	else if (angulo == 0) {
+	else if (angulo == 0 && podeAndar) {
 		move(incremento);
 	}
 	angulo = 0;
 }
-void  Tank::viraBaixo(float incremento) {
+void  Tank::viraBaixo(float incremento,bool podeAndar) {
 	//cout << "ANGULO: " << this->getAngulo();
 	if (angulo == 90) {
 		posiY += dimX;
@@ -304,7 +304,7 @@ void  Tank::viraBaixo(float incremento) {
 		posiX += dimX;
 		posiY += dimY;
 	}
-	else if (angulo == 180) {
+	else if (angulo == 180 && podeAndar) {
 		move(incremento);
 	}
 	angulo = 180;
@@ -343,8 +343,8 @@ void  Tank::setDimX(float tamanho) { dimX = tamanho; }
 void  Tank::setDimY(float tamanho) { dimY = tamanho; }
 
 void  Tank::setStatus(char stat) {
-	status = stat;
-
+    status = stat;
+    if(stat=='m'){
 	if (this->angulo == 0) {
 		explosao = new Explosao(posiX + 0.5*dimX, posiY + 0.5*dimY, 0, 50, 3);
 	}
@@ -357,7 +357,38 @@ void  Tank::setStatus(char stat) {
 	else if (this->angulo == 180) {
 		explosao = new Explosao(posiX - 0.5*dimX, posiY - 0.5*dimY, 0, dimY, 1.2);
 	}
+    }
 }
+float  Tank::getPosiCentroX() { 
+	if (this->angulo == 0) {
+		return posiX+0.5*dimX;
+	}
+	else if (this->angulo == 90) {
+		return posiX-0.5*dimY;
+	}
+	else if (this->angulo == -90) {
+		return posiX+0.5*dimY;
+	}
+	else if (this->angulo == 180) {
+		return posiX-0.5*dimX;
+	}
+
+}
+float  Tank::getPosiCentroY() { 
+	if (this->angulo == 0) {
+		return posiY+0.5*dimY;
+	}
+	else if (this->angulo == 90) {
+		return posiY+0.5*dimX;
+	}
+	else if (this->angulo == -90) {
+		return posiY-0.5*dimX;
+	}
+	else if (this->angulo == 180) {
+		return posiY-0.5*dimY;
+	}
+}
+
 
 float  Tank::getPosiX() { return posiX; }
 float  Tank::getPosiY() { return posiY; }
@@ -367,5 +398,3 @@ float  Tank::getDimY() { return dimY; }
 char  Tank::getStatus() { return status; }
 int  Tank::getTipo() { return tipo; }
 int  Tank::getVida() { return vida; }
-
-

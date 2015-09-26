@@ -2,13 +2,14 @@
 #include <iostream>
 
 using namespace std;
-TiroEspecial::TiroEspecial(float x, float y, float ang) {
+TiroEspecial::TiroEspecial(float x, float y, float ang,float largura) {
 	posiX = x;
 	posiY = y;
 	angulo = ang;
-	dimX = 15;
+	dimX = largura;
 	status = 'a';
-	decremento = 0.01;
+	decremento = 8;
+	comeco=true;
 }
 
 void TiroEspecial::desenhaAng0(float xFinal, float yFinal) {
@@ -123,8 +124,10 @@ void TiroEspecial::desenhaAng180(float xFinal, float yFinal) {
 void TiroEspecial::desenha(float xFinal, float yFinal) {
 
 	glPushMatrix();
-	glTranslatef(posiX, posiY, 0);
-	//glRotatef(angulo, 0, 0, 1);
+	if(comeco){
+		glTranslatef(posiX, posiY, 0);
+		comeco=false;
+	}//glRotatef(angulo, 0, 0, 1);
 	//cout << "Xfinal"<<xFinal<<"Yfinal"<<yFinal;
 	glColor3f(0, 0, 1);
 	if (angulo == 0) {

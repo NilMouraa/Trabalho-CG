@@ -354,16 +354,16 @@ void  Tank::setStatus(char stat) {
 	status = stat;
 	if (stat == 'm') {
 		if (this->angulo == 0) {
-			explosao = new Explosao(posiX + 0.5*dimX, posiY + 0.5*dimY, 0, 50, 3);
+			explosao = new Explosao(posiX + 0.5*dimX, posiY + 0.5*dimY, 0, dimY/3, 4);
 		}
 		else if (this->angulo == 90) {
-			explosao = new Explosao(posiX - 0.5*dimY, posiY + 0.5*dimX, 0, dimY, 1.2);
+			explosao = new Explosao(posiX - 0.5*dimY, posiY + 0.5*dimX, 0, dimY/3, 4);
 		}
 		else if (this->angulo == -90) {
-			explosao = new Explosao(posiX + 0.5*dimY, posiY - 0.5*dimX, 0, dimY, 1.2);
+			explosao = new Explosao(posiX + 0.5*dimY, posiY - 0.5*dimX, 0, dimY/3, 4);
 		}
 		else if (this->angulo == 180) {
-			explosao = new Explosao(posiX - 0.5*dimX, posiY - 0.5*dimY, 0, dimY, 1.2);
+			explosao = new Explosao(posiX - 0.5*dimX, posiY - 0.5*dimY, 0, dimY/3,4);
 		}
 	}
 }
@@ -440,16 +440,16 @@ void Tank::atiraEspecial(float xfinal, float yfinal) {
 	if (qtdTiroEspec > 0) {
 		TiroEspecial *te;
 		if (angulo == 90) {
-			te = new TiroEspecial(posiX - 1.15*dimY, posiY + 0.5*dimX, 90);
+			te = new TiroEspecial(posiX - 1.15*dimY, posiY + 0.5*dimX, 90,dimX*0.2);
 		}
 		else if (angulo == -90) {
-			te = new TiroEspecial(posiX + 1.15*dimY, posiY - 0.5*dimX, -90);
+			te = new TiroEspecial(posiX + 1.15*dimY, posiY - 0.5*dimX, -90, dimX*0.2);
 		}
 		else if (angulo == 0) {
-			te = new TiroEspecial(posiX + 0.5*dimX, posiY + 1.15*dimY, 0);
+			te = new TiroEspecial(posiX + 0.5*dimX, posiY + 1.15*dimY, 0, dimX*0.2);
 		}
 		else if (angulo == 180) {
-			te = new TiroEspecial(posiX - 0.5*dimX, posiY - 1.15*dimY, 180);
+			te = new TiroEspecial(posiX - 0.5*dimX, posiY - 1.15*dimY, 180, dimX*0.2);
 		}
 		qtdTiroEspec--;
 		te->desenha(xfinal, yfinal);

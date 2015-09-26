@@ -124,7 +124,7 @@ bool Tela::semColisao		(Tank *T, float incremento, char direcao,int indiceT) {
 
 }
 
-void Tela::desenhaTankes	() {
+void Tela::desenhaTankes() {
 	for (int i = 0; i < tankes.size(); i++) {
 		tankes[i]->desenha();
 	}

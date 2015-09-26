@@ -15,9 +15,10 @@ private:
 	float angulo;
 	char status;
 	float decremento;
+	bool comeco;
 
 public:
-	TiroEspecial(float x, float y, float ang);
+	TiroEspecial(float x, float y, float ang,float largura);
 	TiroEspecial();
 	void desenha(float xFinal, float yFinal);
 	void desenhaAng0(float xFinal, float yFinal);

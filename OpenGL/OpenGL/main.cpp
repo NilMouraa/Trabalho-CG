@@ -111,17 +111,22 @@ void keyboardDown(unsigned char key, int x, int y) {
 			exit(0);
 		}
 		break;
-
+	case 8:
+		if (tutorialAtiva && !(menuAtiva)) {
+			RetanguloMenu('v');
+			Sleep(200);
+			tutorialAtiva = false;
+			menuAtiva = true;
+		}
 	}
 
 }
-
 void mouseClick(int button, int state, int x, int y) {
-	
-		y = -y + windowHeight;
-		y = 252 * y / windowHeight;
-		x = 360 * x / windowWidth;
-	
+
+	y = -y + windowHeight;
+	y = 252 * y / windowHeight;
+	x = 360 * x / windowWidth;
+
 	if (x > 144 && x < 216) {
 		if (y > 90 && y < 108) {
 			if (introAtiva) {
@@ -149,7 +154,16 @@ void mouseClick(int button, int state, int x, int y) {
 				exit(0);
 			}
 		}
-
+	}
+	else if (x > 252 && x < 324) {
+		if (y > 18 && y < 36) {
+			if ((tutorialAtiva) && !menuAtiva) {
+				RetanguloMenu('v');
+				Sleep(200);
+				tutorialAtiva = false;
+				menuAtiva = true;
+			}
+		}
 	}
 }
 void Timer(int value)
@@ -199,6 +213,9 @@ void RetanguloMenu(char op) {
 	}
 	else if (op == 's') {
 		glTranslatef(144, 18, 0);
+	}
+	else if (op == 'v') {
+		glTranslatef(252, 18, 0);
 	}
 	glColor3f(1, 0, 0);
 	glBegin(GL_POLYGON);

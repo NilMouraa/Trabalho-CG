@@ -15,6 +15,7 @@ public:
     
     Tutorial();
     void desenha();
+	void desenhaBlocos();
     void renderBitmapString(float x, float y, void *font,const char *string);
     
 };

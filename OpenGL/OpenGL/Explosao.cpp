@@ -21,7 +21,7 @@ void Explosao::desenhaContornoParte(char parte) {
 	float pontosY[50];
 	int qtdPontos = 0;
 	//char url[]="tank1.txt";
-	FILE *arq;
+	FILE *arq =NULL;
 	float cooX, cooY;
 	float dimXaux;
 	float dimYaux;
@@ -93,7 +93,7 @@ void Explosao::desenhaParte(char parte){
 	float pontosY[50];
 	int qtdPontos=0;
 	//char url[]="tank1.txt";
-	FILE *arq;
+	FILE *arq = NULL;
 	float cooX,cooY,corR,corG,corB,corRAnt,corGAnt,corBAnt;
 	float dimXaux;
 	float dimYaux;

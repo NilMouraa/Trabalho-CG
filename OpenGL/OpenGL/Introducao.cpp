@@ -156,10 +156,9 @@ void Introducao::Desenha(float largura, float altura){
 	
 		if (incremento > -39) {
 			for (int i = 0; i < lasers.size(); i++) {
-
 				if (lasers[i]->getStatus() != 'i')lasers[i]->desenha(350, lasers[i]->getPosiY());
 			}
-			if (lasers[0]->getStatus() == 'i') {
+			if (lasers[0]->getStatus() == 'i'/*tanques[0]->getStatus() != 'm' && tanques[0]->getStatus() != 'i'*/) {
 				for (int i = 0; i < tanques.size(); i++) {
 					if (tanques[i]->getStatus() != 'm' && tanques[i]->getStatus() != 'i')tanques[i]->setStatus('m');
 

@@ -14,7 +14,7 @@ Tank::Tank(float x, float y, float ang, int tip) {
 	tipo = tip;
 	if (tip == 1) {
 		vida = 250;
-		velocidade = 1;
+		velocidade = 2;
 	}
 	else if (tip == 2) {
 		vida = 250;
@@ -30,7 +30,12 @@ Tank::Tank(float x, float y, float ang, int tip) {
 	}
 	else if (tip == 5) {
 		vida = 250;
-		velocidade = 1;
+		velocidade = 2;
+	}
+
+	else if (tip == 6) {
+		vida = 250;
+		velocidade = 2;
 	}
 }
 Tank::Tank() {}
@@ -64,6 +69,11 @@ void Tank::Inicializa(float x, float y, float ang, int tip) {
 		vida = 250;
 		velocidade = 2;
 	}
+
+	else if (tip == 6) {
+		vida = 250;
+		velocidade = 2;
+	}
 }
 
 void Tank::desenha() {
@@ -77,7 +87,7 @@ void Tank::desenha() {
 		float pontosY[20];
 		int qtdPontos = 0;
 		//char url[]="tank1.txt";
-		FILE *arq;
+		FILE *arq = NULL;
 		float cooX, cooY, corR, corG, corB, corRAnt, corGAnt, corBAnt;
 		float yMinEst = -1;
 		float yMaxEst = -1;
@@ -217,6 +227,8 @@ void Tank::desenha() {
 			status = 'i';
 		}
 	}
+
+	
 }
 void  Tank::move(float incremento) {
 	if (angulo == 0) {
@@ -438,7 +450,7 @@ int  Tank::getVida() { return vida; }
 
 void Tank::atiraEspecial(float xfinal, float yfinal) {
 	if (qtdTiroEspec > 0) {
-		TiroEspecial *te;
+		TiroEspecial *te = NULL;
 		if (angulo == 90) {
 			te = new TiroEspecial(posiX - 1.15*dimY, posiY + 0.5*dimX, 90,dimX*0.2);
 		}
@@ -453,6 +465,6 @@ void Tank::atiraEspecial(float xfinal, float yfinal) {
 		}
 		qtdTiroEspec--;
 		te->desenha(xfinal, yfinal);
-		glFlush();
+		
 	}
 }

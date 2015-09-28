@@ -15,6 +15,11 @@ public:
     
     Tutorial();
     void desenha();
+	void desenhaSeta(float posiX,float posiY,float angulo);
+	void desenhaTank(float posiX,float posiY,float angulo);
+	void desenhaHpExtra(float posiX,float posiY);
+	void desenhaArmaEspecial(float posiX,float posiY);
+	void desenhaObjetos();
 	void desenhaBlocos();
     void renderBitmapString(float x, float y, void *font,const char *string);
     

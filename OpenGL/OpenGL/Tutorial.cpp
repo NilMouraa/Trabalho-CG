@@ -1,6 +1,154 @@
 #include "Tutorial.h"
 #include "Bloco.h"
+#include "Tank.h"
 Tutorial::Tutorial() {}
+void Tutorial::desenhaSeta(float posiX,float posiY,float angulo){
+	float altura=10;
+	float comprimento=10;
+	glPushMatrix();
+	glTranslatef(posiX,posiY,0);
+	glRotatef(angulo,0,0,1);
+	glColor3f(1,1,1);
+
+		glBegin(GL_LINE_LOOP);
+			glVertex2f(-0.5*comprimento,0.25*altura);
+			glVertex2f(0,0.25*altura);
+			glVertex2f(0,0.5*altura);
+			glVertex2f(0.5*comprimento,0);
+			glVertex2f(0,-0.5*altura);
+			glVertex2f(0,-0.25*altura);
+			glVertex2f(-0.5*comprimento,-0.25*altura);
+		glEnd();
+		glBegin(GL_LINE_LOOP);
+			glVertex2f(-0.7*comprimento,0.7*altura);
+			glVertex2f(0.7*comprimento,0.7*altura);
+			glVertex2f(0.7*comprimento,-0.7*altura);
+			glVertex2f(-0.7*comprimento,-0.7*altura);
+		glEnd();
+
+	glPopMatrix();
+}
+void Tutorial::desenhaTank(float posiX,float posiY,float angulo){
+	glPushMatrix();
+		
+	Tank *t=new Tank(posiX,posiY,angulo,6);
+	t->desenha();
+
+	glPopMatrix();
+}
+void Tutorial::desenhaHpExtra(float posiX,float posiY){
+	float altura=10;
+	float comprimento=10;
+	glPushMatrix();
+	glTranslatef(posiX,posiY,0);
+	glColor3f(1,0,0);
+	glBegin(GL_POLYGON);
+		glVertex2f(-0.7*comprimento,0.35*altura);
+		glVertex2f(0.7*comprimento,0.35*altura);
+		glVertex2f(0.7*comprimento,-0.35*altura);
+		glVertex2f(-0.7*comprimento,-0.35*altura);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2f(-0.35*comprimento,0.7*altura);
+		glVertex2f(0.35*comprimento,0.7*altura);
+		glVertex2f(0.35*comprimento,-0.7*altura);
+		glVertex2f(-0.35*comprimento,-0.7*altura);
+	glEnd();
+	glColor3f(1,1,1);
+	glBegin(GL_LINE_LOOP);
+			glVertex2f(-0.7*comprimento,0.7*altura);
+			glVertex2f(0.7*comprimento,0.7*altura);
+			glVertex2f(0.7*comprimento,-0.7*altura);
+			glVertex2f(-0.7*comprimento,-0.7*altura);
+	glEnd();
+	glBegin(GL_LINE_LOOP);
+		glVertex2f(-0.7*comprimento,0.35*altura);
+		glVertex2f(-0.35*comprimento,0.35*altura);
+		glVertex2f(-0.35*comprimento,0.7*altura);
+		glVertex2f(0.35*comprimento,0.7*altura);
+		glVertex2f(0.35*comprimento,0.35*altura);
+		glVertex2f(0.7*comprimento,0.35*altura);
+		glVertex2f(0.7*comprimento,-0.35*altura);
+		glVertex2f(0.35*comprimento,-0.35*altura);
+		glVertex2f(0.35*comprimento,-0.7*altura);
+		glVertex2f(-0.35*comprimento,-0.7*altura);
+		glVertex2f(-0.35*comprimento,-0.35*altura);
+		glVertex2f(-0.7*comprimento,-0.35*altura);
+	glEnd();
+	glPopMatrix();
+}
+void Tutorial::desenhaArmaEspecial(float posiX,float posiY){
+	float altura=10;
+	float comprimento=10;
+	glPushMatrix();
+	glTranslatef(posiX,posiY,0);
+	glColor3f(0,0,1);
+	glBegin(GL_POLYGON);
+		glVertex2f(0,0.4*altura);
+		glVertex2f(0.7*comprimento,0.4*altura);
+		glVertex2f(0.7*comprimento,-0.4*altura);
+		glVertex2f(0,-0.4*altura);
+	glEnd();
+	glColor3f(0.3,0.3,0.3);
+	glBegin(GL_POLYGON);
+		glVertex2f(-0.7*comprimento,0.7*altura);
+		glVertex2f(-0.4*comprimento,0.7*altura);
+		glVertex2f(-0.4*comprimento,0.4*altura);
+		glVertex2f(-0.7*comprimento,0.4*altura);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2f(-0.7*comprimento,-0.4*altura);
+		glVertex2f(-0.7*comprimento,0.4*altura);
+		glVertex2f(0,0.4*altura);
+		glVertex2f(0,-0.4*altura);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2f(-0.7*comprimento,-0.4*altura);
+		glVertex2f(-0.4*comprimento,-0.4*altura);
+		glVertex2f(-0.4*comprimento,-0.7*altura);
+		glVertex2f(-0.7*comprimento,-0.7*altura);
+	glEnd();
+	glColor3f(1,1,1);
+	glBegin(GL_LINE_LOOP);
+			glVertex2f(-0.7*comprimento,0.7*altura);
+			glVertex2f(0.7*comprimento,0.7*altura);
+			glVertex2f(0.7*comprimento,-0.7*altura);
+			glVertex2f(-0.7*comprimento,-0.7*altura);
+		glEnd();
+	glBegin(GL_LINE_LOOP);
+		glVertex2f(-0.7*comprimento,0.7*altura);
+		glVertex2f(-0.4*comprimento,0.7*altura);
+		glVertex2f(-0.4*comprimento,0.4*altura);
+		glVertex2f(0,0.4*altura);
+		glVertex2f(0,-0.4*altura);
+		glVertex2f(-0.4*comprimento,-0.4*altura);
+		glVertex2f(-0.4*comprimento,-0.7*altura);
+		glVertex2f(-0.7*comprimento,-0.7*altura);
+	glEnd();
+	glBegin(GL_LINE_LOOP);
+		glVertex2f(0,0.4*altura);
+		glVertex2f(0.7*comprimento,0.4*altura);
+		glVertex2f(0.7*comprimento,-0.4*altura);
+		glVertex2f(0,-0.4*altura);
+	glEnd();
+	glPopMatrix();
+}
+void Tutorial::desenhaObjetos(){
+	glPushMatrix();
+	desenhaSeta(47,171,0);
+	desenhaTank(57,178.5,-90);
+	desenhaSeta(94,171,180);
+	desenhaTank(122,163.5,90);
+
+	desenhaSeta(47,135,90);
+	desenhaTank(57,127.5,0);
+	desenhaSeta(94,135,-90);
+	desenhaTank(122,142.5,180);
+
+	desenhaArmaEspecial(90,63);
+	desenhaHpExtra(110,63);
+	glPopMatrix();
+}
 void Tutorial::desenhaBlocos() {
 	glPushMatrix();
 
@@ -36,6 +184,7 @@ void Tutorial::desenhaBlocos() {
 }
 void Tutorial::desenha() {
 	desenhaBlocos();
+	desenhaObjetos();
 	glPushMatrix();
 	glColor3f(1,1,1);
 	int font = (int)GLUT_BITMAP_TIMES_ROMAN_24;
@@ -77,7 +226,7 @@ void Tutorial::desenha() {
 	renderBitmapString(154, 94, (void *)font, texto);
 	texto = "Use a barra de espaco para atirar.";
 	renderBitmapString(154, 65, (void *)font, texto);
-	texto = "Municao Especial e Vida sao deixadas por inimigos";
+	texto = "Municao Especial, HP extra sao deixados por inimigos";
 	renderBitmapString(154, 59, (void *)font, texto);
 	font = (int)GLUT_BITMAP_TIMES_ROMAN_24;
 	glColor3f(1, 1, 1);

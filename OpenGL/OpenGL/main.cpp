@@ -43,13 +43,14 @@ bool criou = false;
 bool introAtiva = true;
 bool menuAtiva = false;
 bool tutorialAtiva = false;
+bool fase1Ativa=false;
 Introducao *intro = new Introducao();
 Tutorial *Tuto = new Tutorial();
 
 //TiroEspecial *tiro	= new TiroEspecial	(100,10,0);
 //Explosao   *explo   = new Explosao		(100,100,0,75,2);
-Tank	   *t = new Tank(100, 100, 0, 1);
-Tela	   *tela = new Tela();
+Tank	   *t = new Tank(300, 100, 0, 6);
+Tela	   *tela = new Tela(1);
 
 
 
@@ -67,20 +68,20 @@ void keyboardDown(unsigned char key, int x, int y) {
 			glutReshapeWindow(1024, 690);
 		break;
 	case 'a':
-		t->viraEsquerda(1, tela->semColisao(t, 1, 'e', 1));
+		t->viraEsquerda(1, tela->semColisao(t, 1, 'e', -1));
 		break;
 
 	case 'd':
-		t->viraDireita(1, tela->semColisao(t, 1, 'd', 1));
+		t->viraDireita(1, tela->semColisao(t, 1, 'd', -1));
 
 		break;
 
 	case 'w':
-		t->viraCima(1, tela->semColisao(t, 1, 'c', 1));
+		t->viraCima(1, tela->semColisao(t, 1, 'c', -1));
 		break;
 
 	case 's':
-		t->viraBaixo(1, tela->semColisao(t, 1, 'b', 1));
+		t->viraBaixo(1, tela->semColisao(t, 1, 'b', -1));
 		break;
 	case 32:
 
@@ -91,9 +92,12 @@ void keyboardDown(unsigned char key, int x, int y) {
 			introAtiva = false;
 			menuAtiva = true;
 		}
-		else if ((!introAtiva) && menuAtiva) {
+		else if ((!introAtiva) && menuAtiva && (!fase1Ativa)) {
 			RetanguloMenu('j');
 			Sleep(200);
+			fase1Ativa=true;
+			introAtiva = false;
+				menuAtiva = false;
 		}
 		break;
 	case 'o':
@@ -134,9 +138,12 @@ void mouseClick(int button, int state, int x, int y) {
 				introAtiva = false;
 				menuAtiva = true;
 			}
-			else if ((!introAtiva) && menuAtiva) {
+			else if ((!introAtiva) && menuAtiva && (!fase1Ativa)) {
 				RetanguloMenu('j');
 				Sleep(200);
+			fase1Ativa=true;
+			introAtiva = false;
+				menuAtiva = false;
 			}
 		}
 		else if (y > 54 && y < 72) {
@@ -266,6 +273,7 @@ void Desenha(void) {
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glClear(GL_COLOR_BUFFER_BIT);
+	glPushMatrix();
 	/*if (!criou) {
 		tela->addBloco(b);
 		tela->addBloco(b1);
@@ -295,8 +303,15 @@ void Desenha(void) {
 	else if (tutorialAtiva) {
 		Tuto->desenha();
 	}
+	
+	else if(fase1Ativa){
+		
+		tela->desenhaBlocos();
+		tela->desenhaTankes();
+		t->desenha();
+	}
 
-
+	
 	//tiro->desenha(100,250);
 
 	/*explo->desenha();
@@ -308,6 +323,7 @@ void Desenha(void) {
 	explo-> desenhaParte('g');
 	explo-> desenhaParte('m');
 	explo-> desenhaParte('c');*/
+	glPopMatrix();
 	glFlush();
 
 }

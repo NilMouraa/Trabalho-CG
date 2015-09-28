@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <GL/glut.h>
+#include <GL/glut.h> 
 #include <math.h>
 #include <iostream>
 

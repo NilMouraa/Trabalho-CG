@@ -8,9 +8,11 @@ class Tela
 {
 private: 
 	vector <Tank* > tankes;
-	Tank *Player;
+	Tank *Player, *Player2;
 	vector <Bloco*> blocos;
+	vector <TiroExp*> tiros;
 	Explosao			*E;
+	bool temP2;
 public:
 	Tela(int numFase);
 	 
@@ -24,6 +26,14 @@ public:
 	int retornaQtdBlocos();
 	void desenhaTankes  ();
 	void desenhaBlocos	();
+	void desenhaTiros	();
+	void desenha		();
+	void MoveTankMetodo1(Tank *t, float incremento, int indiceTank);
+	void MoveTankMetodo2(Tank *t, float incremento, int indiceTank);
+	void MoveTankPlayer (char direcao, float incremento);
+	void MoveTankInimigo(float incremento);
+	void setPlayer2();
+	void Atira(int pos);
 	
 	~Tela();
 };

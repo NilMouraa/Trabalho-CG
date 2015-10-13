@@ -124,10 +124,11 @@ void TiroEspecial::desenhaAng180(float xFinal, float yFinal) {
 void TiroEspecial::desenha(float xFinal, float yFinal) {
 
 	glPushMatrix();
-	if(comeco){
-		glTranslatef(posiX, posiY, 0);
-		comeco=false;
-	}//glRotatef(angulo, 0, 0, 1);
+
+	//if(comeco){
+		//glTranslatef(posiX, posiY, 0);
+		//comeco=false;
+	//}//glRotatef(angulo, 0, 0, 1);
 	//cout << "Xfinal"<<xFinal<<"Yfinal"<<yFinal;
 	glColor3f(0, 0, 1);
 	if (angulo == 0) {
@@ -147,6 +148,7 @@ void TiroEspecial::desenha(float xFinal, float yFinal) {
 	else if (angulo == -90) {
 		desenhaAngM90(xFinal, yFinal);
 		posiX += decremento;
+		posiY = posiY;
 		if (posiX + decremento >= xFinal) {
 			status = 'i';
 		}

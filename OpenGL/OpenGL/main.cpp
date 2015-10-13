@@ -8,6 +8,9 @@
 #include "TiroEspecial.h"
 #include "Bloco.h"
 #include "Tutorial.h"
+#include "Final.h"
+#include "GameOver.h"
+#include "Reinicio.h"
 
 using namespace std;
 
@@ -21,6 +24,7 @@ GLfloat y2 = 150.0f;
 GLfloat xstep = 1.0f;
 GLfloat ystep = 1.0f;
 GLsizei rsize = 20;
+
 GLfloat windowWidth;
 GLfloat windowHeight;
 
@@ -39,22 +43,30 @@ Bloco      *b4 = new Bloco(50, 122, 0, DIM_X_BLOC, DIM_Y_BLOC);
 Bloco      *b5 = new Bloco(50, 140, 0, DIM_X_BLOC, DIM_Y_BLOC);
 Bloco      *b6 = new Bloco(50, 158, 0, DIM_X_BLOC, DIM_Y_BLOC);
 //TiroEspecial *te = new TiroEspecial(0, 0, 0,);
+
 bool criou = false;
 bool introAtiva = true;
 bool menuAtiva = false;
 bool tutorialAtiva = false;
-bool fase1Ativa=false;
-Introducao *intro = new Introducao();
-Tutorial *Tuto = new Tutorial();
-
-//TiroEspecial *tiro	= new TiroEspecial	(100,10,0);
-//Explosao   *explo   = new Explosao		(100,100,0,75,2);
-Tank	   *t = new Tank(300, 100, 0, 6);
-Tela	   *tela = new Tela(1);
-
-
-
+bool fase1Ativa = false;
 bool fullscreenAtiva = false;
+
+Introducao *intro = new Introducao();
+Tutorial   *Tuto = new Tutorial();
+Tank	   *t = new Tank(290, 100, 0, 1);
+Tela	   *tela = new Tela(2);
+GameOver   *go = new GameOver();
+Final      *f = new Final();
+Reinicio   *r = new Reinicio();
+
+void keyboardSpecialUp(int key, int x, int y) {
+	switch (key)
+	{
+	case 32:
+		tela->Atira(1);
+		break; 
+	}
+}
 
 void keyboardDown(unsigned char key, int x, int y) {
 
@@ -65,27 +77,26 @@ void keyboardDown(unsigned char key, int x, int y) {
 		if (fullscreenAtiva)
 			glutFullScreen();
 		else
-			glutReshapeWindow(1024, 690);
+			glutReshapeWindow(993.6, 690);
 		break;
 	case 'a':
-		t->viraEsquerda(1, tela->semColisao(t, 1, 'e', -1));
+		tela->MoveTankPlayer('e',1);
 		break;
 
 	case 'd':
-		t->viraDireita(1, tela->semColisao(t, 1, 'd', -1));
+		tela->MoveTankPlayer('d',1);
 
 		break;
 
 	case 'w':
-		t->viraCima(1, tela->semColisao(t, 1, 'c', -1));
+		tela->MoveTankPlayer('c',1);
 		break;
 
 	case 's':
-		t->viraBaixo(1, tela->semColisao(t, 1, 'b', -1));
+		tela->MoveTankPlayer('b',1);
 		break;
-	case 32:
-
-		break;
+	
+		//enter
 	case 13:
 		if (introAtiva) {
 			intro->Incrementa(500);
@@ -95,9 +106,9 @@ void keyboardDown(unsigned char key, int x, int y) {
 		else if ((!introAtiva) && menuAtiva && (!fase1Ativa)) {
 			RetanguloMenu('j');
 			Sleep(200);
-			fase1Ativa=true;
+			fase1Ativa = true;
 			introAtiva = false;
-				menuAtiva = false;
+			menuAtiva = false;
 		}
 		break;
 	case 'o':
@@ -108,6 +119,7 @@ void keyboardDown(unsigned char key, int x, int y) {
 			menuAtiva = false;
 		}
 		break;
+		//Esc
 	case 27:
 		if ((!introAtiva) && menuAtiva) {
 			RetanguloMenu('s');
@@ -115,6 +127,7 @@ void keyboardDown(unsigned char key, int x, int y) {
 			exit(0);
 		}
 		break;
+		//Backspace
 	case 8:
 		if (tutorialAtiva && !(menuAtiva)) {
 			RetanguloMenu('v');
@@ -126,7 +139,8 @@ void keyboardDown(unsigned char key, int x, int y) {
 
 }
 void mouseClick(int button, int state, int x, int y) {
-
+	cout << "\n X: " << x;
+	cout << "\n Y: " << y;
 	y = -y + windowHeight;
 	y = 252 * y / windowHeight;
 	x = 360 * x / windowWidth;
@@ -141,8 +155,8 @@ void mouseClick(int button, int state, int x, int y) {
 			else if ((!introAtiva) && menuAtiva && (!fase1Ativa)) {
 				RetanguloMenu('j');
 				Sleep(200);
-			fase1Ativa=true;
-			introAtiva = false;
+				fase1Ativa = true;
+				introAtiva = false;
 				menuAtiva = false;
 			}
 		}
@@ -175,7 +189,6 @@ void mouseClick(int button, int state, int x, int y) {
 }
 void Timer(int value)
 {
-
 	glutPostRedisplay();
 	glutTimerFunc(1, Timer, 1);
 }
@@ -274,22 +287,8 @@ void Desenha(void) {
 	glLoadIdentity();
 	glClear(GL_COLOR_BUFFER_BIT);
 	glPushMatrix();
-	/*if (!criou) {
-		tela->addBloco(b);
-		tela->addBloco(b1);
-		tela->addBloco(b2);
-		tela->addBloco(b3);
-		tela->addBloco(b4);
-		tela->addBloco(b5);
-		tela->addBloco(b6);
-		tela->addTankes(t);
-		criou = true;
-	}
-	tela->desenhaBlocos();
-	tela->desenhaTankes();
-	/*if (te->getStatus() != 'i') {
-		te->desenha(0, 100);
-	}*/
+	/*r->desenha();*/
+
 
 	if (introAtiva || menuAtiva) {
 		intro->Desenha(windowWidth, 280);
@@ -303,27 +302,14 @@ void Desenha(void) {
 	else if (tutorialAtiva) {
 		Tuto->desenha();
 	}
-	
-	else if(fase1Ativa){
-		
-		tela->desenhaBlocos();
-		tela->desenhaTankes();
-		t->desenha();
+
+	else if (fase1Ativa) {
+		tela->desenha();
 	}
 
-	
-	//tiro->desenha(100,250);
-
-	/*explo->desenha();
-	explo->incrementaTamanho(1);*/
-	//tela->desenhaTankes();
-	//tela->desenhaBlocos();
-	/*explo->desenha();
-	explo->incrementaTamanho(1);
-	explo-> desenhaParte('g');
-	explo-> desenhaParte('m');
-	explo-> desenhaParte('c');*/
 	glPopMatrix();
+
+
 	glFlush();
 
 }
@@ -334,16 +320,7 @@ void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
 
 	windowWidth = w;
 	windowHeight = h;
-	//if (h == 0)h = 1;
 
-	//glViewport(0, 0, w, h);
-	//glMatrixMode(GL_PROJECTION);
-	//glLoadIdentity();
-
-	//if (w <= h)
-	//	gluOrtho2D(0.0f, 250.0f, 0.0f, 250.0f*h / w);
-	//else
-	//	gluOrtho2D(0.0f, 250.0f*w / h, 0.0f, 250.0f);
 
 	glViewport(0, 0, w, h);
 
@@ -361,6 +338,7 @@ int main(int argc, char **argv) {
 	glutCreateWindow("Game");
 	glutDisplayFunc(Desenha);
 	glutKeyboardFunc(keyboardDown);
+	glutSpecialUpFunc(keyboardSpecialUp);
 	glutMouseFunc(mouseClick);
 	glutReshapeFunc(AlteraTamanhoJanela);
 	glutTimerFunc(1, Timer, 1);

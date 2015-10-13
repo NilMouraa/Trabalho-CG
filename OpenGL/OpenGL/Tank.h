@@ -7,7 +7,8 @@
 #include <math.h>
 #include <iostream>
 #include "Explosao.h" 
-//#include "TiroEspec.h"
+#include "TiroEspecial.h"
+#include "TiroExp.h"
 //#include "TiroComum.h"
 using namespace std;
 
@@ -24,6 +25,7 @@ private:
     int tipo;
     float velocidade;
     Explosao *explosao;
+	int tempoPraAtirar;
 public:
     
     Tank(float x,float y,float ang,int tip);
@@ -48,6 +50,9 @@ public:
     TiroEspec usaTiroEspec();
     
     TiroComum usaTiroComum();*/
+	
+	int getTempoPraAtirar();
+	
     
     void setQtdTiroEspec(int qtd);
 	void setDimX(float tamanho);
@@ -69,7 +74,8 @@ public:
 	char getStatus();
 	int getTipo();
 	int getVida();
-	void atiraEspecial(float xfinal, float yfinal);
+	TiroEspecial* atiraEspecial();
+	TiroExp* atira(char tipo);
     
 };
 

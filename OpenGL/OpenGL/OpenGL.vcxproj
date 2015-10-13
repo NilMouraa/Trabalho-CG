@@ -10,6 +10,33 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bloco.h" />
+    <ClInclude Include="Explosao.h" />
+    <ClInclude Include="Final.h" />
+    <ClInclude Include="GameOver.h" />
+    <ClInclude Include="Introducao.h" />
+    <ClInclude Include="Reinicio.h" />
+    <ClInclude Include="Tank.h" />
+    <ClInclude Include="Tela.h" />
+    <ClInclude Include="TiroEspecial.h" />
+    <ClInclude Include="TiroExp.h" />
+    <ClInclude Include="Tutorial.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Bloco.cpp" />
+    <ClCompile Include="Explosao.cpp" />
+    <ClCompile Include="Final.cpp" />
+    <ClCompile Include="GameOver.cpp" />
+    <ClCompile Include="Introducao.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Reinicio.cpp" />
+    <ClCompile Include="Tank.cpp" />
+    <ClCompile Include="Tela.cpp" />
+    <ClCompile Include="TiroEspecial.cpp" />
+    <ClCompile Include="TiroExp.cpp" />
+    <ClCompile Include="Tutorial.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{54298D22-E9F0-487A-93A2-38BE14624D82}</ProjectGuid>
     <RootNamespace>OpenGL</RootNamespace>
@@ -66,25 +93,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Bloco.cpp" />
-    <ClCompile Include="Explosao.cpp" />
-    <ClCompile Include="Introducao.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Tank.cpp" />
-    <ClCompile Include="Tela.cpp" />
-    <ClCompile Include="TiroEspecial.cpp" />
-    <ClCompile Include="Tutorial.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Bloco.h" />
-    <ClInclude Include="Explosao.h" />
-    <ClInclude Include="Introducao.h" />
-    <ClInclude Include="Tank.h" />
-    <ClInclude Include="Tela.h" />
-    <ClInclude Include="TiroEspecial.h" />
-    <ClInclude Include="Tutorial.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

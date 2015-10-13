@@ -1,6 +1,7 @@
 #include "Tank.h"
 #include <iostream>
 #include "TiroEspecial.h"
+
 //#define	TANK_H
 using namespace std;
 Tank::Tank(float x, float y, float ang, int tip) {
@@ -15,27 +16,33 @@ Tank::Tank(float x, float y, float ang, int tip) {
 	if (tip == 1) {
 		vida = 250;
 		velocidade = 2;
+		tempoPraAtirar=10;
 	}
 	else if (tip == 2) {
 		vida = 250;
 		velocidade = 2;
+		tempoPraAtirar=10;
 	}
 	else if (tip == 3) {
 		vida = 250;
 		velocidade = 3;
+		tempoPraAtirar=10;
 	}
 	else if (tip == 4) {
 		vida = 250;
 		velocidade = 2;
+		tempoPraAtirar=10;
 	}
 	else if (tip == 5) {
 		vida = 250;
 		velocidade = 2;
+		tempoPraAtirar=10;
 	}
 
 	else if (tip == 6) {
 		vida = 250;
 		velocidade = 2;
+		tempoPraAtirar=10;
 	}
 }
 Tank::Tank() {}
@@ -52,22 +59,27 @@ void Tank::Inicializa(float x, float y, float ang, int tip) {
 	if (tip == 1) {
 		vida = 250;
 		velocidade = 2;
+		tempoPraAtirar=10;
 	}
 	else if (tip == 2) {
 		vida = 250;
 		velocidade = 2;
+		tempoPraAtirar=10;
 	}
 	else if (tip == 3) {
 		vida = 250;
 		velocidade = 3;
+		tempoPraAtirar=10;
 	}
 	else if (tip == 4) {
 		vida = 250;
 		velocidade = 2;
+		tempoPraAtirar=10;
 	}
 	else if (tip == 5) {
 		vida = 250;
 		velocidade = 2;
+		tempoPraAtirar=10;
 	}
 
 	else if (tip == 6) {
@@ -76,7 +88,25 @@ void Tank::Inicializa(float x, float y, float ang, int tip) {
 	}
 }
 
-void Tank::desenha() {
+void  Tank::desenha() {
+	tempoPraAtirar--;
+	if(tempoPraAtirar==-1){
+		if (tipo == 1) {
+			tempoPraAtirar=10;
+		}
+		else if (tipo == 2) {
+			tempoPraAtirar=10;
+		}
+		else if (tipo == 3) {
+			tempoPraAtirar=10;
+		}
+		else if (tipo == 4) {
+			tempoPraAtirar=10;
+		}
+		else if (tipo == 5) {
+			tempoPraAtirar=10;
+		}	
+	}
 	if ((status != 'm' && status != 'i') || (explosao->getDiminui() == false)) {
 
 		glPushMatrix();
@@ -438,6 +468,7 @@ float  Tank::getPosiOrigemY() {
 	}
 }
 
+int Tank::getTempoPraAtirar(){return tempoPraAtirar;}
 
 float  Tank::getPosiX() { return posiX; }
 float  Tank::getPosiY() { return posiY; }
@@ -448,8 +479,8 @@ char  Tank::getStatus() { return status; }
 int  Tank::getTipo() { return tipo; }
 int  Tank::getVida() { return vida; }
 
-void Tank::atiraEspecial(float xfinal, float yfinal) {
-	if (qtdTiroEspec > 0) {
+TiroEspecial* Tank::atiraEspecial() {
+	//if (qtdTiroEspec > 0) {
 		TiroEspecial *te = NULL;
 		if (angulo == 90) {
 			te = new TiroEspecial(posiX - 1.15*dimY, posiY + 0.5*dimX, 90,dimX*0.2);
@@ -463,8 +494,31 @@ void Tank::atiraEspecial(float xfinal, float yfinal) {
 		else if (angulo == 180) {
 			te = new TiroEspecial(posiX - 0.5*dimX, posiY - 1.15*dimY, 180, dimX*0.2);
 		}
-		qtdTiroEspec--;
-		te->desenha(xfinal, yfinal);
+		//qtdTiroEspec--;
+		//te->desenha(xfinal, yfinal);
 		
+	//}
+	return te;
+}
+
+TiroExp* Tank::atira(char tipo) {
+	//if (qtdTiroEspec > 0) {
+	TiroExp *te = NULL;
+	if (angulo == 90) {
+		te = new TiroExp(posiX - 1.15*dimY, posiY + 0.5*dimX, 'e', dimX*0.3, dimX*0.3,tipo);
 	}
+	else if (angulo == -90) {
+		te = new TiroExp(posiX + 1.15*dimY, posiY - 0.5*dimX, 'd', dimX*0.3, dimX*0.3, tipo);
+	}
+	else if (angulo == 0) {
+		te = new TiroExp(posiX + 0.5*dimX, posiY + 1.15*dimY, 'c', dimX*0.3, dimX*0.3, tipo);
+	}
+	else if (angulo == 180) {
+		te = new TiroExp(posiX - 0.5*dimX, posiY - 1.15*dimY, 'b', dimX*0.3, dimX*0.3, tipo);
+	}
+	//qtdTiroEspec--;
+	//te->desenha(xfinal, yfinal);
+
+	//}
+	return te;
 }

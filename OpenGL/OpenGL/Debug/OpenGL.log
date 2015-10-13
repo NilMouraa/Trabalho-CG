@@ -1,12 +1,13 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (OpenGL.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  main.cpp
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal_sabado\opengl\opengl\main.cpp(126): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal_sabado\opengl\opengl\main.cpp(127): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal_sabado\opengl\opengl\main.cpp(128): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal_sabado\opengl\opengl\main.cpp(187): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal_sabado\opengl\opengl\main.cpp(188): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal_sabado\opengl\opengl\main.cpp(196): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal_sabado\opengl\opengl\main.cpp(319): warning C4244: '=': conversion from 'GLsizei' to 'GLfloat', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal_sabado\opengl\opengl\main.cpp(320): warning C4244: '=': conversion from 'GLsizei' to 'GLfloat', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgfinal_sabado\opengl\opengl\main.cpp(343): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-  OpenGL.vcxproj -> C:\Users\Nil Martins\Documents\Visual Studio 2015\Projects\TP01_CGFinal_Sabado\OpenGL\Debug\TrabalhoCG.exe
+﻿  main.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(144): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(145): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(146): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(207): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(208): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(216): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(321): warning C4244: '=': conversion from 'GLsizei' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(322): warning C4244: '=': conversion from 'GLsizei' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(336): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(341): error C2664: 'void glutSpecialUpFunc(void (__cdecl *)(int,int,int))': cannot convert argument 1 from 'void (__cdecl *)(unsigned char,int,int)' to 'void (__cdecl *)(int,int,int)'
+  c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(341): note: None of the functions with this name in scope match the target type

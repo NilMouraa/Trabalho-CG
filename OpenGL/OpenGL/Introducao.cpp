@@ -147,6 +147,9 @@ void Introducao::DesenhaN(float posiX, float posiY,float ang,int tipoTank){
 
 
 void Introducao::Desenha(float largura, float altura){
+	for (int i = 0; i < lasers.size(); i++) {
+		cout << "\nX:" << lasers[i]->getPosiX()<<"Y:"<< lasers[i]->getPosiY();
+	}
 	glPushMatrix();
 	if ((-20 * DIM_Y_TANK + incremento < 50)) {
 		for (int i = 0; i < tanques.size(); i++) {
@@ -158,12 +161,12 @@ void Introducao::Desenha(float largura, float altura){
 			for (int i = 0; i < lasers.size(); i++) {
 				if (lasers[i]->getStatus() != 'i')lasers[i]->desenha(350, lasers[i]->getPosiY());
 			}
-			if (lasers[0]->getStatus() == 'i'/*tanques[0]->getStatus() != 'm' && tanques[0]->getStatus() != 'i'*/) {
+			//if (lasers[0]->getStatus() == 'i'/*tanques[0]->getStatus() != 'm' && tanques[0]->getStatus() != 'i'*/) {
 				for (int i = 0; i < tanques.size(); i++) {
 					if (tanques[i]->getStatus() != 'm' && tanques[i]->getStatus() != 'i')tanques[i]->setStatus('m');
 
 				}
-			}
+			//}
 		}
 		if(tanques[1]->getStatus()=='i' && -20*DIM_Y_TANK+incremento<30){
 			DesenhaS(-3*DIM_Y_TANK+incremento, 0.5*altura,0,5);

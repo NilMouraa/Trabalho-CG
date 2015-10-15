@@ -36,7 +36,7 @@ void RetanguloMenu(char op);
 //*************************************************
 
 
-Bloco      *b  = new Bloco(50, 50, 0, DIM_X_BLOC, DIM_Y_BLOC);
+Bloco      *b		 = new Bloco(50, 50, 0, DIM_X_BLOC, DIM_Y_BLOC);
 Bloco      *b1 = new Bloco(50, 68, 0, DIM_X_BLOC, DIM_Y_BLOC);
 Bloco      *b2 = new Bloco(50, 86, 0, DIM_X_BLOC, DIM_Y_BLOC);
 Bloco      *b3 = new Bloco(50, 104, 0, DIM_X_BLOC, DIM_Y_BLOC);

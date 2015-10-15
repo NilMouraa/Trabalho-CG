@@ -2,6 +2,7 @@
 #include "Tank.h"
 //Construtores
 TiroExp::TiroExp(float x,float y, char direc,float dmX,float dmY,int tipoTiro){
+	status = 'a';
 	posiX=x;
 	posiY=y;
 	angulo=0;
@@ -10,15 +11,19 @@ TiroExp::TiroExp(float x,float y, char direc,float dmX,float dmY,int tipoTiro){
 	dimY=dmY;
 	tipo=tipoTiro;
 	terminou=false;
+	if (tipo == 3) {
+		deInimigo = true;
+	}
+	else deInimigo = false;
 	incrementoAngulo=1;
 	if (tipo == 1) {
-		velocidade = 0.5;
+		velocidade = 1;
 	}
 	else if (tipo == 2) {
-		velocidade = 1.5;
+		velocidade = 1;
 	}
 	else if (tipo == 3) {
-		velocidade = 1.5;
+		velocidade = 1;
 	}
 }
 void TiroExp::desenhaTipo2(){
@@ -211,12 +216,79 @@ void TiroExp::Gira(){
 //***************SETS***************
 void TiroExp::setDimX			(float tamanho){  dimX      = tamanho;  }
 void TiroExp::setDimY			(float tamanho){  dimY      = tamanho;  }
+void TiroExp::setStatus(char s)				   {  status = s; }
 
 //***************GETS***************
 float TiroExp::getPosiX	(){  return posiX;  }
 float TiroExp::getPosiY	(){  return posiY;  }
-float TiroExp::getAngulo	(){  return angulo; }
-float TiroExp::getDimX		(){  return dimX;   }
-float TiroExp::getDimY		(){  return dimY;   }
+float TiroExp::getAngulo	(){  return angulo;		}
+float TiroExp::getDimX		(){  return dimX;		}
+float TiroExp::getDimY		(){  return dimY;		}
+float TiroExp::getEdeInimigo(){  return deInimigo;	}
 
 bool TiroExp::getTerminou() { return terminou; }
+char TiroExp::getStatus()	{ return status; }
+char TiroExp::getDirecao() { return direcao; }
+
+float  TiroExp::getPosiCentroX() {
+	/*if (this->angulo == 0) {
+		return posiX;
+	}
+	else if (this->angulo == 90) {
+		return posiX - 0.5*dimY;
+	}
+	else if (this->angulo == -90) {
+		return posiX + 0.5*dimY;
+	}
+	else if (this->angulo == 180) {
+		return posiX;
+	}*/
+	return posiX;
+
+}
+
+float  TiroExp::getPosiCentroY() {
+	/*if (this->angulo == 0) {
+		return posiY + 0.5*dimY;
+	}
+	else if (this->angulo == 90) {
+		return posiY;
+	}
+	else if (this->angulo == -90) {
+		return posiY;
+	}
+	else if (this->angulo == 180) {
+		return posiY - 0.5*dimY;
+	}*/
+	return posiY;
+}
+
+float  TiroExp::getPosiOrigemX() {
+	if (this->angulo == 0) {
+		return ( posiX - 0.5*dimX );
+	}
+	else if (this->angulo == 90) {
+		return posiX - dimY;
+	}
+	else if (this->angulo == -90) {
+		return posiX;
+	}
+	else if (this->angulo == 180) {
+		return posiX - 0.5*dimX;
+	}
+
+}
+float  TiroExp::getPosiOrigemY() {
+	if (this->angulo == 0) {
+		return posiY;
+	}
+	else if (this->angulo == 90) {
+		return (posiY - 0.5*dimX);
+	}
+	else if (this->angulo == -90) {
+		return (posiY - 0.5*dimX);
+	}
+	else if (this->angulo == 180) {
+		return posiY - dimY;
+	}
+}

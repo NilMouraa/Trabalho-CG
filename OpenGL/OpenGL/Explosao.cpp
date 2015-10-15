@@ -11,7 +11,10 @@ Explosao::Explosao(float x,float y,float ang,int incM,float cresc){
 	terminou=false;
 	diminui=false;
 	fatorCresc=cresc; 
-	 
+	leParte('g');
+	leParte('m');
+	leParte('c');
+	leContornoLinha();
 }
 void Explosao::desenhaContornoParte(char parte) {
 	glPushMatrix();
@@ -20,13 +23,10 @@ void Explosao::desenhaContornoParte(char parte) {
 	float pontosX[50];
 	float pontosY[50];
 	int qtdPontos = 0;
-	//char url[]="tank1.txt";
-	FILE *arq =NULL;
 	float cooX, cooY;
 	float dimXaux;
 	float dimYaux;
-	char tipo;
-	arq = fopen("explosaoLinha.txt", "r");
+	char tipoPol;
 	if (parte == 'g') {
 		dimXaux = dimX;
 		dimYaux = dimY;/*
@@ -45,17 +45,18 @@ void Explosao::desenhaContornoParte(char parte) {
 							 glTranslatef(posiX+(dimX/2)-dimXaux/2, posiY+(dimY/2)-dimYaux/2, 0);
 							 glRotatef(angulo, 0, 0, 1);*/
 	}
-	if (arq == NULL)
-		printf("Erro, nao foi possivel abrir o arquivo\n");
-	else {
-		char tpAnt = 'z';
-		while ((fscanf(arq, "%c %f %f\n", &tipo, &cooX, &cooY)) != EOF)
+	
+		char tpAnt='z';
+		for(int cont=0;cont<qtdPontosTotalL;cont++)
 		{
-			if (tipo == tpAnt || tpAnt == 'z') {
+			tipoPol=idObjL[cont];
+			cooX=vetPontosXL[cont];
+			cooY=vetPontosYL[cont];
+			if (tipoPol == tpAnt || tpAnt == 'z') {
 				pontosX[qtdPontos] = cooX-0.5;
 				pontosY[qtdPontos] = cooY-0.5;
 				qtdPontos++;
-				tpAnt = tipo;
+				tpAnt = tipoPol;
 
 			}
 			else {
@@ -66,7 +67,7 @@ void Explosao::desenhaContornoParte(char parte) {
 					glVertex2f(pontosX[i] * dimXaux, pontosY[i] * dimYaux);
 				}
 				glEnd();
-				tpAnt = tipo;
+				tpAnt = tipoPol;
 				pontosX[0] = cooX-0.5;
 				pontosY[0] = cooY-0.5;
 				qtdPontos = 1;
@@ -79,11 +80,95 @@ void Explosao::desenhaContornoParte(char parte) {
 			glVertex2f(pontosX[i] * dimXaux, pontosY[i] * dimYaux);
 		}
 		glEnd();
-
+glPopMatrix();
+}
+void Explosao::leParte(char parte){
+	
+	FILE *arq = NULL;
+	if(parte=='g'){
+		arq = fopen("explosaoG.txt", "r");
+		qtdPontosTotalG = 0;
+		float cooX, cooY, corR, corG, corB, corRAnt, corGAnt, corBAnt;
+		char tipoPol;
+		if (arq == NULL)
+			printf("Erro, nao foi possivel abrir o arquivo\n");
+		else {
+			while ((fscanf(arq, "%f %f %f %c %f %f\n", &corR, &corG, &corB, &tipoPol, &cooX, &cooY)) != EOF)
+			{
+				vetCorRG.push_back(corR);
+				vetCorGG.push_back(corG);
+				vetCorBG.push_back(corB);
+				idObjG.push_back(tipoPol);
+				vetPontosXG.push_back(cooX);
+				vetPontosYG.push_back(cooY);
+				qtdPontosTotalG++;
+			}
+		}
+		fclose(arq);
+	}else if(parte=='m'){
+		arq = fopen("explosaoM.txt", "r");
+		qtdPontosTotalM = 0;
+		float cooX, cooY, corR, corG, corB, corRAnt, corGAnt, corBAnt;
+		char tipoPol;
+		if (arq == NULL)
+			printf("Erro, nao foi possivel abrir o arquivo\n");
+		else {
+			while ((fscanf(arq, "%f %f %f %c %f %f\n", &corR, &corG, &corB, &tipoPol, &cooX, &cooY)) != EOF)
+			{
+				vetCorRM.push_back(corR);
+				vetCorGM.push_back(corG);
+				vetCorBM.push_back(corB);
+				idObjM.push_back(tipoPol);
+				vetPontosXM.push_back(cooX);
+				vetPontosYM.push_back(cooY);
+				qtdPontosTotalM++;
+			}
+		}
+		fclose(arq);
+	}else if(parte=='c'){
+		arq = fopen("explosaoC.txt", "r");
+		qtdPontosTotalC = 0;
+		float cooX, cooY, corR, corG, corB, corRAnt, corGAnt, corBAnt;
+		char tipoPol;
+		if (arq == NULL)
+			printf("Erro, nao foi possivel abrir o arquivo\n");
+		else {
+			while ((fscanf(arq, "%f %f %f %c %f %f\n", &corR, &corG, &corB, &tipoPol, &cooX, &cooY)) != EOF)
+			{
+				vetCorRC.push_back(corR);
+				vetCorGC.push_back(corG);
+				vetCorBC.push_back(corB);
+				idObjC.push_back(tipoPol);
+				vetPontosXC.push_back(cooX);
+				vetPontosYC.push_back(cooY);
+				qtdPontosTotalC++;
+			}
+		}
+		fclose(arq);
 	}
-	fclose(arq);
-
-	glPopMatrix();
+	
+}
+void Explosao::leContornoLinha(){
+	
+	FILE *arq = NULL;
+		arq = fopen("explosaoLinha.txt", "r");
+		qtdPontosTotalL = 0;
+		float cooX, cooY;
+		char tipoPol;
+		if (arq == NULL)
+			printf("Erro, nao foi possivel abrir o arquivo\n");
+		else {
+			while ((fscanf(arq, "%c %f %f\n", &tipoPol, &cooX, &cooY)) != EOF)
+			{
+				idObjL.push_back(tipoPol);
+				vetPontosXL.push_back(cooX);
+				vetPontosYL.push_back(cooY);
+				qtdPontosTotalL++;
+			}
+		}
+		fclose(arq);
+	
+	
 }
 void Explosao::desenhaParte(char parte){
 	glPushMatrix();
@@ -92,42 +177,29 @@ void Explosao::desenhaParte(char parte){
 	float pontosX[50];
 	float pontosY[50];
 	int qtdPontos=0;
-	//char url[]="tank1.txt";
-	FILE *arq = NULL;
 	float cooX,cooY,corR,corG,corB,corRAnt,corGAnt,corBAnt;
 	float dimXaux;
 	float dimYaux;
-	char tipo;
+	char tipoPol;
 	if(parte=='g'){
-		arq = fopen("explosaoG.txt", "r");
 		dimXaux=dimX;
-		dimYaux=dimY;/*
-		glTranslatef(posiX, posiY, 0);
-		glRotatef(angulo, 0, 0, 1);*/
-	}else if(parte=='m'){
-		arq = fopen("explosaoM.txt", "r");
-		dimXaux=dimXmedio;
-		dimYaux=dimYmedio;/*
-		glTranslatef(posiX+(dimX/2)-dimXaux/2, posiY+(dimY/2)-dimYaux/2, 0);
-		glRotatef(angulo, 0, 0, 1);*/
-	}else if(parte=='c'){
-		arq = fopen("explosaoC.txt", "r");
-		dimXaux=dimXcentro;
-		dimYaux=dimYcentro;/*
-		glTranslatef(posiX+(dimX/2)-dimXaux/2, posiY+(dimY/2)-dimYaux/2, 0);
-		glRotatef(angulo, 0, 0, 1);*/
-	}
-	if(arq == NULL)
-		printf("Erro, nao foi possivel abrir o arquivo\n");
-	else{
+		dimYaux=dimY;
+		
 		char tpAnt='z';
-		while( (fscanf(arq,"%f %f %f %c %f %f\n", &corR,&corG,&corB,&tipo, &cooX, &cooY))!=EOF )
+		for(int cont=0;cont<qtdPontosTotalG;cont++)
 		{
-			if(tipo==tpAnt || tpAnt=='z'){
+			corR=vetCorRG[cont];
+			corG=vetCorGG[cont];
+			corB=vetCorBG[cont];
+			tipoPol=idObjG[cont];
+			cooX=vetPontosXG[cont];
+			cooY=vetPontosYG[cont];
+			
+			if(tipoPol==tpAnt || tpAnt=='z'){
 				pontosX[qtdPontos]=cooX-0.5;
 				pontosY[qtdPontos]=cooY-0.5;
 				qtdPontos++;
-				tpAnt=tipo;
+				tpAnt=tipoPol;
 				corRAnt=corR;
 				corGAnt=corG;
 				corBAnt=corB;
@@ -139,7 +211,7 @@ void Explosao::desenhaParte(char parte){
 					glVertex2f(pontosX[i]*dimXaux,pontosY[i]*dimYaux);
 				}
 				glEnd();
-				tpAnt=tipo;
+				tpAnt=tipoPol;
 				pontosX[0]=cooX-0.5;
 				pontosY[0]=cooY-0.5;
 				qtdPontos=1;
@@ -155,14 +227,101 @@ void Explosao::desenhaParte(char parte){
 		}
 		glEnd();
 
-	}
-	fclose(arq);
+		
+	}else if(parte=='m'){
+		dimXaux=dimXmedio;
+		dimYaux=dimYmedio;
+		char tpAnt='z';
+		for(int cont=0;cont<qtdPontosTotalM;cont++)
+		{
+			corR=vetCorRM[cont];
+			corG=vetCorGM[cont];
+			corB=vetCorBM[cont];
+			tipoPol=idObjM[cont];
+			cooX=vetPontosXM[cont];
+			cooY=vetPontosYM[cont];
+			
+			if(tipoPol==tpAnt || tpAnt=='z'){
+				pontosX[qtdPontos]=cooX-0.5;
+				pontosY[qtdPontos]=cooY-0.5;
+				qtdPontos++;
+				tpAnt=tipoPol;
+				corRAnt=corR;
+				corGAnt=corG;
+				corBAnt=corB;
 
+			}else{
+				glColor3f(corRAnt,corGAnt,corBAnt);
+				glBegin(GL_POLYGON);	
+				for(int i=qtdPontos-1;i>=0;i--){
+					glVertex2f(pontosX[i]*dimXaux,pontosY[i]*dimYaux);
+				}
+				glEnd();
+				tpAnt=tipoPol;
+				pontosX[0]=cooX-0.5;
+				pontosY[0]=cooY-0.5;
+				qtdPontos=1;
+				corRAnt=corR;
+				corGAnt=corG;
+				corBAnt=corB;
+			}
+		}
+		glColor3f(corRAnt,corGAnt,corBAnt);
+		glBegin(GL_POLYGON);	
+		for(int i=0;i<qtdPontos;i++){
+			glVertex2f(pontosX[i]*dimXaux,pontosY[i]*dimYaux);
+		}
+		glEnd();
+	}else if(parte=='c'){
+		dimXaux=dimXcentro;
+		dimYaux=dimYcentro;
+		char tpAnt='z';
+		for(int cont=0;cont<qtdPontosTotalC;cont++)
+		{
+			corR=vetCorRC[cont];
+			corG=vetCorGC[cont];
+			corB=vetCorBC[cont];
+			tipoPol=idObjC[cont];
+			cooX=vetPontosXC[cont];
+			cooY=vetPontosYC[cont];
+			
+			if(tipoPol==tpAnt || tpAnt=='z'){
+				pontosX[qtdPontos]=cooX-0.5;
+				pontosY[qtdPontos]=cooY-0.5;
+				qtdPontos++;
+				tpAnt=tipoPol;
+				corRAnt=corR;
+				corGAnt=corG;
+				corBAnt=corB;
+
+			}else{
+				glColor3f(corRAnt,corGAnt,corBAnt);
+				glBegin(GL_POLYGON);	
+				for(int i=qtdPontos-1;i>=0;i--){
+					glVertex2f(pontosX[i]*dimXaux,pontosY[i]*dimYaux);
+				}
+				glEnd();
+				tpAnt=tipoPol;
+				pontosX[0]=cooX-0.5;
+				pontosY[0]=cooY-0.5;
+				qtdPontos=1;
+				corRAnt=corR;
+				corGAnt=corG;
+				corBAnt=corB;
+			}
+		}
+		glColor3f(corRAnt,corGAnt,corBAnt);
+		glBegin(GL_POLYGON);	
+		for(int i=0;i<qtdPontos;i++){
+			glVertex2f(pontosX[i]*dimXaux,pontosY[i]*dimYaux);
+		}
+		glEnd();
+	}
+	
 	glPopMatrix();
 	desenhaContornoParte(parte);
 }
 void Explosao::desenha(){
-	cout << "ENTROU";
 	desenhaParte('g');
 	desenhaParte('m');
 	desenhaParte('c');

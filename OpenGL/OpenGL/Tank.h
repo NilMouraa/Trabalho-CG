@@ -9,6 +9,7 @@
 #include "Explosao.h" 
 #include "TiroEspecial.h"
 #include "TiroExp.h"
+#include <vector>
 //#include "TiroComum.h"
 using namespace std;
 
@@ -26,11 +27,19 @@ private:
     float velocidade;
     Explosao *explosao;
 	int tempoPraAtirar;
+	vector <float> vetPontosX;
+	vector <float> vetPontosY;
+	vector <char> idObj;
+	vector <float> vetCorR;
+	vector <float> vetCorG;
+	vector <float> vetCorB;
+	int qtdPontosTotal;
+	
 public:
     
     Tank(float x,float y,float ang,int tip);
 	Tank();
-	void Inicializa(float x, float y, float ang, int tip);
+	/*void Inicializa(float x, float y, float ang, int tip);*/
     void desenha();
     
     void move(float incremento);

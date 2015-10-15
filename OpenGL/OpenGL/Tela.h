@@ -22,6 +22,7 @@ public:
 	void addTankes		(Tank *t);
 	void aplicaExplosão	(float x, float y, float ang, int incM, float cresc);
 	bool semColisao		(Tank *tanque, float incremento, char direcao,int indiceT);
+	bool semColisao		(TiroExp *tExp, float incremento, char direcao, int indiceT);
 	int retornaQtdTanks	();
 	int retornaQtdBlocos();
 	void desenhaTankes  ();

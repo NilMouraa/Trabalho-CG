@@ -1,13 +1,72 @@
-﻿  main.cpp
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(144): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(145): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(146): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(207): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(208): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(216): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(321): warning C4244: '=': conversion from 'GLsizei' to 'GLfloat', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(322): warning C4244: '=': conversion from 'GLsizei' to 'GLfloat', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(336): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(341): error C2664: 'void glutSpecialUpFunc(void (__cdecl *)(int,int,int))': cannot convert argument 1 from 'void (__cdecl *)(unsigned char,int,int)' to 'void (__cdecl *)(int,int,int)'
-  c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(341): note: None of the functions with this name in scope match the target type
+﻿  Tank.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(21): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(27): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(33): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(39): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(45): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(52): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(58): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(66): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(61): warning C4101: 'corGAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(61): warning C4101: 'corBAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(61): warning C4101: 'corRAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(239): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(240): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(243): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(244): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(245): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(249): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(250): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(252): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(258): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(259): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(260): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(261): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(264): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(265): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(266): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(268): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(273): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(276): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(403): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(406): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(409): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(412): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(434): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(434): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(437): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(437): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(440): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(440): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(443): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(443): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(449): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(452): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(455): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(458): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(464): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(467): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(470): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(473): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(515): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(521): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(524): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(527): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(530): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(562): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(565): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(568): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(571): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(461): warning C4715: 'Tank::getPosiCentroX' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(475): warning C4715: 'Tank::getPosiCentroY' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(504): warning C4715: 'Tank::getPosiOrigemY' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(490): warning C4715: 'Tank::getPosiOrigemX' : not all control paths return a value
+  OpenGL.vcxproj -> C:\Users\Nil Martins\Documents\Visual Studio 2015\Projects\TP01_CGParte1\OpenGL\Debug\TrabalhoCG.exe

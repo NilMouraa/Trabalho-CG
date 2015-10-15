@@ -6,6 +6,7 @@
 #include <GL/glut.h>
 #include <math.h> 
 #include <iostream>
+#include <vector>
 using namespace std;
  
 class Explosao{
@@ -24,11 +25,41 @@ private:
 	bool terminou;
 	bool diminui;
 	float fatorCresc;
+	
+	vector <float> vetPontosXG;
+	vector <float> vetPontosYG;
+	vector <char> idObjG;
+	vector <float> vetCorRG;
+	vector <float> vetCorGG;
+	vector <float> vetCorBG;
+	int qtdPontosTotalG;
+	
+	vector <float> vetPontosXM;
+	vector <float> vetPontosYM;
+	vector <char> idObjM;
+	vector <float> vetCorRM;
+	vector <float> vetCorGM;
+	vector <float> vetCorBM;
+	int qtdPontosTotalM;
 
+	vector <float> vetPontosXC;
+	vector <float> vetPontosYC;
+	vector <char> idObjC;
+	vector <float> vetCorRC;
+	vector <float> vetCorGC;
+	vector <float> vetCorBC;
+	int qtdPontosTotalC;
+	
+	vector <float> vetPontosXL;
+	vector <float> vetPontosYL;
+	vector <char> idObjL;
+	int qtdPontosTotalL;
 public:
 	//Construtores
 	Explosao(float x,float y,float ang, int incM,float cresc);
 	void desenhaContornoParte(char parte);
+	void leParte(char parte);
+	void leContornoLinha();
 	void desenhaParte	(char parte);
 	void desenha		();
 

@@ -10,48 +10,47 @@ Tela::Tela	(int numFase) {
 	temP2 = false;
 
 	Player= new Tank(128, 1, 0, 6);
-    tankes.push_back(Player);
-	Tank *to = new Tank(290,25,0,3);
+	tankes.push_back(Player);
+	Tank *to = new Tank(290,19,0,3);
 	tankes.push_back(to);
 	Tank *to2 = new Tank(300,216,0,2);
-	
 	tankes.push_back(to2);
 	float DIM_X_BLOC = 18;
 	float DIM_Y_BLOC = 18;
-	
-		vector<float> pontoX;
-		vector<float> pontoY;
-		int qtdBlocos = 0;
-		//char url[]="tank1.txt";
-		FILE *arq = NULL;
-		float cooX, cooY;
-		
-		if (numFase == 1) {
-			arq = fopen("fase1.txt", "r");
+
+	vector<float> pontoX;
+	vector<float> pontoY;
+	int qtdBlocos = 0;
+	//char url[]="tank1.txt";
+	FILE *arq = NULL;
+	float cooX, cooY;
+
+	if (numFase == 1) {
+		arq = fopen("fase1.txt", "r");
+	}
+	else if (numFase == 2) {
+		arq = fopen("fase2.txt", "r");
+	}
+	else if (numFase == 3) {
+		arq = fopen("lengs.txt", "r");
+	}
+	if (arq == NULL)
+		printf("Erro, nao foi possivel abrir o arquivo\n");
+	else {
+
+		while ((fscanf(arq, "%f %f\n",&cooX, &cooY)) != EOF)
+		{
+			pontoX.push_back(cooX);
+			pontoY.push_back(cooY);
+			qtdBlocos++;
 		}
-		else if (numFase == 2) {
-			arq = fopen("fase2.txt", "r");
-		}
-		else if (numFase == 3) {
-			arq = fopen("lengs.txt", "r");
-		}
-		if (arq == NULL)
-			printf("Erro, nao foi possivel abrir o arquivo\n");
-		else {
-			
-			while ((fscanf(arq, "%f %f\n",&cooX, &cooY)) != EOF)
-			{
-				pontoX.push_back(cooX);
-				pontoY.push_back(cooY);
-				qtdBlocos++;
-			}
-		}
-		fclose(arq);
-		for(int j=0;j<qtdBlocos;j++){
-			blocos.push_back(new Bloco(pontoX[j]*DIM_X_BLOC,pontoY[j]*DIM_Y_BLOC, 0, DIM_X_BLOC, DIM_Y_BLOC));
-		}
-		
-		//MoveTankMetodo1(to2, 3, 1);
+	}
+	fclose(arq);
+	for(int j=0;j<qtdBlocos;j++){
+		blocos.push_back(new Bloco(pontoX[j]*DIM_X_BLOC,pontoY[j]*DIM_Y_BLOC, 0, DIM_X_BLOC, DIM_Y_BLOC));
+	}
+
+	//MoveTankMetodo1(to2, 3, 1);
 
 }
 Tela::~Tela	()
@@ -74,7 +73,7 @@ void Tela::addTankes		(Tank *t) {
 }
 bool Tela::semColisao		(Tank *T, float incremento, char direcao,int indiceT) {
 
-	
+
 	float posCentroX = T->getPosiCentroX(),
 		posCentroY = T->getPosiCentroY(),
 
@@ -83,7 +82,7 @@ bool Tela::semColisao		(Tank *T, float incremento, char direcao,int indiceT) {
 		dimXB = blocos[0]->getDimX(),
 		dimYB = blocos[0]->getDimY();
 
-	
+
 	if (direcao == 'd') {
 		if (posCentroX + 0.5*dimYT+incremento>=360) {
 			return false;
@@ -103,96 +102,259 @@ bool Tela::semColisao		(Tank *T, float incremento, char direcao,int indiceT) {
 			return false;
 		}
 	}
-	
-	
 
-		for (int i = 0; i < blocos.size(); i++) {
-			float posBlocoX = blocos[i]->getPosiX(),
-				posBlocoY = blocos[i]->getPosiY();
-			if (direcao == 'd') {
-				if ((  ( (    ((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB) )  &&  ((posCentroY - 0.5*dimYT) >= posBlocoY)     )     ||				  (    ((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB))   &&  ((posCentroY + 0.5*dimYT) >= posBlocoY)     )  )
-					&&  ((posCentroX+0.65*dimYT+incremento-1) > posBlocoX ) && ((posCentroX + 0.65*dimYT + incremento-1) < posBlocoX+dimXB)) ) {
-					return false;
-					
-				}
-			}
-			else if (direcao == 'e') {
-				if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
-					&& ((posCentroX - 0.65*dimYT - incremento+1) < posBlocoX+dimXB)&& ((posCentroX - 0.65*dimYT - incremento+1) > posBlocoX))) {
-					return false;
 
-				}
-			}
-			else if (direcao == 'c') {
-				if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
-					(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
-					&& ((posCentroY + 0.65*dimYT + incremento-1) > posBlocoY) && ((posCentroY + 0.65*dimYT + incremento-1) < posBlocoY+dimYB))) {
-					return false;
 
-				}
-			}
-			else if (direcao == 'b') {
-				if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
-					(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
-					&& ((posCentroY - 0.65*dimYT - incremento+1) > posBlocoY) && ((posCentroY - 0.65*dimYT - incremento+1) < posBlocoY + dimYB))) {
-					return false;
+	for (int i = 0; i < blocos.size(); i++) {
+		float posBlocoX = blocos[i]->getPosiX(),
+			posBlocoY = blocos[i]->getPosiY();
+		if (direcao == 'd') {
+			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
+				&& ((posCentroX + 0.65*dimYT + incremento) >= posBlocoX) && ((posCentroX + 0.65*dimYT + incremento) <= posBlocoX + dimXB))) {
+				return false;
 
-				}
 			}
-			
+		}
+		else if (direcao == 'e') {
+			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
+				&& ((posCentroX - 0.65*dimYT - incremento) <= posBlocoX + dimXB) && ((posCentroX - 0.65*dimYT - incremento) >= posBlocoX))) {
+				return false;
+
+			}
+		}
+		else if (direcao == 'c') {
+			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
+				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
+				&& ((posCentroY + 0.65*dimYT + incremento) >= posBlocoY) && ((posCentroY + 0.65*dimYT + incremento) <= posBlocoY + dimYB))) {
+				return false;
+
+			}
+		}
+		else if (direcao == 'b') {
+			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
+				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
+				&& ((posCentroY - 0.65*dimYT - incremento) >= posBlocoY) && ((posCentroY - 0.65*dimYT - incremento) <= posBlocoY + dimYB))) {
+				return false;
+
+			}
 		}
 
-		// FOR PARA TANQUES
-		int inicio = 0;
+	}
 
-		if (!temP2)
-			inicio = 1;
+	// FOR PARA TANQUES
+	int inicio = 0;
 
-		for (int i = inicio; i < tankes.size(); i++) {
-			if (i == indiceT)continue;
-			float posBlocoX = tankes[i]->getPosiOrigemX(),
-				posBlocoY = tankes[i]->getPosiOrigemY(),
-				dimXB = tankes[i]->getDimX(),
-				dimYB = tankes[i]->getDimY()*1.15;
-			if (direcao == 'd') {
-				if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
-					&& ((posCentroX + 0.65*dimYT + incremento) > posBlocoX) && ((posCentroX + 0.65*dimYT + incremento) < posBlocoX + dimXB))) {
+	if (!temP2)
+		inicio = 1;
+
+	for (int i = inicio; i < tankes.size(); i++) {
+		if (i == indiceT)continue;
+		float posBlocoX = tankes[i]->getPosiOrigemX(),
+			posBlocoY = tankes[i]->getPosiOrigemY(),
+			dimXB = tankes[i]->getDimX(),
+			dimYB = tankes[i]->getDimY();
+		if (direcao == 'd') {
+			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
+				&& ((posCentroX + 0.65*dimYT + incremento) > posBlocoX) && ((posCentroX + 0.65*dimYT + incremento) < posBlocoX + dimXB))) {
 					return false;
 
-				}
 			}
-			else if (direcao == 'e') {
-				if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
-					&& ((posCentroX - 0.65*dimYT - incremento) < posBlocoX + dimXB) && ((posCentroX - 0.65*dimYT - incremento) > posBlocoX))) {
-					return false;
-
-				}
-			}
-			else if (direcao == 'c') {
-				if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
-					(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
-					&& ((posCentroY + 0.65*dimYT + incremento) > posBlocoY) && ((posCentroY + 0.65*dimYT + incremento) < posBlocoY + dimYB))) {
-					return false;
-
-				}
-			}
-			else if (direcao == 'b') {
-				if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
-					(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
-					&& ((posCentroY - 0.65*dimYT - incremento) > posBlocoY) && ((posCentroY - 0.65*dimYT - incremento) < posBlocoY + dimYB))) {
-					return false;
-
-				}
-			}
-
 		}
-		return true;
+		else if (direcao == 'e') {
+			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
+				&& ((posCentroX - 0.65*dimYT - incremento) < posBlocoX + dimXB) && ((posCentroX - 0.65*dimYT - incremento) > posBlocoX))) {
+					return false;
+
+			}
+		}
+		else if (direcao == 'c') {
+			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
+				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
+				&& ((posCentroY + 0.65*dimYT + incremento) > posBlocoY) && ((posCentroY + 0.65*dimYT + incremento) < posBlocoY + dimYB))) {
+					return false;
+
+			}
+		}
+		else if (direcao == 'b') {
+			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
+				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
+				&& ((posCentroY - 0.65*dimYT - incremento) > posBlocoY) && ((posCentroY - 0.65*dimYT - incremento) < posBlocoY + dimYB))) {
+					return false;
+
+			}
+		}
+
+	}
+	return true;
 
 }
+bool Tela::semColisao		(TiroExp *T, float incremento, char direcao, int indiceT) {
 
+
+	float posCentroX = T->getPosiCentroX(),
+		posCentroY = T->getPosiCentroY(),
+
+		dimXT = T->getDimX(),
+		dimYT = T->getDimY(),
+		dimXB = blocos[0]->getDimX(),
+		dimYB = blocos[0]->getDimY();
+
+
+	if (direcao == 'd') {
+		if (posCentroX + 0.5*dimYT + incremento >= 360) {
+			return false;
+		}
+	}
+	else if (direcao == 'e') {
+		if (posCentroX - 0.5*dimYT - incremento <= 0) {
+			return false;
+		}
+	}
+	else if (direcao == 'c') {
+		if (posCentroY + 0.5*dimYT + incremento >= 252) {
+			return false;
+		}
+	}
+	else if (direcao == 'b') {
+		if (posCentroY - 0.5*dimYT - incremento <= 0) {
+			return false;
+		}
+	}
+
+
+
+	for (int i = 0; i < blocos.size(); i++) {
+		float posBlocoX = blocos[i]->getPosiX(),
+			posBlocoY = blocos[i]->getPosiY();
+		if (direcao == 'd') {
+			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
+				&& ((posCentroX + 0.65*dimYT + incremento - 1) > posBlocoX) && ((posCentroX + 0.65*dimYT + incremento - 1) < posBlocoX + dimXB))) {
+				return false;
+
+			}
+		}
+		else if (direcao == 'e') {
+			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
+				&& ((posCentroX - 0.65*dimYT - incremento + 1) < posBlocoX + dimXB) && ((posCentroX - 0.65*dimYT - incremento + 1) > posBlocoX))) {
+				return false;
+
+			}
+		}
+		else if (direcao == 'c') {
+			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
+				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
+				&& ((posCentroY + 0.65*dimYT + incremento - 1) > posBlocoY) && ((posCentroY + 0.65*dimYT + incremento - 1) < posBlocoY + dimYB))) {
+				return false;
+
+			}
+		}
+		else if (direcao == 'b') {
+			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
+				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
+				&& ((posCentroY - 0.65*dimYT - incremento + 1) > posBlocoY) && ((posCentroY - 0.65*dimYT - incremento + 1) < posBlocoY + dimYB))) {
+				return false;
+
+			}
+		}
+
+	}
+
+	// FOR PARA TANQUES
+	int inicio = 0;
+	int fim = tankes.size();
+
+	if (T->getEdeInimigo()) {
+		fim = 2;
+	}
+
+	if (!temP2)
+		inicio = 1;
+
+	for (int i = inicio; i < fim; i++) {
+		//if (i == indiceT)continue;
+		float posBlocoX = tankes[i]->getPosiOrigemX(),
+			posBlocoY = tankes[i]->getPosiOrigemY(),
+			dimXB = tankes[i]->getDimX(),
+			dimYB = tankes[i]->getDimY()/*1.15*/;
+		if (direcao == 'd') {
+			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
+				&& ((posCentroX + 0.65*dimYT + incremento) > posBlocoX) && ((posCentroX + 0.65*dimYT + incremento) < posBlocoX + dimXB))) {
+				return false;
+
+			}
+		}
+		else if (direcao == 'e') {
+			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
+				&& ((posCentroX - 0.65*dimYT - incremento) < posBlocoX + dimXB) && ((posCentroX - 0.65*dimYT - incremento) > posBlocoX))) {
+				return false;
+
+			}
+		}
+		else if (direcao == 'c') {
+			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
+				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
+				&& ((posCentroY + 0.65*dimYT + incremento) > posBlocoY) && ((posCentroY + 0.65*dimYT + incremento) < posBlocoY + dimYB))) {
+				return false;
+
+			}
+		}
+		else if (direcao == 'b') {
+			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
+				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
+				&& ((posCentroY - 0.65*dimYT - incremento) > posBlocoY) && ((posCentroY - 0.65*dimYT - incremento) < posBlocoY + dimYB))) {
+				return false;
+
+			}
+		}
+
+	}
+	// FOR PARA TIROS
+	
+
+	for (int i = 0; i < tiros.size(); i++) {
+		if (i == indiceT)continue;
+		float posBlocoX = tiros[i]->getPosiOrigemX(),
+			posBlocoY = tiros[i]->getPosiOrigemY(),
+			dimXB = tiros[i]->getDimX(),
+			dimYB = tiros[i]->getDimY();
+		if (direcao == 'd') {
+			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
+				&& ((posCentroX + 0.65*dimYT + incremento) > posBlocoX) && ((posCentroX + 0.65*dimYT + incremento) < posBlocoX + dimXB))) {
+				return false;
+
+			}
+		}
+		else if (direcao == 'e') {
+			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
+				&& ((posCentroX - 0.65*dimYT - incremento) < posBlocoX + dimXB) && ((posCentroX - 0.65*dimYT - incremento) > posBlocoX))) {
+				return false;
+
+			}
+		}
+		else if (direcao == 'c') {
+			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
+				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
+				&& ((posCentroY + 0.65*dimYT + incremento) > posBlocoY) && ((posCentroY + 0.65*dimYT + incremento) < posBlocoY + dimYB))) {
+				return false;
+
+			}
+		}
+		else if (direcao == 'b') {
+			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
+				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
+				&& ((posCentroY - 0.65*dimYT - incremento) > posBlocoY) && ((posCentroY - 0.65*dimYT - incremento) < posBlocoY + dimYB))) {
+				return false;
+
+			}
+		}
+
+	}
+	return true;
+
+}
 void Tela::desenhaTankes() {
 	glPushMatrix();
-
+	MoveTankInimigo(0.1);
 	int inicio = 0;
 
 	if (!temP2)
@@ -204,17 +366,23 @@ void Tela::desenhaTankes() {
 	glPopMatrix();
 }
 void Tela::desenhaBlocos() {
-glPushMatrix();
+	glPushMatrix();
 	for (int i = 0; i < blocos.size(); i++) {
 		blocos[i]->desenha();
 	}
-glPopMatrix();
+	glPopMatrix();
 }
 void Tela::desenhaTiros() {
 	glPushMatrix();
 	for (int i = 0; i < tiros.size(); i++) {
-		tiros[i]->desenha();
-		tiros[i]->Move(1);
+		if (!(semColisao(tiros[i], 1, tiros[i]->getDirecao(), i))) {
+			tiros[i]->setStatus('i');
+			
+		}
+		if(tiros[i] -> getStatus() != 'i'){
+			tiros[i]->desenha();
+			tiros[i]->Move(1);
+		}
 	}
 	glPopMatrix();
 }
@@ -328,101 +496,67 @@ void Tela::MoveTankMetodo2(Tank *t, float incremento, int indiceTank) {
 
 	float ang = t->getAngulo();
 
-	
-	if (ang == 0) {
-		if (t->getPosiX() > Player->getPosiX()) {
-			
-			if (semColisao(t, incremento, 'e', indiceTank)) {
-				t->viraEsquerda(incremento, true);
-			}
-		}
-		else if (t->getPosiX() < Player->getPosiX()) {
-			if (semColisao(t, incremento, 'd', indiceTank)) {
-				t->viraDireita(incremento, true);
-			}
-		}
-		else if (t->getPosiY() < Player->getPosiY()) {
-			if (semColisao(t, incremento, 'c', indiceTank)) {
-				t->viraCima(incremento, true);
-			}
-		}
-		else if (t->getPosiY() > Player->getPosiY()) {
-			if (semColisao(t, incremento, 'b', indiceTank)) {
-				t->viraBaixo(incremento, true);
-			}
-		}
-		
+	float deltaVert= t->getPosiCentroY()-Player->getPosiCentroY();
+	if (deltaVert<0)deltaVert = -1 * deltaVert;
+	float deltaHoriz=t->getPosiCentroX()-Player->getPosiCentroX();
+	if (deltaHoriz<0)deltaHoriz = -1 * deltaHoriz;
 
-	}
-	else if (ang == 180) {
-		if (t->getPosiX() > Player->getPosiX()) {
-			if (semColisao(t, incremento, 'e', indiceTank)) {
-				t->viraEsquerda(incremento, true);
-			}
+	if (deltaHoriz > deltaVert) {
+		if (t->getPosiCentroX() > Player->getPosiCentroX() && semColisao(t, incremento, 'e', indiceTank)) {
+			cout << "PLAYER MAIS ESQUERDA 0" << endl;
+			//if (semColisao(t, incremento, 'e', indiceTank)) {
+			t->viraEsquerda(incremento, true);
+			//}
+
 		}
-		else if (t->getPosiX() < Player->getPosiX()) {
-			if (semColisao(t, incremento, 'd', indiceTank)) {
-				t->viraDireita(incremento, true);
-			}
+		else if (t->getPosiCentroX() < Player->getPosiCentroX() && semColisao(t, incremento, 'd', indiceTank)) {
+			cout << "PLAYER MAIS DIREITA 0" << endl;
+
+			t->viraDireita(incremento, true);
+			//}
+
 		}
-		else if (t->getPosiY() < Player->getPosiY()) {
-			if (semColisao(t, incremento, 'c', indiceTank)) {
+		else
+			if (t->getPosiCentroY() < Player->getPosiCentroY() && semColisao(t, incremento, 'c', indiceTank)) {
+				cout << "PLAYER MAIS ACIMA 0" << endl;
+				/*if () {*/
 				t->viraCima(incremento, true);
+				//}
+
 			}
-		}
-		else if (t->getPosiY() > Player->getPosiY()) {
-			if (semColisao(t, incremento, 'b', indiceTank)) {
+			else if (t->getPosiCentroY() > Player->getPosiCentroY() && semColisao(t, incremento, 'b', indiceTank)) {
+				cout << "PLAYER MAIS ABAIXO 0" << endl;
+
 				t->viraBaixo(incremento, true);
 			}
+	}else {
+				if (t->getPosiCentroY() < Player->getPosiCentroY() && semColisao(t, incremento, 'c', indiceTank)) {
+					cout << "PLAYER MAIS ACIMA 0" << endl;
+					/*if () {*/
+					t->viraCima(incremento, true);
+					//}
+
+				}
+				else if (t->getPosiCentroY() > Player->getPosiCentroY() && semColisao(t, incremento, 'b', indiceTank)) {
+					cout << "PLAYER MAIS ABAIXO 0" << endl;
+
+					t->viraBaixo(incremento, true);
+				}else
+					if (t->getPosiCentroX() > Player->getPosiCentroX() && semColisao(t, incremento, 'e', indiceTank)) {
+						cout << "PLAYER MAIS ESQUERDA 0" << endl;
+						//if (semColisao(t, incremento, 'e', indiceTank)) {
+						t->viraEsquerda(incremento, true);
+						//}
+
+					}
+					else if (t->getPosiCentroX() < Player->getPosiCentroX() && semColisao(t, incremento, 'd', indiceTank)) {
+						cout << "PLAYER MAIS DIREITA 0" << endl;
+
+						t->viraDireita(incremento, true);
+						//}
+
+					}
 		}
-		
-	}
-	else if (ang == -90) {
-		if (t->getPosiX() > Player->getPosiX()) {
-			if (semColisao(t, incremento, 'e', indiceTank)) {
-				t->viraEsquerda(incremento, true);
-			}
-		}
-		else if (t->getPosiX() < Player->getPosiX()) {
-			if (semColisao(t, incremento, 'd', indiceTank)) {
-				t->viraDireita(incremento, true);
-			}
-		}
-		else if (t->getPosiY() < Player->getPosiY()) {
-			if (semColisao(t, incremento, 'c', indiceTank)) {
-				t->viraCima(incremento, true);
-			}
-		}
-		else if (t->getPosiY() > Player->getPosiY()) {
-			if (semColisao(t, incremento, 'b', indiceTank)) {
-				t->viraBaixo(incremento, true);
-			}
-		}
-		 
-	}
-	else if (ang == 90) {
-		if (t->getPosiX() > Player->getPosiX()) {
-			if (semColisao(t, incremento, 'e', indiceTank)) {
-				t->viraEsquerda(incremento, true);
-			}
-		}
-		else if (t->getPosiX() < Player->getPosiX()) {
-			if (semColisao(t, incremento, 'd', indiceTank)) {
-				t->viraDireita(incremento, true);
-			}
-		}
-		else if (t->getPosiY() < Player->getPosiY()) {
-			if (semColisao(t, incremento, 'c', indiceTank)) {
-				t->viraCima(incremento, true);
-			}
-		}
-		else if (t->getPosiY() > Player->getPosiY()) {
-			if (semColisao(t, incremento, 'b', indiceTank)) {
-				t->viraBaixo(incremento, true);
-			}
-		}
-		
-	}
 }
 
 void Tela::MoveTankPlayer(char direcao, float incremento){
@@ -440,8 +574,11 @@ void Tela::MoveTankPlayer(char direcao, float incremento){
 	}
 }
 
-void Tela::MoveTankInimigo(float incremento){
+void Tela::MoveTankInimigo(float incremento) {
 
+	for (int i = 2; i < tankes.size()-1; i++) {
+		MoveTankMetodo2(tankes[i], incremento, i);
+	}
 }
 
 void Tela::setPlayer2() {
@@ -449,32 +586,33 @@ void Tela::setPlayer2() {
 }
 
 void Tela::Atira(int pos){
-	int tipo=tankes[pos]->getTipo();
-	if(tipo==1)
-	{
-		tiros.push_back(tankes[pos]->atira(3));
+	if(tankes[pos]->getTempoPraAtirar()<0){
+		int tipo=tankes[pos]->getTipo();
+		if(tipo==1)
+		{
+			tiros.push_back(tankes[pos]->atira(3));
+		}
+		else if (tipo == 2)
+		{
+			tiros.push_back(tankes[pos]->atira(2));
+		}
+		else if (tipo == 3)
+		{
+			tiros.push_back(tankes[pos]->atira(2));
+		}
+		else if (tipo == 4)
+		{
+			tiros.push_back(tankes[pos]->atira(2));
+		}
+		else if (tipo == 5)
+		{
+			tiros.push_back(tankes[pos]->atira(2));
+		}
+		else if (tipo == 6)
+		{
+			tiros.push_back(tankes[pos]->atira(1));
+		}
 	}
-	else if (tipo == 2)
-	{
-		tiros.push_back(tankes[pos]->atira(2));
-	}
-	else if (tipo == 3)
-	{
-		tiros.push_back(tankes[pos]->atira(2));
-	}
-	else if (tipo == 4)
-	{
-		tiros.push_back(tankes[pos]->atira(2));
-	}
-	else if (tipo == 5)
-	{
-		tiros.push_back(tankes[pos]->atira(2));
-	}
-	else if (tipo == 6)
-	{
-		tiros.push_back(tankes[pos]->atira(1));
-	}
-	
 }
 
 void Tela::desenha() {

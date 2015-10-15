@@ -18,7 +18,9 @@ private:
 	float incrementoAngulo;
 	char direcao;
 	bool terminou;
+	bool deInimigo;
 	char tipo;
+	char status;
 	float velocidade;
 
 public:
@@ -33,14 +35,22 @@ public:
 	//***************SETS***************
 	void setDimX		(float tamanho);
 	void setDimY		(float tamanho);
+	void setStatus		(char s);
 	//***************GETS***************
 	float getPosiX();
 	float getPosiY();
 	float getAngulo();
 	float getDimX();
+	float getEdeInimigo();
 	float getDimY();
+	float getPosiCentroX();
+	float getPosiCentroY();
+	float getPosiOrigemX();
+	float getPosiOrigemY();
 
 	bool getTerminou();
+	char getStatus();
+	char getDirecao();
 	void Gira();
 	void Move(float incremento);
 	

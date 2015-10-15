@@ -8,105 +8,154 @@ Tank::Tank(float x, float y, float ang, int tip) {
 	posiX = x;
 	posiY = y;
 	angulo = ang;
-	dimX = 15;
-	dimY = 15;
+	dimX = 100;
+	dimY = 100;
 	status = 'a';
 	qtdTiroEspec = 100;
 	tipo = tip;
+	FILE *arq = NULL;
 	if (tip == 1) {
 		vida = 250;
 		velocidade = 2;
-		tempoPraAtirar=10;
+		tempoPraAtirar=100;
+			arq = fopen("tank1.txt", "r");
 	}
 	else if (tip == 2) {
 		vida = 250;
 		velocidade = 2;
-		tempoPraAtirar=10;
+		tempoPraAtirar=100;
+			arq = fopen("tank2.txt", "r");
 	}
 	else if (tip == 3) {
 		vida = 250;
 		velocidade = 3;
-		tempoPraAtirar=10;
+		tempoPraAtirar=100;
+			arq = fopen("tank3.txt", "r");
 	}
 	else if (tip == 4) {
 		vida = 250;
 		velocidade = 2;
-		tempoPraAtirar=10;
+		tempoPraAtirar=100;
+			arq = fopen("tank4.txt", "r");
 	}
 	else if (tip == 5) {
 		vida = 250;
 		velocidade = 2;
-		tempoPraAtirar=10;
+		tempoPraAtirar=100;
+			arq = fopen("tank5.txt", "r");
 	}
 
 	else if (tip == 6) {
 		vida = 250;
 		velocidade = 2;
-		tempoPraAtirar=10;
+		tempoPraAtirar=100;
+			arq = fopen("tankPlayer.txt", "r");
 	}
+	else if (tip == 7) {
+		vida = 250;
+		velocidade = 2;
+		tempoPraAtirar = 100;
+		arq = fopen("tankB.txt", "r");
+	}
+		qtdPontosTotal = 0;
+		float cooX, cooY, corR, corG, corB, corRAnt, corGAnt, corBAnt;
+		char tipoPol;
+		if (arq == NULL)
+			printf("Erro, nao foi possivel abrir o arquivo\n");
+		else {
+			while ((fscanf(arq, "%f %f %f %c %f %f\n", &corR, &corG, &corB, &tipoPol, &cooX, &cooY)) != EOF)
+			{
+				vetCorR.push_back(corR);
+				vetCorG.push_back(corG);
+				vetCorB.push_back(corB);
+				idObj.push_back(tipoPol);
+				vetPontosX.push_back((cooX));
+				vetPontosY.push_back((cooY));
+				qtdPontosTotal++;
+			}
+		}
+		fclose(arq);
 }
 Tank::Tank() {}
 
-void Tank::Inicializa(float x, float y, float ang, int tip) {
-	posiX = x;
-	posiY = y;
-	angulo = ang;
-	dimX = 15;
-	dimY = 15;
-	status = 'a';
-	qtdTiroEspec = 100;
-	tipo = tip;
-	if (tip == 1) {
-		vida = 250;
-		velocidade = 2;
-		tempoPraAtirar=10;
-	}
-	else if (tip == 2) {
-		vida = 250;
-		velocidade = 2;
-		tempoPraAtirar=10;
-	}
-	else if (tip == 3) {
-		vida = 250;
-		velocidade = 3;
-		tempoPraAtirar=10;
-	}
-	else if (tip == 4) {
-		vida = 250;
-		velocidade = 2;
-		tempoPraAtirar=10;
-	}
-	else if (tip == 5) {
-		vida = 250;
-		velocidade = 2;
-		tempoPraAtirar=10;
-	}
-
-	else if (tip == 6) {
-		vida = 250;
-		velocidade = 2;
-	}
-}
+//void Tank::Inicializa(float x, float y, float ang, int tip) {
+//	posiX = x;
+//	posiY = y;
+//	angulo = ang;
+//	dimX = 15;
+//	dimY = 15;
+//	status = 'a';
+//	qtdTiroEspec = 100;
+//	tipo = tip;
+//	FILE *arq = NULL;
+//	if (tip == 1) {
+//		vida = 250;
+//		velocidade = 2;
+//		tempoPraAtirar=100;
+//			arq = fopen("tank1.txt", "r");
+//	}
+//	else if (tip == 2) {
+//		vida = 250;
+//		velocidade = 2;
+//		tempoPraAtirar=100;
+//			arq = fopen("tank2.txt", "r");
+//	}
+//	else if (tip == 3) {
+//		vida = 250;
+//		velocidade = 3;
+//		tempoPraAtirar=100;
+//			arq = fopen("tank3.txt", "r");
+//	}
+//	else if (tip == 4) {
+//		vida = 250;
+//		velocidade = 2;
+//		tempoPraAtirar=100;
+//			arq = fopen("tank4.txt", "r");
+//	}
+//	else if (tip == 5) {
+//		vida = 250;
+//		velocidade = 2;
+//		tempoPraAtirar=100;
+//			arq = fopen("tank5.txt", "r");
+//	}
+//
+//	else if (tip == 6) {
+//		vida = 250;
+//		velocidade = 2;
+//			arq = fopen("tankPlayer.txt", "r");
+//	}
+//	else if (tip == 7) {
+//		
+//		vida = 250;
+//		velocidade = 2;
+//		arq = fopen("tankB.txt", "r");
+//	}
+//		qtdPontosTotal = 0;
+//		float cooX, cooY, corR, corG, corB, corRAnt, corGAnt, corBAnt;
+//		float yMinEst = -1;
+//		float yMaxEst = -1;
+//		char tipoPol;
+//		if (arq == NULL)
+//			printf("Erro, nao foi possivel abrir o arquivo\n");
+//		else {
+//			while ((fscanf(arq, "%f %f %f %c %f %f\n", &corR, &corG, &corB, &tipoPol, &cooX, &cooY)) != EOF)
+//			{
+//				vetCorR.push_back(corR);
+//				vetCorG.push_back(corG);
+//				vetCorB.push_back(corB);
+//				idObj.push_back(tipoPol);
+//				vetPontosX.push_back(cooX);
+//				vetPontosY.push_back(cooY);
+//				qtdPontosTotal++;
+//			}
+//		}
+//		fclose(arq);
+//	
+//}
 
 void  Tank::desenha() {
 	tempoPraAtirar--;
-	if(tempoPraAtirar==-1){
-		if (tipo == 1) {
-			tempoPraAtirar=10;
-		}
-		else if (tipo == 2) {
-			tempoPraAtirar=10;
-		}
-		else if (tipo == 3) {
-			tempoPraAtirar=10;
-		}
-		else if (tipo == 4) {
-			tempoPraAtirar=10;
-		}
-		else if (tipo == 5) {
-			tempoPraAtirar=10;
-		}	
-	}
+	
 	if ((status != 'm' && status != 'i') || (explosao->getDiminui() == false)) {
 
 		glPushMatrix();
@@ -116,36 +165,23 @@ void  Tank::desenha() {
 		float pontosX[20];
 		float pontosY[20];
 		int qtdPontos = 0;
-		//char url[]="tank1.txt";
-		FILE *arq = NULL;
 		float cooX, cooY, corR, corG, corB, corRAnt, corGAnt, corBAnt;
 		float yMinEst = -1;
 		float yMaxEst = -1;
 		char tipoPol;
-		if (tipo == 1) {
-			arq = fopen("tank1.txt", "r");
-		}
-		else if (tipo == 2) {
-			arq = fopen("tank2.txt", "r");
-		}
-		else if (tipo == 3) {
-			arq = fopen("tank3.txt", "r");
-		}
-		else if (tipo == 4) {
-			arq = fopen("tank4.txt", "r");
-		}
-		else if (tipo == 5) {
-			arq = fopen("tank5.txt", "r");
-		}
-		else if (tipo == 6) {
-			arq = fopen("tankPlayer.txt", "r");
-		}
-		if (arq == NULL)
-			printf("Erro, nao foi possivel abrir o arquivo\n");
-		else {
+		
+		
+		
 			char tpAnt = 'z';
-			while ((fscanf(arq, "%f %f %f %c %f %f\n", &corR, &corG, &corB, &tipoPol, &cooX, &cooY)) != EOF)
+			for(int cont=0;cont<qtdPontosTotal;cont++)
 			{
+				corR=vetCorR[cont];
+				corG=vetCorG[cont];
+				corB=vetCorB[cont];
+				tipoPol=idObj[cont];
+				cooX=vetPontosX[cont];
+				cooY=vetPontosY[cont];
+				
 				if (tipoPol == tpAnt || tpAnt == 'z') {
 					if (cooX == 0) {
 						if (yMinEst == -1) {
@@ -242,8 +278,7 @@ void  Tank::desenha() {
 			glEnd();
 			//_________________________________________________________________
 
-		}
-		fclose(arq);
+		
 		glPopMatrix();
 		if (status == 'm') {
 			explosao->desenha();
@@ -504,6 +539,25 @@ TiroEspecial* Tank::atiraEspecial() {
 TiroExp* Tank::atira(char tipo) {
 	//if (qtdTiroEspec > 0) {
 	TiroExp *te = NULL;
+
+	if(tempoPraAtirar<0){
+		if (tipo == 1) {
+			tempoPraAtirar=100;
+		}
+		else if (tipo == 2) {
+			tempoPraAtirar=100;
+		}
+		else if (tipo == 3) {
+			tempoPraAtirar=100;
+		}
+		else if (tipo == 4) {
+			tempoPraAtirar=100;
+		}
+		else if (tipo == 5) {
+			tempoPraAtirar=100;
+		}	
+	}
+
 	if (angulo == 90) {
 		te = new TiroExp(posiX - 1.15*dimY, posiY + 0.5*dimX, 'e', dimX*0.3, dimX*0.3,tipo);
 	}

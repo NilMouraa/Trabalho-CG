@@ -48,6 +48,9 @@
     <ClInclude Include="TiroExp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FimDeFase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bloco.cpp">
@@ -84,6 +87,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TiroExp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FimDeFase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

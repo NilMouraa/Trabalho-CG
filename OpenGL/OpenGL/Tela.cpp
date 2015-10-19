@@ -6,7 +6,7 @@
 
 Tela::Tela(int numFase) {
 	numeroFase = numFase;
-	tankesRestantes = 90;
+	tankesRestantes = 0;
 
 	Player2 = new Tank(164, 1, 0, 6);
 	tankes.push_back(Player2);
@@ -744,19 +744,19 @@ void Tela::Atira(int pos) {
 		}
 		else if (tipo == 2)
 		{
-			tiros.push_back(tankes[pos]->atira(2));
+			tiros.push_back(tankes[pos]->atira(3));
 		}
 		else if (tipo == 3)
 		{
-			tiros.push_back(tankes[pos]->atira(2));
+			tiros.push_back(tankes[pos]->atira(3));
 		}
 		else if (tipo == 4)
 		{
-			tiros.push_back(tankes[pos]->atira(2));
+			tiros.push_back(tankes[pos]->atira(3));
 		}
 		else if (tipo == 5)
 		{
-			tiros.push_back(tankes[pos]->atira(2));
+			tiros.push_back(tankes[pos]->atira(3));
 		}
 		else if (tipo == 6)
 		{
@@ -787,12 +787,12 @@ bool Tela::morreu() {
 }
 bool Tela::gameOver() {
 	if (temP2) {
-		if (tankes[0]->getQtdVida() == 0 && tankes[1]->getQtdVida() == 0) {
+		if (Player2->getQtdVida() == 0 && Player->getQtdVida() == 0) {
 			return true;
 		}
 		else return false;
 	}
-	else if (tankes[1]->getQtdVida() == 0) {
+	else if (Player->getQtdVida() == 0) {
 		return true;
 	}
 	else return false;
@@ -825,11 +825,26 @@ Tank* Tela::getP1() {
 Tank* Tela::getP2() {
 	return tankes[0];
 }
+
+
+
 void Tela::setP1(Tank *t) {
+	t->setStatus('a');
+	t->viraCima(0,true);
+	t->setPosiX(128);
+	t->setPosiY(1);
+	t->reiniciaVida();
 	tankes[1] = t;
+	Player = t;
 }
 void Tela::setP2(Tank *t) {
+	t->setStatus('a');
+	t->viraCima(0, true);
+	t->setPosiX(128);
+	t->setPosiY(1);
+	t->reiniciaVida();
 	tankes[0] = t;
+	Player2 = t;
 }
 
 int Tela::escolheTank() {
@@ -890,3 +905,4 @@ int Tela::escolheTank() {
 	}
 
 }
+

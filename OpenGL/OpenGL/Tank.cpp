@@ -422,6 +422,15 @@ void  Tank::setQtdTiroEspec(int qtd) {
 void  Tank::setDimX(float tamanho) { dimX = tamanho; }
 
 void  Tank::setDimY(float tamanho) { dimY = tamanho; }
+void Tank::setPosiX(float x){
+	posiX=x;
+}
+void Tank::setPosiY(float y){
+	posiY=y;
+}
+void Tank::reiniciaVida(){
+	vida=vidaCheia;
+}
 
 void  Tank::setStatus(char stat) {
 	status = stat;

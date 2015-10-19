@@ -5,7 +5,15 @@ TiroExp::TiroExp(float x,float y, char direc,float dmX,float dmY,int tipoTiro){
 	status = 'a';
 	posiX=x;
 	posiY=y;
-	angulo=0;
+	if(direc=='c'){
+	angulo=0;	
+	}else if(direc=='b'){
+	angulo=180;	
+	}else if(direc=='d'){
+	angulo=-90;	
+	}else if(direc=='e'){
+	angulo=90;	
+	}
 	direcao=direc;
 	dimX=dmX;
 	dimY=dmY;

@@ -79,6 +79,9 @@ public:
 	void setDimX(float tamanho);
 	void setDimY(float tamanho);
 	void setStatus(char stat);
+	void setPosiX(float x);
+	void setPosiY(float y);
+	void reiniciaVida();
 	
 	float getPosiCentroX();
 	float getPosiCentroY();

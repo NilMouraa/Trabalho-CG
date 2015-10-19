@@ -12,29 +12,35 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bloco.h" />
+    <ClInclude Include="Chefao.h" />
     <ClInclude Include="Explosao.h" />
     <ClInclude Include="FimDeFase.h" />
     <ClInclude Include="Final.h" />
+    <ClInclude Include="Fogo.h" />
     <ClInclude Include="GameOver.h" />
     <ClInclude Include="Introducao.h" />
     <ClInclude Include="Reinicio.h" />
     <ClInclude Include="Tank.h" />
     <ClInclude Include="Tela.h" />
+    <ClInclude Include="TelaChefao.h" />
     <ClInclude Include="TiroEspecial.h" />
     <ClInclude Include="TiroExp.h" />
     <ClInclude Include="Tutorial.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bloco.cpp" />
+    <ClCompile Include="Chefao.cpp" />
     <ClCompile Include="Explosao.cpp" />
     <ClCompile Include="FimDeFase.cpp" />
     <ClCompile Include="Final.cpp" />
+    <ClCompile Include="Fogo.cpp" />
     <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="Introducao.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Reinicio.cpp" />
     <ClCompile Include="Tank.cpp" />
     <ClCompile Include="Tela.cpp" />
+    <ClCompile Include="TelaChefao.cpp" />
     <ClCompile Include="TiroEspecial.cpp" />
     <ClCompile Include="TiroExp.cpp" />
     <ClCompile Include="Tutorial.cpp" />

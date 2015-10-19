@@ -33,10 +33,12 @@ GLfloat windowHeight;
 void Timer(int value);
 void RetanguloMenu(char op);
 
+void Desenha(void);
+
 //*************************************************
 
 
-Bloco      *b = new Bloco(50, 50, 0, DIM_X_BLOC, DIM_Y_BLOC);
+Bloco      *b  = new Bloco(50, 50, 0, DIM_X_BLOC, DIM_Y_BLOC);
 Bloco      *b1 = new Bloco(50, 68, 0, DIM_X_BLOC, DIM_Y_BLOC);
 Bloco      *b2 = new Bloco(50, 86, 0, DIM_X_BLOC, DIM_Y_BLOC);
 Bloco      *b3 = new Bloco(50, 104, 0, DIM_X_BLOC, DIM_Y_BLOC);
@@ -64,15 +66,15 @@ bool gameOverAtiva = false;
 bool reinicioAtiva = false;
 
 Introducao *intro = new Introducao();
-Tutorial   *Tuto = new Tutorial();
-Tank	   *t = new Tank(290, 100, 0, 1);
-Tank *p1=new Tank(290, 100, 0, 6);
-Tank *p2=new Tank(290, 100, 0, 6);
-Tela	   *tela = new Tela(1);
-GameOver   *go = new GameOver();
-Final      *f = new Final();
-Reinicio   *r = new Reinicio();
-TelaChefao *telaBoss;
+Tutorial   *Tuto  = new Tutorial();
+Tank	   *t     = new Tank(290, 100, 0, 7);
+Tank       *p1    = new Tank(290, 100, 0, 6);
+Tank       *p2    = new Tank(290, 100, 0, 6);
+Tela	   *tela  = new Tela(1);
+GameOver   *go    = new GameOver();
+Final      *f     = new Final();
+Reinicio   *r     = new Reinicio();
+TelaChefao *telaBoss = new TelaChefao(3);
 
 
 void keyboardUp(unsigned char key, int x, int y) {
@@ -80,7 +82,7 @@ void keyboardUp(unsigned char key, int x, int y) {
 	{
 	case 32:
 		tela->Atira(1);
-		break; 
+		break;
 	}
 }
 
@@ -111,7 +113,7 @@ void keyboardDown(unsigned char key, int x, int y) {
 	case 's':
 		tela->MoveTankPlayer('b',1);
 		break;
-	
+
 		//enter
 	case 13:
 		if (introAtiva) {
@@ -126,6 +128,7 @@ void keyboardDown(unsigned char key, int x, int y) {
 			introAtiva = false;
 			menuAtiva = false;
 		}
+		else if (fase1Ativa)tela->setPlayer2();
 		break;
 	case 'o':
 		if ((!introAtiva) && menuAtiva) {
@@ -299,6 +302,7 @@ void DesenhaMenu() {
 	glPopMatrix();
 }
 void Desenha(void) {
+	
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -337,7 +341,7 @@ void Desenha(void) {
 			}else if(tela->acabou()){
 				fase1Ativa=false;
 				bossFase1Ativa=true;
-				telaBoss=new TelaChefao(1)
+				telaBoss = new TelaChefao(1);
 			}
 		}
 	}else if(bossFase1Ativa){
@@ -386,7 +390,7 @@ void Desenha(void) {
 			}else if(tela->acabou()){
 				fase1Ativa=false;
 				bossFase2Ativa=true;
-				telaBoss=new TelaChefao(2)
+				telaBoss = new TelaChefao(2);
 			}
 		}
 	}else if(bossFase2Ativa){
@@ -421,7 +425,7 @@ void Desenha(void) {
 				r->desenha();
 			}
 		}else{
-			tela->desenha();
+		tela->desenha();
 			if(tela->morreu() && tela->gameOver()==false){
 				reinicioAtiva=true;
 				p1=tela->getP1();
@@ -435,7 +439,7 @@ void Desenha(void) {
 			}else if(tela->acabou()){
 				fase3Ativa=false;
 				bossFase3Ativa=true;
-				telaBoss=new TelaChefao(3)
+				telaBoss = new TelaChefao(3);
 			}
 		}
 	}else if(bossFase3Ativa){

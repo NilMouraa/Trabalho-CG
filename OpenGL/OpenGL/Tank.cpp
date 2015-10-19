@@ -8,56 +8,86 @@ Tank::Tank(float x, float y, float ang, int tip) {
 	posiX = x;
 	posiY = y;
 	angulo = ang;
-	dimX = 100;
-	dimY = 100;
+	dimX = 15;
+	dimY = 15;
 	status = 'a';
 	qtdTiroEspec = 100;
+	qtdPontosTotal = 0;
+	qtdPontuacao = 0;
+	vidasGanhas=0;
 	tipo = tip;
+	qtdVidas = 5;
 	FILE *arq = NULL;
 	if (tip == 1) {
-		vida = 250;
+		vida = 20;
+		vidaCheia=vida;
 		velocidade = 2;
 		tempoPraAtirar=100;
 			arq = fopen("tank1.txt", "r");
 	}
 	else if (tip == 2) {
-		vida = 250;
+		vida = 20;
+		vidaCheia=vida;
 		velocidade = 2;
 		tempoPraAtirar=100;
 			arq = fopen("tank2.txt", "r");
 	}
 	else if (tip == 3) {
-		vida = 250;
+		vida = 20;
+		vidaCheia=vida;
 		velocidade = 3;
 		tempoPraAtirar=100;
 			arq = fopen("tank3.txt", "r");
 	}
 	else if (tip == 4) {
-		vida = 250;
+		vida = 20;
+		vidaCheia=vida;
 		velocidade = 2;
 		tempoPraAtirar=100;
 			arq = fopen("tank4.txt", "r");
 	}
 	else if (tip == 5) {
-		vida = 250;
+		vida = 20;
+		vidaCheia=vida;
 		velocidade = 2;
 		tempoPraAtirar=100;
 			arq = fopen("tank5.txt", "r");
 	}
 
 	else if (tip == 6) {
-		vida = 250;
+		vida = 100;
+		vidaCheia=vida;
 		velocidade = 2;
-		tempoPraAtirar=100;
-			arq = fopen("tankPlayer.txt", "r");
+		tempoPraAtirar=10;
+		arq = fopen("tankPlayer.txt", "r");
+		qtdVidas=5;
 	}
 	else if (tip == 7) {
-		vida = 250;
+		vida = 20;
+		vidaCheia=vida;
 		velocidade = 2;
-		tempoPraAtirar = 100;
-		arq = fopen("tankB.txt", "r");
+		tempoPraAtirar=100;
+			arq = fopen("tankQuad.txt", "r");
+			f1=new Fogo(0.0625*dimX, 0.9375*dimY,45,0,0.2,4*(dimY/15),2*(dimY/15),4*(dimY/15),2*(dimY/15),0.125*dimX,3*(dimY/15));
+			f2=new Fogo(0.0625*dimX, 0.0625*dimY,135,0,0.2,4*(dimY/15),2*(dimY/15),4*(dimY/15),2*(dimY/15),0.125*dimX,3*(dimY/15));
+			f3=new Fogo(0.9375*dimX, 0.9375*dimY,-45,0,0.2,4*(dimY/15),2*(dimY/15),4*(dimY/15),2*(dimY/15),0.125*dimX,3*(dimY/15));
+			f4=new Fogo(0.9375*dimX, 0.0625*dimY,225,0,0.2,4*(dimY/15),2*(dimY/15),4*(dimY/15),2*(dimY/15),0.125*dimX,3*(dimY/15));
 	}
-		qtdPontosTotal = 0;
+	else if (tip == 8) {
+		vida = 20;
+		vidaCheia=vida;
+		velocidade = 2;
+		tempoPraAtirar=100;
+			arq = fopen("tankBruto2.txt", "r");
+			f1=new Fogo(0.7425*dimX, dimY,0,0,0.2,4*(dimY/15),2*(dimY/15),4*(dimY/15),2*(dimY/15),0.1*dimX,3*(dimY/15));
+			f2=new Fogo(0.2475*dimX,dimY,0,0,0.2,4*(dimY/15),2*(dimY/15),4*(dimY/15),2*(dimY/15),0.1*dimX,3*(dimY/15));
+			f3=new Fogo(0.2475*dimX, 0,-180,0,0.2,4*(dimY/15),2*(dimY/15),4*(dimY/15),2*(dimY/15),0.1*dimX,3*(dimY/15));
+			f4=new Fogo(0.7425*dimX, 0,-180,0,0.2,4*(dimY/15),2*(dimY/15),4*(dimY/15),2*(dimY/15),0.1*dimX,3*(dimY/15));
+			f5=new Fogo(0, 0.495*dimY,90,0,0.2,4*(dimY/15),2*(dimY/15),4*(dimY/15),2,0.1*dimX,3*(dimY/15));
+			f6=new Fogo(dimX, 0.495*dimY,-90,0,0.2,4*(dimY/15),2*(dimY/15),4*(dimY/15),2*(dimY/15),0.1*dimX,3*(dimY/15));
+
+	}
+		
 		float cooX, cooY, corR, corG, corB, corRAnt, corGAnt, corBAnt;
 		char tipoPol;
 		if (arq == NULL)
@@ -69,89 +99,15 @@ Tank::Tank(float x, float y, float ang, int tip) {
 				vetCorG.push_back(corG);
 				vetCorB.push_back(corB);
 				idObj.push_back(tipoPol);
-				vetPontosX.push_back((cooX));
-				vetPontosY.push_back((cooY));
+				vetPontosX.push_back(cooX);
+				vetPontosY.push_back(cooY);
 				qtdPontosTotal++;
 			}
 		}
 		fclose(arq);
 }
-Tank::Tank() {}
+//Tank::Tank() {}
 
-//void Tank::Inicializa(float x, float y, float ang, int tip) {
-//	posiX = x;
-//	posiY = y;
-//	angulo = ang;
-//	dimX = 15;
-//	dimY = 15;
-//	status = 'a';
-//	qtdTiroEspec = 100;
-//	tipo = tip;
-//	FILE *arq = NULL;
-//	if (tip == 1) {
-//		vida = 250;
-//		velocidade = 2;
-//		tempoPraAtirar=100;
-//			arq = fopen("tank1.txt", "r");
-//	}
-//	else if (tip == 2) {
-//		vida = 250;
-//		velocidade = 2;
-//		tempoPraAtirar=100;
-//			arq = fopen("tank2.txt", "r");
-//	}
-//	else if (tip == 3) {
-//		vida = 250;
-//		velocidade = 3;
-//		tempoPraAtirar=100;
-//			arq = fopen("tank3.txt", "r");
-//	}
-//	else if (tip == 4) {
-//		vida = 250;
-//		velocidade = 2;
-//		tempoPraAtirar=100;
-//			arq = fopen("tank4.txt", "r");
-//	}
-//	else if (tip == 5) {
-//		vida = 250;
-//		velocidade = 2;
-//		tempoPraAtirar=100;
-//			arq = fopen("tank5.txt", "r");
-//	}
-//
-//	else if (tip == 6) {
-//		vida = 250;
-//		velocidade = 2;
-//			arq = fopen("tankPlayer.txt", "r");
-//	}
-//	else if (tip == 7) {
-//		
-//		vida = 250;
-//		velocidade = 2;
-//		arq = fopen("tankB.txt", "r");
-//	}
-//		qtdPontosTotal = 0;
-//		float cooX, cooY, corR, corG, corB, corRAnt, corGAnt, corBAnt;
-//		float yMinEst = -1;
-//		float yMaxEst = -1;
-//		char tipoPol;
-//		if (arq == NULL)
-//			printf("Erro, nao foi possivel abrir o arquivo\n");
-//		else {
-//			while ((fscanf(arq, "%f %f %f %c %f %f\n", &corR, &corG, &corB, &tipoPol, &cooX, &cooY)) != EOF)
-//			{
-//				vetCorR.push_back(corR);
-//				vetCorG.push_back(corG);
-//				vetCorB.push_back(corB);
-//				idObj.push_back(tipoPol);
-//				vetPontosX.push_back(cooX);
-//				vetPontosY.push_back(cooY);
-//				qtdPontosTotal++;
-//			}
-//		}
-//		fclose(arq);
-//	
-//}
 
 void  Tank::desenha() {
 	tempoPraAtirar--;
@@ -161,6 +117,22 @@ void  Tank::desenha() {
 		glPushMatrix();
 		glTranslatef(posiX, posiY, 0);
 		glRotatef(angulo, 0, 0, 1);
+
+		if(tipo==7){
+			f1->desenha();
+			f2->desenha();
+			f3->desenha();
+			f4->desenha();
+		}else if(tipo==8){
+			f1->desenha();
+			f2->desenha();
+			f3->desenha();
+			f4->desenha();
+			f5->desenha();
+			f6->desenha();
+		}
+
+
 
 		float pontosX[20];
 		float pontosY[20];
@@ -235,7 +207,7 @@ void  Tank::desenha() {
 			}
 			glEnd();
 			//ESTEIRA ______________________________________________________________
-
+			if(tipo!=7 && tipo!=8){
 			for (float i = yMinEst*dimY/*-0.1*dimY*/; i < yMaxEst*dimY; i += 0.1*dimY) {
 				glColor3f(0.4, 0.4, 0.4);
 				glBegin(GL_QUADS);
@@ -276,9 +248,23 @@ void  Tank::desenha() {
 			glVertex2f(0.9*dimX, yMinEst*dimY/*-0.1*dimY*/);
 			glVertex2f(dimX, yMinEst*dimY/*-0.1*dimY*/);
 			glEnd();
+			}
 			//_________________________________________________________________
-
-		
+			glColor3f(1,0,0);
+			glBegin(GL_POLYGON);
+				glVertex2f(1,-1);
+				glVertex2f(1,-2);
+				glVertex2f(dimX-1,-2);
+				glVertex2f(dimX-1,-1);
+			glEnd();
+			glColor3f(0,1,0);
+			glBegin(GL_POLYGON);
+				glVertex2f(1,-1);
+				glVertex2f(1,-2);
+				glVertex2f((dimX-1)*(vida/vidaCheia),-2);
+				glVertex2f((dimX-1)*(vida/vidaCheia),-1);
+			glEnd();
+			glColor3f(1,1,1);
 		glPopMatrix();
 		if (status == 'm') {
 			explosao->desenha();
@@ -315,7 +301,7 @@ void  Tank::move(float incremento) {
 
 }
 void  Tank::viraDireita(float incremento, bool podeAndar) {
-	if (podeAndar) {
+	//if (podeAndar) {
 		if (angulo == 0) {
 			posiY += dimX;
 		}
@@ -331,11 +317,11 @@ void  Tank::viraDireita(float incremento, bool podeAndar) {
 				move(incremento);
 			}
 			angulo = -90;
-	}
+	//}
 }
 void  Tank::viraEsquerda(float incremento, bool podeAndar) {
 	//cout << "ANGULO: " << this->getAngulo();
-	if (podeAndar) {
+	//if (podeAndar) {
 		if (angulo == 0) {
 			posiX += dimY;
 		}
@@ -350,11 +336,11 @@ void  Tank::viraEsquerda(float incremento, bool podeAndar) {
 			move(incremento);
 		}
 		angulo = 90;
-	}
+//	}
 }
 void  Tank::viraCima(float incremento, bool podeAndar) {
 	//cout << "ANGULO: " << this->getAngulo();
-	if (podeAndar) {
+	//if (podeAndar) {
 		if (angulo == 90) {
 			posiX -= dimY;
 		}
@@ -371,11 +357,11 @@ void  Tank::viraCima(float incremento, bool podeAndar) {
 			move(incremento);
 		}
 		angulo = 0;
-	}
+	//}
 }
 void  Tank::viraBaixo(float incremento, bool podeAndar) {
 	//cout << "ANGULO: " << this->getAngulo();
-	if (podeAndar) {
+	//if (podeAndar) {
 		if (angulo == 90) {
 			posiY += dimX;
 		}
@@ -392,13 +378,14 @@ void  Tank::viraBaixo(float incremento, bool podeAndar) {
 			move(incremento);
 		}
 		angulo = 180;
-	}
+	//}
 }
 
 void  Tank::recebeDano(float dano) {
 	vida -= dano;
 	if (vida <= 0) {
 		status = 'm';
+		qtdVidas--;
 		if (angulo == 0) {
 			explosao = new Explosao(posiX + 0.5*dimX, posiY + 0.5*dimY, 0, 3, 3);
 		}
@@ -411,6 +398,15 @@ void  Tank::recebeDano(float dano) {
 		else if (angulo == 180) {
 			explosao = new Explosao(posiX - 0.5*dimX, posiY - 0.5*dimY, 0, 3, 3);
 		}
+	}
+
+}
+
+void Tank::recebePontos(float p){
+	qtdPontuacao+=p;
+	if(qtdPontuacao>=((vidasGanhas+1)*10000)){
+		qtdVidas++;	
+		vidasGanhas++;
 	}
 
 }
@@ -430,6 +426,7 @@ void  Tank::setDimY(float tamanho) { dimY = tamanho; }
 void  Tank::setStatus(char stat) {
 	status = stat;
 	if (stat == 'm') {
+		qtdVidas--;
 		if (this->angulo == 0) {
 			explosao = new Explosao(posiX + 0.5*dimX, posiY + 0.5*dimY, 0, dimY/3, 4);
 		}
@@ -512,7 +509,10 @@ float  Tank::getDimX() { return dimX; }
 float  Tank::getDimY() { return dimY; }
 char  Tank::getStatus() { return status; }
 int  Tank::getTipo() { return tipo; }
-int  Tank::getVida() { return vida; }
+float  Tank::getVida() { return vida; }
+int  Tank::getQtdVida() { return qtdVidas; }
+float  Tank::getQtdPontuacao() { return qtdPontuacao; }
+
 
 TiroEspecial* Tank::atiraEspecial() {
 	//if (qtdTiroEspec > 0) {

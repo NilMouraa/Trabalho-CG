@@ -11,6 +11,7 @@ TiroExp::TiroExp(float x,float y, char direc,float dmX,float dmY,int tipoTiro){
 	dimY=dmY;
 	tipo=tipoTiro;
 	terminou=false;
+	P1 = false;
 	if (tipo == 3) {
 		deInimigo = true;
 	}
@@ -18,12 +19,15 @@ TiroExp::TiroExp(float x,float y, char direc,float dmX,float dmY,int tipoTiro){
 	incrementoAngulo=1;
 	if (tipo == 1) {
 		velocidade = 1;
+		potencia = 20;
 	}
 	else if (tipo == 2) {
 		velocidade = 1;
+		potencia = 20;
 	}
 	else if (tipo == 3) {
 		velocidade = 1;
+		potencia = 20;
 	}
 }
 void TiroExp::desenhaTipo2(){
@@ -291,4 +295,14 @@ float  TiroExp::getPosiOrigemY() {
 	else if (this->angulo == 180) {
 		return posiY - dimY;
 	}
+}
+
+float TiroExp::getPotencia() {
+	return potencia;
+}
+void TiroExp::setEP1(bool Ep1) {
+	P1 = Ep1;
+}
+bool TiroExp::getEP1(){
+	return P1;
 }

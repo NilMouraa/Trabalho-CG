@@ -19,9 +19,12 @@ private:
 	char direcao;
 	bool terminou;
 	bool deInimigo;
+	bool P1;
 	char tipo;
 	char status;
 	float velocidade;
+	float potencia;
+
 
 public:
 	//Construtores
@@ -47,12 +50,15 @@ public:
 	float getPosiCentroY();
 	float getPosiOrigemX();
 	float getPosiOrigemY();
-
+	float getPotencia();
 	bool getTerminou();
 	char getStatus();
 	char getDirecao();
 	void Gira();
 	void Move(float incremento);
+	void setEP1(bool Ep1);
+	bool getEP1();
+
 	
 };
 #endif

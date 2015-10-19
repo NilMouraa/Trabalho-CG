@@ -51,6 +51,15 @@
     <ClInclude Include="FimDeFase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TelaChefao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Fogo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chefao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bloco.cpp">
@@ -90,6 +99,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FimDeFase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaChefao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Fogo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chefao.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

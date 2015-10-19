@@ -1,24 +1,4 @@
-﻿  Bloco.cpp
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\bloco.cpp(26): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\bloco.cpp(40): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\bloco.cpp(41): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\bloco.cpp(43): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\bloco.cpp(46): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\bloco.cpp(48): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-  Generating Code...
-  Compiling...
-  main.cpp
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(83): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(148): warning C4244: '=' : conversion from 'GLfloat' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(149): warning C4244: '=' : conversion from 'GLfloat' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(150): warning C4244: '=' : conversion from 'GLfloat' to 'int', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(211): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(212): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(220): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(327): warning C4244: '=' : conversion from 'GLsizei' to 'GLfloat', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(328): warning C4244: '=' : conversion from 'GLsizei' to 'GLfloat', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(342): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-  Tutorial.cpp
+﻿  Tutorial.cpp
 c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tutorial.cpp(14): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
 c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tutorial.cpp(15): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
 c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tutorial.cpp(16): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
@@ -96,26 +76,734 @@ c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\
 c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tutorial.cpp(205): warning C4305: 'argument' : truncation from 'double' to 'float'
 c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tutorial.cpp(245): warning C4305: 'argument' : truncation from 'double' to 'float'
 c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tutorial.cpp(247): warning C4305: 'argument' : truncation from 'double' to 'float'
-  Tela.cpp
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(29): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  TiroExp.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(40): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(41): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(43): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(44): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(48): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(49): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(51): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(52): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(64): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(65): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(67): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(68): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(72): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(73): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(75): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(76): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(94): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
           c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(32): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(35): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(41): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(99): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
           c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(63): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(63): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(69): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(108): warning C4018: '<' : signed/unsigned mismatch
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(150): warning C4018: '<' : signed/unsigned mismatch
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(226): warning C4018: '<' : signed/unsigned mismatch
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(314): warning C4018: '<' : signed/unsigned mismatch
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(357): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(363): warning C4018: '<' : signed/unsigned mismatch
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(370): warning C4018: '<' : signed/unsigned mismatch
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(377): warning C4018: '<' : signed/unsigned mismatch
-c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(579): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(102): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(103): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(117): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(118): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(148): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(153): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(156): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(157): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(172): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(173): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(272): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(281): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(290): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(293): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+  TiroEspecial.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(19): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(20): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(30): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(31): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(34): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(35): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(36): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(37): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(38): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(46): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(47): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(57): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(58): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(61): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(62): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(63): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(64): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(65): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(73): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(74): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(84): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(85): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(88): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(89): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(90): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(91): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(92): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(101): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(102): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(112): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(113): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(116): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(117): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(118): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(119): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroespecial.cpp(120): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+  TelaChefao.cpp
+  Tela.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(52): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(55): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(58): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(64): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(141): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(141): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(147): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(187): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(229): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(307): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(367): warning C4805: '==' : unsafe mix of type 'float' and type 'bool' in operation
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(384): warning C4805: '==' : unsafe mix of type 'float' and type 'bool' in operation
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(401): warning C4805: '==' : unsafe mix of type 'float' and type 'bool' in operation
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(417): warning C4805: '==' : unsafe mix of type 'float' and type 'bool' in operation
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(433): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(481): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(487): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(511): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(518): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(727): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(802): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(814): warning C4018: '<' : signed/unsigned mismatch
+  Tank.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(26): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(33): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(40): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(47): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(54): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(62): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(70): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(71): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(71): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(72): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(72): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(73): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(73): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(74): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(74): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(81): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(82): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(82): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(83): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(83): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(84): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(84): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(85): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(85): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(86): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(86): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(87): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(87): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(96): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(91): warning C4101: 'corGAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(91): warning C4101: 'corBAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(91): warning C4101: 'corRAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(211): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(212): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(215): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(216): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(217): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(221): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(222): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(224): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(230): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(231): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(232): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(233): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(236): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(237): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(238): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(240): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(245): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(248): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(390): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(393): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(396): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(399): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(431): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(431): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(434): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(434): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(437): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(437): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(440): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(440): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(446): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(449): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(452): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(455): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(461): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(464): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(467): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(470): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(521): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(524): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(527): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(530): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(562): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(565): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(568): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(571): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+  Reinicio.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\reinicio.cpp(30): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\reinicio.cpp(39): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\reinicio.cpp(108): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\reinicio.cpp(117): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\reinicio.cpp(189): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\reinicio.cpp(191): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\reinicio.cpp(193): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\reinicio.cpp(195): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\reinicio.cpp(200): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\reinicio.cpp(202): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+  main.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(98): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(164): warning C4244: '=' : conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(165): warning C4244: '=' : conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(166): warning C4244: '=' : conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(227): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(228): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(236): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(487): warning C4244: '=' : conversion from 'GLsizei' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(488): warning C4244: '=' : conversion from 'GLsizei' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\main.cpp(502): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+  Introducao.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(22): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(114): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(117): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(135): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(137): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(139): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(141): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(150): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(155): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(161): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(165): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(172): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(173): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(174): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(175): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(176): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(181): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(182): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(183): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(184): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\introducao.cpp(185): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+  GameOver.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\gameover.cpp(62): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\gameover.cpp(65): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\gameover.cpp(100): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\gameover.cpp(104): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\gameover.cpp(108): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\gameover.cpp(112): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\gameover.cpp(173): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\gameover.cpp(175): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\gameover.cpp(177): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+  Fogo.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(38): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(39): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(40): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(41): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(42): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(46): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(47): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(48): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(49): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(50): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(51): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(55): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(57): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(58): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(59): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(60): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(64): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(65): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(66): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(67): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(68): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(69): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(73): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(74): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(75): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(76): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(77): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(81): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(82): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(83): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(84): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(85): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(87): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(88): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(89): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(90): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fogo.cpp(91): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+  Final.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(65): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(69): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(140): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(143): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(146): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(149): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(195): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(198): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(260): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(262): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(264): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(266): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(295): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(304): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\final.cpp(317): warning C4018: '<' : signed/unsigned mismatch
+  FimDeFase.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(47): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(52): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(65): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(137): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(142): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(155): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(218): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(219): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(220): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(221): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(222): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(226): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(227): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(228): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(229): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(230): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(231): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(235): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(237): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(238): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(239): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(240): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(244): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(245): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(246): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(247): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(248): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(249): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(253): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(254): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(255): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(256): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(257): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(261): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(262): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(263): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(264): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(265): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(267): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(268): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(269): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(270): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\fimdefase.cpp(271): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+  Explosao.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(56): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(57): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(71): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(72): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(89): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(96): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(109): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(116): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(129): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(136): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(91): warning C4101: 'corGAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(91): warning C4101: 'corBAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(91): warning C4101: 'corRAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(111): warning C4101: 'corGAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(111): warning C4101: 'corBAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(111): warning C4101: 'corRAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(131): warning C4101: 'corGAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(131): warning C4101: 'corBAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(131): warning C4101: 'corRAnt' : unreferenced local variable
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(154): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(161): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(199): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(200): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(215): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(216): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(245): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(246): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(261): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(262): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(289): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(290): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(305): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\explosao.cpp(306): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+  Chefao.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(41): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(42): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(43): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(44): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(45): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(48): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(49): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(50): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(51): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(52): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(55): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(56): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(57): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(58): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(59): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(63): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(64): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(65): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(66): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(67): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(68): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(69): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(70): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(78): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(79): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(82): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(83): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(84): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(85): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(88): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(89): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(90): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(91): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(92): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(95): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(96): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(97): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(98): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(99): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(103): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(104): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(105): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(106): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(109): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(111): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(114): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(115): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(116): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(117): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(122): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(123): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(124): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(125): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(126): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(127): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(128): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(129): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(130): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(131): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(132): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(134): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(135): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(136): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(137): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(138): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(139): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(140): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(141): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(147): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(148): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(149): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(150): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(154): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(155): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(156): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(157): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(180): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(182): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(184): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(193): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(195): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(199): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(201): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(202): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(204): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(208): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(210): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(211): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(212): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(213): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(214): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(215): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(219): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(220): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(221): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(222): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(223): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(224): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(227): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(229): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(230): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(231): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(234): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(235): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(236): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(239): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(240): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(241): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(245): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(246): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(247): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(248): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(249): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(250): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(251): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(257): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(259): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(260): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(261): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(262): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(265): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(266): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(267): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(268): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(273): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(274): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(275): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(276): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(279): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(280): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(281): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(282): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(289): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(290): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(291): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(292): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(295): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(296): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(297): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(298): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(306): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(307): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(308): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(309): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(315): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(316): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(317): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(318): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(319): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(320): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(321): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(322): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(323): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(324): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(325): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(326): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(327): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(328): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(329): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(330): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(331): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(332): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(333): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(334): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(359): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(378): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(380): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(381): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(382): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(383): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(386): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(387): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(388): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(389): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(392): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(393): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(394): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(395): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(398): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(399): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(400): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(401): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(404): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(405): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(406): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(407): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(410): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(411): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(412): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(413): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(416): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(417): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(418): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(419): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(423): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(424): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(425): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(426): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(427): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(428): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(429): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(430): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(431): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(432): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(433): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(434): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(435): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(436): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(437): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(438): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(439): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(440): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(441): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(442): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(455): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(457): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(458): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(459): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(460): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(464): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(465): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(466): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(467): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(471): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(473): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(474): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(475): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(480): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(481): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(482): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(486): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(488): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(489): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(490): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(491): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(492): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(493): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(494): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(495): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(499): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(500): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(501): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(505): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(506): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(507): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(508): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(509): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(510): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(511): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(512): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(515): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(517): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(518): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(519): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(520): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(524): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(525): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(526): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(527): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(531): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(533): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(534): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(535): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(536): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(540): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(541): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(542): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(543): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(545): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(556): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(557): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(560): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(561): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(562): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(566): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(567): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(569): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(575): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(576): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(577): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(578): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(581): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(582): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(583): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(585): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(590): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(593): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(743): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(746): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(749): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(752): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(774): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(774): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(777): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(777): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(780): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(780): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(783): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(783): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(789): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(792): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(795): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(798): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(804): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(807): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(810): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(813): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(855): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(861): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(864): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(867): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(870): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(902): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(905): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(908): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(911): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+  Bloco.cpp
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\bloco.cpp(26): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\bloco.cpp(40): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\bloco.cpp(41): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\bloco.cpp(43): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\bloco.cpp(46): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\bloco.cpp(48): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
   Generating Code...
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(801): warning C4715: 'Chefao::getPosiCentroX' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(815): warning C4715: 'Chefao::getPosiCentroY' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(830): warning C4715: 'Chefao::getPosiOrigemX' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\chefao.cpp(844): warning C4715: 'Chefao::getPosiOrigemY' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(458): warning C4715: 'Tank::getPosiCentroX' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(472): warning C4715: 'Tank::getPosiCentroY' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(487): warning C4715: 'Tank::getPosiOrigemX' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tank.cpp(501): warning C4715: 'Tank::getPosiOrigemY' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tela.cpp(892): warning C4715: 'Tela::escolheTank' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(284): warning C4715: 'TiroExp::getPosiOrigemX' : not all control paths return a value
+c:\users\nil martins\documents\visual studio 2015\projects\tp01_cgparte1\opengl\opengl\tiroexp.cpp(298): warning C4715: 'TiroExp::getPosiOrigemY' : not all control paths return a value
   OpenGL.vcxproj -> C:\Users\Nil Martins\Documents\Visual Studio 2015\Projects\TP01_CGParte1\OpenGL\Debug\TrabalhoCG.exe

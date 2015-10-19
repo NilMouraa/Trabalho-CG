@@ -1,6 +1,6 @@
 #pragma once
-#ifndef TANK_H
-#define	TANK_H
+#ifndef Chefao_H
+#define	Chefao_H
 #include <stdio.h>
 #include <string.h>
 #include <GL/glut.h>
@@ -9,47 +9,33 @@
 #include "Explosao.h" 
 #include "TiroEspecial.h"
 #include "TiroExp.h"
-#include "Fogo.h"
-#include <vector>
 //#include "TiroComum.h"
 using namespace std;
 
-class Tank{
+class Chefao{
 private:
-	Fogo *f1;
-	Fogo *f2;
-	Fogo *f3;
-	Fogo *f4;
-	Fogo *f5;
-	Fogo *f6;
     float posiX;
     float posiY;
     float dimX;
     float dimY;
     float angulo;
     float vida;
-	float vidaCheia;
     int qtdTiroEspec;
     char status;
     int tipo;
     float velocidade;
     Explosao *explosao;
 	int tempoPraAtirar;
-	float 	qtdPontuacao;
-	vector <float> vetPontosX;
-	vector <float> vetPontosY;
-	vector <char> idObj;
-	vector <float> vetCorR;
-	vector <float> vetCorG;
-	vector <float> vetCorB;
-	int 	qtdPontosTotal;
-	int vidasGanhas;
-	int qtdVidas;
-	
 public:
     
-    Tank(float x,float y,float ang,int tip);
-	//Tank();
+    Chefao(float x,float y,float ang,int tip);
+	
+	void desenhaChefao1();
+	void desenhaChefao2();
+	void desenhaChefao3();
+	void desenhaChefao4();
+	void desenhaEsteira(float yMinEst,float yMaxEst);
+	
     void desenha();
     
     void move(float incremento);
@@ -63,8 +49,6 @@ public:
     void viraBaixo(float incremento,bool podeAndar);
        
     void recebeDano(float dano);
-	
-	void recebePontos(float p);
     
 	void aumentaVida(float incremento);
 	/*
@@ -94,9 +78,7 @@ public:
 	float getDimY();
 	char getStatus();
 	int getTipo();
-	float getVida();
-	int getQtdVida();
-	float getQtdPontuacao();
+	int getVida();
 	TiroEspecial* atiraEspecial();
 	TiroExp* atira(char tipo);
     

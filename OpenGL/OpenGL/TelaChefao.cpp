@@ -13,7 +13,7 @@ TelaChefao::TelaChefao(int numFase) {
 	Player = new Tank(128, 1, 0, 6);
 
 	if (numFase == 1) {
-		boss = new Chefao(250, 250, 180, 4);
+		boss = new Chefao(250, 250, 180, 3);
 	}
 	else
 		if (numFase == 2) {
@@ -22,7 +22,7 @@ TelaChefao::TelaChefao(int numFase) {
 		}
 		else
 			if (numFase == 3) {
-				boss = new Chefao(172.5, 250, 180, 3);
+				boss = new Chefao(172.5, 250, 180, 4);
 			}
 	
 
@@ -268,7 +268,7 @@ bool TelaChefao::semColisao(TiroExp *T, float incremento, char direcao, int indi
 
 	
 	// FOR PARA TANQUES
-	if (Player2->getStatus() != 'i' && temP2) {
+	if (Player2->getStatus() != 'i' && temP2 && T->getEdeInimigo()) {
 		float posBlocoX = Player2->getPosiOrigemX(),
 			posBlocoY = Player2->getPosiOrigemY(),
 			dimXB = Player2->getDimX(),
@@ -276,14 +276,16 @@ bool TelaChefao::semColisao(TiroExp *T, float incremento, char direcao, int indi
 		if (direcao == 'd') {
 			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
 				&& ((posCentroX + 0.6*dimYT + incremento) > posBlocoX) && ((posCentroX + 0.6*dimYT + incremento) < posBlocoX + dimXB))) {
-				return false;
+					Player2->recebeDano(T->getPotencia());
+					return false;
 
 			}
 		}
 		else if (direcao == 'e') {
 			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
 				&& ((posCentroX - 0.6*dimYT - incremento) < posBlocoX + dimXB) && ((posCentroX - 0.6*dimYT - incremento) > posBlocoX))) {
-				return false;
+				Player2->recebeDano(T->getPotencia());
+					return false;
 
 			}
 		}
@@ -291,7 +293,8 @@ bool TelaChefao::semColisao(TiroExp *T, float incremento, char direcao, int indi
 			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
 				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
 				&& ((posCentroY + 0.6*dimYT + incremento) > posBlocoY) && ((posCentroY + 0.6*dimYT + incremento) < posBlocoY + dimYB))) {
-				return false;
+				Player2->recebeDano(T->getPotencia());
+					return false;
 
 			}
 		}
@@ -299,12 +302,13 @@ bool TelaChefao::semColisao(TiroExp *T, float incremento, char direcao, int indi
 			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
 				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
 				&& ((posCentroY - 0.6*dimYT - incremento) > posBlocoY) && ((posCentroY - 0.6*dimYT - incremento) < posBlocoY + dimYB))) {
-				return false;
+				Player2->recebeDano(T->getPotencia());
+					return false;
 
 			}
 		}
 	}
-	if (Player->getStatus() != 'i') {
+	if (Player->getStatus() != 'i' && T->getEdeInimigo()) {
 		float posBlocoX = Player->getPosiOrigemX(),
 			posBlocoY = Player->getPosiOrigemY(),
 			dimXB = Player->getDimX(),
@@ -312,14 +316,16 @@ bool TelaChefao::semColisao(TiroExp *T, float incremento, char direcao, int indi
 		if (direcao == 'd') {
 			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
 				&& ((posCentroX + 0.6*dimYT + incremento) > posBlocoX) && ((posCentroX + 0.6*dimYT + incremento) < posBlocoX + dimXB))) {
-				return false;
+				Player->recebeDano(T->getPotencia());
+					return false;
 
 			}
 		}
 		else if (direcao == 'e') {
 			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
 				&& ((posCentroX - 0.6*dimYT - incremento) < posBlocoX + dimXB) && ((posCentroX - 0.6*dimYT - incremento) > posBlocoX))) {
-				return false;
+				Player->recebeDano(T->getPotencia());
+					return false;
 
 			}
 		}
@@ -327,7 +333,8 @@ bool TelaChefao::semColisao(TiroExp *T, float incremento, char direcao, int indi
 			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
 				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
 				&& ((posCentroY + 0.6*dimYT + incremento) > posBlocoY) && ((posCentroY + 0.6*dimYT + incremento) < posBlocoY + dimYB))) {
-				return false;
+				Player->recebeDano(T->getPotencia());
+					return false;
 
 			}
 		}
@@ -335,12 +342,13 @@ bool TelaChefao::semColisao(TiroExp *T, float incremento, char direcao, int indi
 			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
 				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
 				&& ((posCentroY - 0.6*dimYT - incremento) > posBlocoY) && ((posCentroY - 0.6*dimYT - incremento) < posBlocoY + dimYB))) {
-				return false;
+				Player->recebeDano(T->getPotencia());
+					return false;
 
 			}
 		}
 	}
-	if (boss->getStatus() != 'i') {
+	if (boss->getStatus() != 'i' && T->getEdeInimigo()==false) {
 		float posBlocoX = boss->getPosiOrigemX(),
 			posBlocoY = boss->getPosiOrigemY(),
 			dimXB = boss->getDimX(),
@@ -348,14 +356,18 @@ bool TelaChefao::semColisao(TiroExp *T, float incremento, char direcao, int indi
 		if (direcao == 'd') {
 			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
 				&& ((posCentroX + 0.6*dimYT + incremento) > posBlocoX) && ((posCentroX + 0.6*dimYT + incremento) < posBlocoX + dimXB))) {
-				return false;
+				boss->recebeDano(T->getPotencia());
+				if(T->getEP1())Player->recebePontos(T->getPotencia());else Player2->recebePontos(T->getPotencia());
+					return false;
 
 			}
 		}
 		else if (direcao == 'e') {
 			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
 				&& ((posCentroX - 0.6*dimYT - incremento) < posBlocoX + dimXB) && ((posCentroX - 0.6*dimYT - incremento) > posBlocoX))) {
-				return false;
+				boss->recebeDano(T->getPotencia());
+				if(T->getEP1())Player->recebePontos(T->getPotencia());else Player2->recebePontos(T->getPotencia());
+					return false;
 
 			}
 		}
@@ -363,7 +375,9 @@ bool TelaChefao::semColisao(TiroExp *T, float incremento, char direcao, int indi
 			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
 				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
 				&& ((posCentroY + 0.6*dimYT + incremento) > posBlocoY) && ((posCentroY + 0.6*dimYT + incremento) < posBlocoY + dimYB))) {
-				return false;
+				boss->recebeDano(T->getPotencia());
+				if(T->getEP1())Player->recebePontos(T->getPotencia());else Player2->recebePontos(T->getPotencia());
+					return false;
 
 			}
 		}
@@ -371,7 +385,9 @@ bool TelaChefao::semColisao(TiroExp *T, float incremento, char direcao, int indi
 			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
 				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
 				&& ((posCentroY - 0.6*dimYT - incremento) > posBlocoY) && ((posCentroY - 0.6*dimYT - incremento) < posBlocoY + dimYB))) {
-				return false;
+				boss->recebeDano(T->getPotencia());
+				if(T->getEP1())Player->recebePontos(T->getPotencia());else Player2->recebePontos(T->getPotencia());
+					return false;
 
 			}
 		}
@@ -726,7 +742,7 @@ void TelaChefao::setP1(Tank *t) {
 void TelaChefao::setP2(Tank *t) {
 	t->setStatus('a');
 	t->viraCima(0, true);
-	t->setPosiX(128);
+	t->setPosiX(164);
 	t->setPosiY(1);
 	//t->reiniciaVida();
 	Player2 = t;

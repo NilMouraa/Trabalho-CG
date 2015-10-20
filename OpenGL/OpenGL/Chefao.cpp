@@ -15,17 +15,22 @@ Chefao::Chefao(float x, float y, float ang, int tip) {
 	if (tip == 1) {
 		vida = 250;
 		velocidade = 2;
-		tempoPraAtirar=100;
+		tempoPraAtirar=1000;
 	}
 	else if (tip == 2) {
 		vida = 250;
 		velocidade = 2;
-		tempoPraAtirar=100;
+		tempoPraAtirar=1000;
 	}
 	else if (tip == 3) {
 		vida = 250;
 		velocidade = 3;
-		tempoPraAtirar=100;
+		tempoPraAtirar=1000;
+	}
+	else if (tip == 4) {
+		vida = 250;
+		velocidade = 3;
+		tempoPraAtirar=1000;
 	}
 }
 
@@ -899,16 +904,16 @@ TiroExp* Chefao::atira(char tipo) {
 	}
 
 	if (angulo == 90) {
-		te = new TiroExp(posiX - 1.15*dimY, posiY + 0.5*dimX, 'e', dimX*0.3, dimX*0.3,tipo);
+		te = new TiroExp(posiX - 1.15*dimY, posiY + 0.5*dimX, 'e', dimX*0.2, dimX*0.2,tipo);
 	}
 	else if (angulo == -90) {
-		te = new TiroExp(posiX + 1.15*dimY, posiY - 0.5*dimX, 'd', dimX*0.3, dimX*0.3, tipo);
+		te = new TiroExp(posiX + 1.15*dimY, posiY - 0.5*dimX, 'd', dimX*0.2, dimX*0.2, tipo);
 	}
 	else if (angulo == 0) {
-		te = new TiroExp(posiX + 0.5*dimX, posiY + 1.15*dimY, 'c', dimX*0.3, dimX*0.3, tipo);
+		te = new TiroExp(posiX + 0.5*dimX, posiY + 1.15*dimY, 'c', dimX*0.2, dimX*0.2, tipo);
 	}
 	else if (angulo == 180) {
-		te = new TiroExp(posiX - 0.5*dimX, posiY - 1.15*dimY, 'b', dimX*0.3, dimX*0.3, tipo);
+		te = new TiroExp(posiX - 0.5*dimX, posiY - 1.15*dimY, 'b', dimX*0.2, dimX*0.2, tipo);
 	}
 	//qtdTiroEspec--;
 	//te->desenha(xfinal, yfinal);

@@ -2,34 +2,47 @@
 #include <iostream>
 //#define	FimDeFase_H
 using namespace std;
-FimDeFase::FimDeFase() {
-	posiXTopoP;
-    posiYTopoP;
-    posiXBaseP;
-    posiYBaseP;
-    dimXTopoP;
-    dimYTopoP;
-    dimXBaseP;
-    dimYBaseP;
-	posiXTopoI;
-    posiYTopoI;
-    posiXBaseI;
-    posiYBaseI;
-    dimXTopoI;
-    dimYTopoI;
-    dimXBaseI;
-    dimYBaseI;
-    status;
-	velocCrescFogoX=2;
-	velocCrescFogoY=2;
-	limiteSobeFogoX=75;
-	limiteDesceFogoX=25;
-	limiteSobeFogoY=75;
-	limiteDesceFogoY=25;
-	dimXFogo=50;
-	dimYFogo=50;
+FimDeFase::FimDeFase(int numeroFase) {
+	fase=numeroFase;
+	posiXTopoP=235;
+    posiYTopoP=77.5;
+    posiXBaseP=250;
+    posiYBaseP=40;
+    dimXTopoP=75;
+    dimYTopoP=100;
+    dimXBaseP=100;
+    dimYBaseP=37.5;
+	posiXTopoI=5;
+    posiYTopoI=85;
+    posiXBaseI=35;
+    posiYBaseI=10;
+    dimXTopoI=150;
+    dimYTopoI=200;
+    dimXBaseI=200;
+    dimYBaseI=75;
+    status='a';
+	framesMax=1000;
+	contFrames=1;
+	velocCrescFogoX=0.0;
+	velocCrescFogoY=0.4;
+	limiteSobeFogoX=60;
+	limiteDesceFogoX=40;
+	limiteSobeFogoY=100;
+	limiteDesceFogoY=80;
+	dimXFogo=80;
+	dimYFogo=90;
 	crescendoX=true;
 	crescendoY=true;
+	velocCrescFogoX2=0.00;
+	velocCrescFogoY2=0.4;
+	limiteSobeFogoX2=200;
+	limiteDesceFogoX2=180;
+	limiteSobeFogoY2=150;
+	limiteDesceFogoY2=75;
+	dimXFogo2=190;
+	dimYFogo2=100;
+	crescendoX2=true;
+	crescendoY2=true;
 }
 
 void FimDeFase::desenhaParteGuindaste(float posX,float posY,char qual) {
@@ -44,15 +57,21 @@ void FimDeFase::desenhaParteGuindaste(float posX,float posY,char qual) {
 		float dimXGuind;
 		float dimYGuind;
 		if(qual=='p'){
-			arq = fopen("correntefinal.txt", "r");
+			arq = fopen("correntefinalP.txt", "r");
 			dimXGuind=dimXTopoP;
 			dimYGuind=dimYTopoP;
 		}else
 		if(qual=='i'){
-			arq = fopen("correntefinalI.txt", "r");
+			if(fase==1){
+				arq = fopen("correntefinalI1.txt", "r");			
+			}else if(fase==2){
+				arq = fopen("correntefinalI2.txt", "r");			
+			}else if(fase==3){
+				arq = fopen("correntefinalI3.txt", "r");			
+			}
 			dimXGuind=dimXTopoI;
 			dimYGuind=dimYTopoI;
-			glRotatef(180, 0, 0, 1);
+			//glRotatef(180, 0, 0, 1);
 		}		
 		float cooX, cooY, corR, corG, corB, corRAnt, corGAnt, corBAnt;
 		float yMinEst = -1;
@@ -135,14 +154,20 @@ void FimDeFase::desenhaParteBase(float posX,float posY,char qual) {
 		float dimYBase;
 		if(qual=='p'){
 			arq = fopen("pontosBase.txt", "r");
-			dimXBase =dimXTopoP;
-			dimYBase =dimYTopoP;
+			dimXBase=dimXBaseP;
+			dimYBase=dimYBaseP;
 		}else
 		if(qual=='i'){
-			arq = fopen("pontosBaseI.txt", "r");
-			dimXBase =dimXTopoI;
-			dimYBase =dimYTopoI;
-			glRotatef(180, 0, 0, 1);
+			if(fase==1){
+				arq = fopen("pontosBaseI.txt", "r");			
+			}else if(fase==2){
+				arq = fopen("pontosBaseI2.txt", "r");			
+			}else if(fase==3){
+				arq = fopen("pontosBaseI3.txt", "r");			
+			}
+			dimXBase=dimXBaseI;
+			dimYBase=dimYBaseI;
+			//glRotatef(180, 0, 0, 1);
 		}		
 		float cooX, cooY, corR, corG, corB, corRAnt, corGAnt, corBAnt;
 		float yMinEst = -1;
@@ -212,7 +237,8 @@ void FimDeFase::desenhaParteBase(float posX,float posY,char qual) {
 		glPopMatrix();
 }
 void FimDeFase::desenhaFogo(float posX,float posY){
-	
+	glPushMatrix();
+	glTranslatef(posX,posY,0);
 	glBegin(GL_POLYGON);
 		glColor3f(1,0,0);
 		glVertex2f(-0.4*dimXFogo,0.6*dimYFogo);
@@ -269,15 +295,108 @@ void FimDeFase::desenhaFogo(float posX,float posY){
 		glVertex2f(0.3*dimXFogo,0.4*dimYFogo);
 		glVertex2f(0.4*dimXFogo,0.6*dimYFogo);
 		glVertex2f(0.5*dimXFogo,0);
-	glEnd();	
-}	
+	glEnd();
+
+glPopMatrix();	
+}
+void FimDeFase::desenhaFogo2(float posX,float posY){
+	glPushMatrix();
+	glTranslatef(posX,posY,0);
+	glBegin(GL_POLYGON);
+		glColor3f(1,0,0);
+		glVertex2f(-0.4*dimXFogo2,0.6*dimYFogo2);
+		glVertex2f(-0.3*dimXFogo2,0.4*dimYFogo2);
+		glColor3f(0.8,0.6,0);
+		glVertex2f(-0.3*dimXFogo2,0);
+		glVertex2f(-0.5*dimXFogo2,0);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glColor3f(1,0,0);
+		glVertex2f(-0.3*dimXFogo2,0.4*dimYFogo2);
+		glVertex2f(-0.2*dimXFogo2,0.8*dimYFogo2);
+		glVertex2f(-0.1*dimXFogo2,0.6*dimYFogo2);
+		glColor3f(0.8,0.6,0);
+		glVertex2f(-0.1*dimXFogo2,0);
+		glVertex2f(-0.3*dimXFogo2,0);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glColor3f(1,0,0);
+		glVertex2f(-0.1*dimXFogo2,0.6*dimYFogo2);
+		glVertex2f(0,dimYFogo2);
+		glVertex2f(0.1*dimXFogo2,0.6*dimYFogo2);
+		glColor3f(0.8,0.6,0);
+		glVertex2f(0.1*dimXFogo2,0);
+		glVertex2f(-0.1*dimXFogo2,0);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glColor3f(1,0,0);
+		glVertex2f(0.1*dimXFogo2,0.6*dimYFogo2);
+		glVertex2f(0.2*dimXFogo2,0.8*dimYFogo2);
+		glVertex2f(0.3*dimXFogo2,0.4*dimYFogo2);
+		glColor3f(0.8,0.6,0);
+		glVertex2f(0.3*dimXFogo2,0);
+		glVertex2f(0.1*dimXFogo2,0);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glColor3f(1,0,0);
+		glVertex2f(0.3*dimXFogo2,0.4*dimYFogo2);
+		glVertex2f(0.4*dimXFogo2,0.6*dimYFogo2);
+		glColor3f(0.8,0.6,0);
+		glVertex2f(0.5*dimXFogo2,0);
+		glVertex2f(0.3*dimXFogo2,0);
+	glEnd();
+	glColor3f(1,1,1);
+	glBegin(GL_LINE_LOOP);
+		glVertex2f(-0.5*dimXFogo2,0);
+		glVertex2f(-0.4*dimXFogo2,0.6*dimYFogo2);
+		glVertex2f(-0.3*dimXFogo2,0.4*dimYFogo2);
+		glVertex2f(-0.2*dimXFogo2,0.8*dimYFogo2);
+		glVertex2f(-0.1*dimXFogo2,0.6*dimYFogo2);
+		glVertex2f(0,dimYFogo2);
+		glVertex2f(0.1*dimXFogo2,0.6*dimYFogo2);
+		glVertex2f(0.2*dimXFogo2,0.8*dimYFogo2);
+		glVertex2f(0.3*dimXFogo2,0.4*dimYFogo2);
+		glVertex2f(0.4*dimXFogo2,0.6*dimYFogo2);
+		glVertex2f(0.5*dimXFogo2,0);
+	glEnd();
+
+glPopMatrix();	
+}		
 void FimDeFase::desenha(){
-	/*
+	
 	desenhaParteGuindaste(posiXTopoP,posiYTopoP,'p');
 	desenhaParteBase(posiXBaseP,posiYBaseP,'p');
+	glPushMatrix();
+
+	desenhaFogo2(104.8,73);
+	if(crescendoX2){
+		if(dimXFogo2<limiteSobeFogoX2){
+			dimXFogo2+=velocCrescFogoX2;
+		}else crescendoX2=false;
+	}else{
+		if(dimXFogo2>limiteDesceFogoX2){
+			dimXFogo2-=velocCrescFogoX2;
+		}else crescendoX2=true;
+	}
+	if(crescendoY2){
+		if(dimYFogo2<limiteSobeFogoY2){
+			dimYFogo2+=velocCrescFogoY2;
+		}else crescendoY2=false;
+	}else{
+		if(dimYFogo2>limiteDesceFogoY2){
+			dimYFogo2-=velocCrescFogoY2;
+		}else crescendoY2=true;
+	}
+
+
+
+	glTranslatef(240,126,0);
+	glRotatef(180, 0, 0, 1);
 	desenhaParteGuindaste(posiXTopoI,posiYTopoI,'i');
-	desenhaParteBase(posiXBaseI,posiYBaseI,'i');*/
-	desenhaFogo(100,100);
+	desenhaParteBase(posiXBaseI,posiYBaseI,'i');
+	glPopMatrix();
+	
+	desenhaFogo(70,6);
 	if(crescendoX){
 		if(dimXFogo<limiteSobeFogoX){
 			dimXFogo+=velocCrescFogoX;
@@ -296,5 +415,8 @@ void FimDeFase::desenha(){
 			dimYFogo-=velocCrescFogoY;
 		}else crescendoY=true;
 	}
+
+	if(contFrames>=framesMax)status='t';
+	contFrames++;
 }
 char  FimDeFase::getStatus() { return status; }

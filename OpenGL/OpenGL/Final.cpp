@@ -7,7 +7,7 @@ Final::Final() {
     posiYLengs=75;
     status='a';
 	limiteXLengs=30;
-	velocMove=3;
+	velocMove=1;
 	DIM_X_TANK=15;
 	DIM_Y_TANK=15;
 	tj=new Tank(-20,posiYLengs+DIM_X_TANK,-90,6);
@@ -297,7 +297,7 @@ void Final::desenha(){
 			}
 
 			if(tj->getPosiX()<5 && tj->getPosiY()==posiYLengs+DIM_X_TANK ){
-				tj->viraDireita(1.5,true);
+				tj->viraDireita(0.25,true);
 			}else{
 				if(tj->getAngulo()==-90){
 					lasers.push_back(tj->atiraEspecial());
@@ -305,12 +305,14 @@ void Final::desenha(){
 						if (tanques[i]->getStatus() != 'm' && tanques[i]->getStatus() != 'i' && (tanques[i]->getPosiY()==tj->getPosiY() || tanques[i]->getPosiY()==tj->getPosiY()-0.5*DIM_X_TANK) )tanques[i]->setStatus('m');
 
 					}
+					
 					tj->viraCima(0.5,true);
-					tj->viraCima(0.5,true);
+					tj->viraCima(0.25,true);
 				}else if(tj->getPosiY()!=posiYLengs+DIM_X_TANK && tj->getPosiY()!=posiYLengs+2*DIM_X_TANK && tj->getPosiY()!=posiYLengs+3*DIM_X_TANK && tj->getPosiY()!=posiYLengs+4*DIM_X_TANK && tj->getPosiY()!=posiYLengs+5*DIM_X_TANK ){
-					tj->viraCima(0.5,true);
+					Sleep(20);
+					tj->viraCima(0.25,true);
 				}else{
-					tj->viraDireita(1,true);
+					tj->viraDireita(0.25,true);
 				}
 			
 			}

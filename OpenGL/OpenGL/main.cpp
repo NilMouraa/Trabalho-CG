@@ -12,6 +12,7 @@
 #include "GameOver.h"
 #include "Reinicio.h"
 #include "TelaChefao.h"
+#include "FimDeFase.h"
 
 using namespace std;
 
@@ -73,6 +74,7 @@ Tank       *p2    = new Tank(290, 100, 0, 6);
 Tela	   *tela  = new Tela(1);
 GameOver   *go    = new GameOver();
 Final      *f     = new Final();
+FimDeFase *fimFase =new FimDeFase(1);
 Reinicio   *r     = new Reinicio();
 TelaChefao *telaBoss = new TelaChefao(3);
 
@@ -322,6 +324,15 @@ void Desenha(void) {
 	}
 	else if (tutorialAtiva) {
 		Tuto->desenha();
+	}else if(fimDeFase1Ativa){
+		fimFase->desenha();
+		if(fimFase->getStatus()=='t')fimDeFase1Ativa=false;
+	}else if(fimDeFase2Ativa){
+		fimFase->desenha();
+		if(fimFase->getStatus()=='t')fimDeFase2Ativa=false;	
+	}else if(fimDeFase3Ativa){
+		fimFase->desenha();
+		if(fimFase->getStatus()=='t')fimDeFase3Ativa=false;	
 	}
 	else if (fase1Ativa) {
 		if(reinicioAtiva){
@@ -376,6 +387,8 @@ void Desenha(void) {
 				tela->setP1(p1);
 				tela->setP2(p2);
 				fase2Ativa=true;
+				fimDeFase1Ativa=true;
+				fimFase =new FimDeFase(1);
 			}
 	}
 	else if (fase2Ativa) {
@@ -400,7 +413,7 @@ void Desenha(void) {
 				fase2Ativa=false;
 				gameOverAtiva=true;
 			}else if(tela->acabou()){
-				fase1Ativa=false;
+				fase2Ativa=false;
 				bossFase2Ativa=true;
 				p1 = tela->getP1();
 				p2 = tela->getP2();
@@ -432,6 +445,8 @@ void Desenha(void) {
 				tela->setP1(p1);
 				tela->setP2(p2);
 				fase3Ativa=true;
+				fimDeFase2Ativa=true;
+				fimFase =new FimDeFase(2);
 			}
 	}
 	else if (fase3Ativa) {
@@ -484,6 +499,8 @@ void Desenha(void) {
 				p1=tela->getP1();
 				p2=tela->getP2();
 				fimJogoAtiva=true;
+				fimDeFase3Ativa=true;
+				fimFase =new FimDeFase(3);
 			}
 	}else if(gameOverAtiva){
 		go->desenha();

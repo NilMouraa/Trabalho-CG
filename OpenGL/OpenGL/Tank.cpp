@@ -387,16 +387,16 @@ void  Tank::recebeDano(float dano) {
 		status = 'm';
 		qtdVidas--;
 		if (angulo == 0) {
-			explosao = new Explosao(posiX + 0.5*dimX, posiY + 0.5*dimY, 0, 3, 3);
+			explosao = new Explosao(posiX + 0.5*dimX, posiY + 0.5*dimY, 0, 2*dimY, 0.5);
 		}
 		else if (angulo == 90) {
-			explosao = new Explosao(posiX - 0.5*dimY, posiY + 0.5*dimX, 0, 3, 3);
+			explosao = new Explosao(posiX - 0.5*dimY, posiY + 0.5*dimX, 0, 2*dimY, 0.5);
 		}
 		else if (angulo == -90) {
-			explosao = new Explosao(posiX + 0.5*dimY, posiY - 0.5*dimX, 0, 3, 3);
+			explosao = new Explosao(posiX + 0.5*dimY, posiY - 0.5*dimX, 0, 2*dimY, 0.5);
 		}
 		else if (angulo == 180) {
-			explosao = new Explosao(posiX - 0.5*dimX, posiY - 0.5*dimY, 0, 3, 3);
+			explosao = new Explosao(posiX - 0.5*dimX, posiY - 0.5*dimY, 0, 2*dimY, 0.5);
 		}
 	}
 
@@ -437,16 +437,16 @@ void  Tank::setStatus(char stat) {
 	if (stat == 'm') {
 		qtdVidas--;
 		if (this->angulo == 0) {
-			explosao = new Explosao(posiX + 0.5*dimX, posiY + 0.5*dimY, 0, dimY/3, 4);
+			explosao = new Explosao(posiX + 0.5*dimX, posiY + 0.5*dimY, 0,2*dimY, 0.5);
 		}
 		else if (this->angulo == 90) {
-			explosao = new Explosao(posiX - 0.5*dimY, posiY + 0.5*dimX, 0, dimY/3, 4);
+			explosao = new Explosao(posiX - 0.5*dimY, posiY + 0.5*dimX, 0,2*dimY, 0.5);
 		}
 		else if (this->angulo == -90) {
-			explosao = new Explosao(posiX + 0.5*dimY, posiY - 0.5*dimX, 0, dimY/3, 4);
+			explosao = new Explosao(posiX + 0.5*dimY, posiY - 0.5*dimX, 0,2*dimY, 0.5);
 		}
 		else if (this->angulo == 180) {
-			explosao = new Explosao(posiX - 0.5*dimX, posiY - 0.5*dimY, 0, dimY/3,4);
+			explosao = new Explosao(posiX - 0.5*dimX, posiY - 0.5*dimY, 0,2*dimY, 0.5);
 		}
 	}
 }

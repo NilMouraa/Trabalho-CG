@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bloco.h" />
+    <ClInclude Include="Bresenham.h" />
     <ClInclude Include="Chefao.h" />
     <ClInclude Include="Explosao.h" />
     <ClInclude Include="FimDeFase.h" />
@@ -29,6 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bloco.cpp" />
+    <ClCompile Include="Bresenham.cpp" />
     <ClCompile Include="Chefao.cpp" />
     <ClCompile Include="Explosao.cpp" />
     <ClCompile Include="FimDeFase.cpp" />

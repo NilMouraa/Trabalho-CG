@@ -3,6 +3,7 @@
 #include <GL/glut.h>
 #include <math.h>
 #include <iostream>
+
 #include "Introducao.h"
 #include "Tela.h"
 #include "TiroEspecial.h"
@@ -21,11 +22,11 @@ using namespace std;
 #define DIM_X_BLOC 18.0
 #define DIM_Y_BLOC 18.0
 
-GLfloat x2 = 100.0f;
-GLfloat y2 = 150.0f;
-GLfloat xstep = 1.0f;
-GLfloat ystep = 1.0f;
-GLsizei rsize = 20;
+GLfloat x2		= 100.0f;
+GLfloat y2		= 150.0f;
+GLfloat xstep	= 1.0f;
+GLfloat ystep	= 1.0f;
+GLsizei rsize	= 20;
 
 GLfloat windowWidth;
 GLfloat windowHeight;
@@ -46,37 +47,37 @@ Bloco      *b3 = new Bloco(50, 104, 0, DIM_X_BLOC, DIM_Y_BLOC);
 Bloco      *b4 = new Bloco(50, 122, 0, DIM_X_BLOC, DIM_Y_BLOC);
 Bloco      *b5 = new Bloco(50, 140, 0, DIM_X_BLOC, DIM_Y_BLOC);
 Bloco      *b6 = new Bloco(50, 158, 0, DIM_X_BLOC, DIM_Y_BLOC);
-//TiroEspecial *te = new TiroEspecial(0, 0, 0,);
 
-bool criou = false;
-bool introAtiva = true;
-bool menuAtiva = false;
-bool tutorialAtiva = false;
-bool fase1Ativa = false;
-bool fase2Ativa = false;
-bool fase3Ativa = false;
-bool bossFase1Ativa = false;
-bool bossFase2Ativa = false;
-bool bossFase3Ativa = false;
-bool fimDeFase1Ativa = false;
-bool fimDeFase2Ativa = false;
-bool fimDeFase3Ativa = false;
-bool fullscreenAtiva = false;
-bool fimJogoAtiva = false;
-bool gameOverAtiva = false;
-bool reinicioAtiva = false;
 
-Introducao *intro = new Introducao();
-Tutorial   *Tuto  = new Tutorial();
-Tank	   *t     = new Tank(290, 100, 0, 7);
-Tank       *p1    = new Tank(290, 100, 0, 6);
-Tank       *p2    = new Tank(290, 100, 0, 6);
-Tela	   *tela  = new Tela(1);
-GameOver   *go    = new GameOver();
-Final      *f     = new Final();
-FimDeFase *fimFase =new FimDeFase(1);
-Reinicio   *r     = new Reinicio();
-TelaChefao *telaBoss = new TelaChefao(3);
+bool criou				= false;
+bool introAtiva			= true;
+bool menuAtiva			= false;
+bool tutorialAtiva		= false;
+bool fase1Ativa			= false;
+bool fase2Ativa			= false;
+bool fase3Ativa			= false;
+bool bossFase1Ativa		= false;
+bool bossFase2Ativa		= false;
+bool bossFase3Ativa		= false;
+bool fimDeFase1Ativa	= false;
+bool fimDeFase2Ativa	= false;
+bool fimDeFase3Ativa	= false;
+bool fullscreenAtiva	= false;
+bool fimJogoAtiva		= false;
+bool gameOverAtiva		= false;
+bool reinicioAtiva		= false;
+
+Introducao *intro		= new Introducao();
+Tank	   *t			= new Tank(290, 100, 0, 7);
+Tank       *p1			= new Tank(290, 100, 0, 6);
+Tank       *p2			= new Tank(290, 100, 0, 6);
+GameOver   *go			= new GameOver();
+Final      *f			= new Final();
+FimDeFase  *fimFase		= new FimDeFase(1);
+Reinicio   *r			= new Reinicio();
+TelaChefao *telaBoss	= new TelaChefao(3);
+Tela       *tela	    = new Tela(1);
+Tutorial   *Tuto		= new Tutorial();
 
 
 void keyboardUp(unsigned char key, int x, int y) {
@@ -101,7 +102,7 @@ void keyboardDown(unsigned char key, int x, int y) {
 			glutReshapeWindow(993.6, 690);
 		break;
 	case 'a':
-		if(fase1Ativa||fase2Ativa||fase3Ativa)tela->MoveTankPlayer('e',1);
+		if (fase1Ativa || fase2Ativa || fase3Ativa)tela->MoveTankPlayer('e', 1);
 		if (bossFase1Ativa || bossFase2Ativa || bossFase3Ativa)telaBoss->MoveTankPlayer('e', 1);
 		break;
 
@@ -308,7 +309,7 @@ void DesenhaMenu() {
 	glPopMatrix();
 }
 void Desenha(void) {
-	
+
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -324,39 +325,46 @@ void Desenha(void) {
 	}
 	else if (tutorialAtiva) {
 		Tuto->desenha();
-	}else if(fimDeFase1Ativa){
+	}
+	else if (fimDeFase1Ativa) {
 		fimFase->desenha();
-		if(fimFase->getStatus()=='t')fimDeFase1Ativa=false;
-	}else if(fimDeFase2Ativa){
+		if (fimFase->getStatus() == 't')fimDeFase1Ativa = false;
+	}
+	else if (fimDeFase2Ativa) {
 		fimFase->desenha();
-		if(fimFase->getStatus()=='t')fimDeFase2Ativa=false;	
-	}else if(fimDeFase3Ativa){
+		if (fimFase->getStatus() == 't')fimDeFase2Ativa = false;
+	}
+	else if (fimDeFase3Ativa) {
 		fimFase->desenha();
-		if(fimFase->getStatus()=='t')fimDeFase3Ativa=false;	
+		if (fimFase->getStatus() == 't')fimDeFase3Ativa = false;
 	}
 	else if (fase1Ativa) {
-		if(reinicioAtiva){
-			if(r->getStatus() == 't'){
-				reinicioAtiva=false;
-			}else{
+		if (reinicioAtiva) {
+			if (r->getStatus() == 't') {
+				reinicioAtiva = false;
+			}
+			else {
 				r->desenha();
 			}
-		}else{
+		}
+		else {
 			tela->desenha();
-			if(tela->morreu() && tela->gameOver()==false){
-				reinicioAtiva=true;
-				r= new Reinicio();
-				p1=tela->getP1();
-				p2=tela->getP2();
-				tela=new Tela(1);
+			if (tela->morreu() && tela->gameOver() == false) {
+				reinicioAtiva = true;
+				r = new Reinicio();
+				p1 = tela->getP1();
+				p2 = tela->getP2();
+				tela = new Tela(1);
 				tela->setP1(p1);
 				tela->setP2(p2);
-			}else if(tela->gameOver()){
-				fase1Ativa=false;
-				gameOverAtiva=true;
-			}else if(tela->acabou()){
-				fase1Ativa=false;
-				bossFase1Ativa=true;
+			}
+			else if (tela->gameOver()) {
+				fase1Ativa = false;
+				gameOverAtiva = true;
+			}
+			else if (tela->acabou()) {
+				fase1Ativa = false;
+				bossFase1Ativa = true;
 				p1 = tela->getP1();
 				p2 = tela->getP2();
 				telaBoss = new TelaChefao(1);
@@ -364,57 +372,64 @@ void Desenha(void) {
 				telaBoss->setP2(p2);
 			}
 		}
-	}else if(bossFase1Ativa){
+	}
+	else if (bossFase1Ativa) {
 		telaBoss->desenha();
-			if(telaBoss->morreu() && telaBoss->gameOver()==false){
-				reinicioAtiva=true;
-				r= new Reinicio();
-				p1=tela->getP1();
-				p2=tela->getP2();
-				tela=new Tela(1);
-				tela->setP1(p1);
-				tela->setP2(p2);
-				fase1Ativa=true;
-				bossFase1Ativa=false;
-			}else if(telaBoss->gameOver()){
-				bossFase1Ativa=false;
-				gameOverAtiva=true;
-			}else if(telaBoss->acabou()){
-				bossFase1Ativa=false;
-				p1=tela->getP1();
-				p2=tela->getP2();
-				tela=new Tela(2);
-				tela->setP1(p1);
-				tela->setP2(p2);
-				fase2Ativa=true;
-				fimDeFase1Ativa=true;
-				fimFase =new FimDeFase(1);
-			}
+		if (telaBoss->morreu() && telaBoss->gameOver() == false) {
+			reinicioAtiva = true;
+			r = new Reinicio();
+			p1 = tela->getP1();
+			p2 = tela->getP2();
+			tela = new Tela(1);
+			tela->setP1(p1);
+			tela->setP2(p2);
+			fase1Ativa = true;
+			bossFase1Ativa = false;
+		}
+		else if (telaBoss->gameOver()) {
+			bossFase1Ativa = false;
+			gameOverAtiva = true;
+		}
+		else if (telaBoss->acabou()) {
+			bossFase1Ativa = false;
+			p1 = tela->getP1();
+			p2 = tela->getP2();
+			tela = new Tela(2);
+			tela->setP1(p1);
+			tela->setP2(p2);
+			fase2Ativa = true;
+			fimDeFase1Ativa = true;
+			fimFase = new FimDeFase(1);
+		}
 	}
 	else if (fase2Ativa) {
-		if(reinicioAtiva){
-			if(r->getStatus() == 't'){
-				reinicioAtiva=false;
-				r= new Reinicio();
-			}else{
+		if (reinicioAtiva) {
+			if (r->getStatus() == 't') {
+				reinicioAtiva = false;
+				r = new Reinicio();
+			}
+			else {
 				r->desenha();
 			}
-		}else{
+		}
+		else {
 			tela->desenha();
-			if(tela->morreu() && tela->gameOver()==false){
-				reinicioAtiva=true;
-				r= new Reinicio();
-				p1=tela->getP1();
-				p2=tela->getP2();
-				tela=new Tela(2);
+			if (tela->morreu() && tela->gameOver() == false) {
+				reinicioAtiva = true;
+				r = new Reinicio();
+				p1 = tela->getP1();
+				p2 = tela->getP2();
+				tela = new Tela(2);
 				tela->setP1(p1);
 				tela->setP2(p2);
-			}else if(tela->gameOver()){
-				fase2Ativa=false;
-				gameOverAtiva=true;
-			}else if(tela->acabou()){
-				fase2Ativa=false;
-				bossFase2Ativa=true;
+			}
+			else if (tela->gameOver()) {
+				fase2Ativa = false;
+				gameOverAtiva = true;
+			}
+			else if (tela->acabou()) {
+				fase2Ativa = false;
+				bossFase2Ativa = true;
 				p1 = tela->getP1();
 				p2 = tela->getP2();
 				telaBoss = new TelaChefao(2);
@@ -422,56 +437,63 @@ void Desenha(void) {
 				telaBoss->setP2(p2);
 			}
 		}
-	}else if(bossFase2Ativa){
+	}
+	else if (bossFase2Ativa) {
 		telaBoss->desenha();
-			if(telaBoss->morreu() && telaBoss->gameOver()==false){
-				reinicioAtiva=true;
-				r= new Reinicio();
-				p1=tela->getP1();
-				p2=tela->getP2();
-				tela=new Tela(2);
-				tela->setP1(p1);
-				tela->setP2(p2);
-				fase2Ativa=true;
-				bossFase2Ativa=false;
-			}else if(telaBoss->gameOver()){
-				bossFase2Ativa=false;
-				gameOverAtiva=true;
-			}else if(telaBoss->acabou()){
-				bossFase2Ativa=false;
-				p1=tela->getP1();
-				p2=tela->getP2();
-				tela=new Tela(3);
-				tela->setP1(p1);
-				tela->setP2(p2);
-				fase3Ativa=true;
-				fimDeFase2Ativa=true;
-				fimFase =new FimDeFase(2);
-			}
+		if (telaBoss->morreu() && telaBoss->gameOver() == false) {
+			reinicioAtiva = true;
+			r = new Reinicio();
+			p1 = tela->getP1();
+			p2 = tela->getP2();
+			tela = new Tela(2);
+			tela->setP1(p1);
+			tela->setP2(p2);
+			fase2Ativa = true;
+			bossFase2Ativa = false;
+		}
+		else if (telaBoss->gameOver()) {
+			bossFase2Ativa = false;
+			gameOverAtiva = true;
+		}
+		else if (telaBoss->acabou()) {
+			bossFase2Ativa = false;
+			p1 = tela->getP1();
+			p2 = tela->getP2();
+			tela = new Tela(3);
+			tela->setP1(p1);
+			tela->setP2(p2);
+			fase3Ativa = true;
+			fimDeFase2Ativa = true;
+			fimFase = new FimDeFase(2);
+		}
 	}
 	else if (fase3Ativa) {
-		if(reinicioAtiva){
-			if(r->getStatus() == 't'){
-				reinicioAtiva=false;
-			}else{
+		if (reinicioAtiva) {
+			if (r->getStatus() == 't') {
+				reinicioAtiva = false;
+			}
+			else {
 				r->desenha();
 			}
-		}else{
-		tela->desenha();
-			if(tela->morreu() && tela->gameOver()==false){
-				reinicioAtiva=true;
-				r= new Reinicio();
-				p1=tela->getP1();
-				p2=tela->getP2();
-				tela=new Tela(3);
+		}
+		else {
+			tela->desenha();
+			if (tela->morreu() && tela->gameOver() == false) {
+				reinicioAtiva = true;
+				r = new Reinicio();
+				p1 = tela->getP1();
+				p2 = tela->getP2();
+				tela = new Tela(3);
 				tela->setP1(p1);
 				tela->setP2(p2);
-			}else if(tela->gameOver()){
-				fase3Ativa=false;
-				gameOverAtiva=true;
-			}else if(tela->acabou()){
-				fase3Ativa=false;
-				bossFase3Ativa=true;
+			}
+			else if (tela->gameOver()) {
+				fase3Ativa = false;
+				gameOverAtiva = true;
+			}
+			else if (tela->acabou()) {
+				fase3Ativa = false;
+				bossFase3Ativa = true;
 				p1 = tela->getP1();
 				p2 = tela->getP2();
 				telaBoss = new TelaChefao(3);
@@ -479,39 +501,44 @@ void Desenha(void) {
 				telaBoss->setP2(p2);
 			}
 		}
-	}else if(bossFase3Ativa){
+	}
+	else if (bossFase3Ativa) {
 		telaBoss->desenha();
-			if(telaBoss->morreu() && telaBoss->gameOver()==false){
-				reinicioAtiva=true;
-				r= new Reinicio();
-				p1=tela->getP1();
-				p2=tela->getP2();
-				tela=new Tela(3);
-				tela->setP1(p1);
-				tela->setP2(p2);
-				fase3Ativa=true;
-				bossFase3Ativa=false;
-			}else if(telaBoss->gameOver()){
-				bossFase3Ativa=false;
-				gameOverAtiva=true;
-			}else if(telaBoss->acabou()){
-				bossFase3Ativa=false;
-				p1=tela->getP1();
-				p2=tela->getP2();
-				fimJogoAtiva=true;
-				fimDeFase3Ativa=true;
-				fimFase =new FimDeFase(3);
-			}
-	}else if(gameOverAtiva){
+		if (telaBoss->morreu() && telaBoss->gameOver() == false) {
+			reinicioAtiva = true;
+			r = new Reinicio();
+			p1 = tela->getP1();
+			p2 = tela->getP2();
+			tela = new Tela(3);
+			tela->setP1(p1);
+			tela->setP2(p2);
+			fase3Ativa = true;
+			bossFase3Ativa = false;
+		}
+		else if (telaBoss->gameOver()) {
+			bossFase3Ativa = false;
+			gameOverAtiva = true;
+		}
+		else if (telaBoss->acabou()) {
+			bossFase3Ativa = false;
+			p1 = tela->getP1();
+			p2 = tela->getP2();
+			fimJogoAtiva = true;
+			fimDeFase3Ativa = true;
+			fimFase = new FimDeFase(3);
+		}
+	}
+	else if (gameOverAtiva) {
 		go->desenha();
-		if(go->getStatus()=='t'){
-			gameOverAtiva=false;
+		if (go->getStatus() == 't') {
+			gameOverAtiva = false;
 			menuAtiva = true;
 		}
-	}else if(fimJogoAtiva){
+	}
+	else if (fimJogoAtiva) {
 		f->desenha();
-		if(f->getStatus()=='t'){
-			fimJogoAtiva=false;
+		if (f->getStatus() == 't') {
+			fimJogoAtiva = false;
 			menuAtiva = true;
 		}
 	}
@@ -533,8 +560,7 @@ void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluOrtho2D(0.0f, 360.0f, 0.0f, 252.0f);
-	/*glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();*/
+	
 }
 int main(int argc, char **argv) {
 

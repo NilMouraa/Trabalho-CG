@@ -14,10 +14,7 @@ Tela::Tela(int numFase) {
 
 	Player = new Tank(128, 1, 0, 6);
 	tankes.push_back(Player);
-	/*Tank *to = new Tank(290,19,0,3);
-	tankes.push_back(to);
-	Tank *to2 = new Tank(300,216,0,2);
-	tankes.push_back(to2);*/
+
 	if (numFase == 1) {
 		for (float i = 16.5; i < 360; i += 36) {
 			tankes.push_back(new Tank(i, 250.5, 180, 1));
@@ -44,7 +41,7 @@ Tela::Tela(int numFase) {
 	vector<float> pontoX;
 	vector<float> pontoY;
 	int qtdBlocos = 0;
-	//char url[]="tank1.txt";
+
 	FILE *arq = NULL;
 	float cooX, cooY;
 
@@ -73,7 +70,6 @@ Tela::Tela(int numFase) {
 		blocos.push_back(new Bloco(pontoX[j] * DIM_X_BLOC, pontoY[j] * DIM_Y_BLOC, 0, DIM_X_BLOC, DIM_Y_BLOC));
 	}
 
-	//MoveTankMetodo1(to2, 3, 1);
 
 }
 Tela::~Tela()
@@ -87,51 +83,52 @@ void Tela::renderBitmapString(float x, float y, void *font, const char *string) 
 		glutBitmapCharacter(font, *c);
 	}
 }
-void Tela::desenhaLateral(){
+void Tela::desenhaLateral() {
 	glPushMatrix();
 
 	string NomeDoFilme = "";
 	std::stringstream Resultado;
 	Resultado << tankesRestantes;
 	NomeDoFilme = NomeDoFilme + " " + Resultado.str();
-	const char* text= NomeDoFilme.c_str();
+	const char* text = NomeDoFilme.c_str();
 
-	glColor3f(1,1,1);
+	glColor3f(1, 1, 1);
 	int font = (int)GLUT_BITMAP_HELVETICA_12;
 	renderBitmapString(1, 240, (void *)font, "Na Fila:");
-	
-	renderBitmapString(3, 235, (void *)font,text);
+
+	renderBitmapString(3, 235, (void *)font, text);
 
 	NomeDoFilme = "";
 	std::stringstream Result;
 	Result << Player->getQtdVida();
 	NomeDoFilme = NomeDoFilme + " " + Result.str();
-	text= NomeDoFilme.c_str();
+	text = NomeDoFilme.c_str();
 	string points = "";
 	std::stringstream Result3;
 	Result3 << Player->getQtdPontuacao();
-	points = points + " " + Result3.str()+"pts";
+	points = points + " " + Result3.str() + "pts";
 	const char* text2;
-	text2= points.c_str();
-	renderBitmapString(127, 16, (void *)font,"Player1");
-	renderBitmapString(127, 11, (void *)font,text2);
-	renderBitmapString(128, 6, (void *)font,"Vidas:");
-	renderBitmapString(131, 1, (void *)font,text);
+	text2 = points.c_str();
+	renderBitmapString(127, 16, (void *)font, "Player1");
+	renderBitmapString(127, 11, (void *)font, text2);
+	renderBitmapString(128, 6, (void *)font, "Vidas:");
+	renderBitmapString(131, 1, (void *)font, text);
 
-	if(temP2){
-	NomeDoFilme = "";
-	std::stringstream Result2;
-	Result2 << Player2->getQtdVida();
-	NomeDoFilme = NomeDoFilme + " " + Result2.str();
-	text= NomeDoFilme.c_str();
-	renderBitmapString(163, 11, (void *)font,"Player2");
-	renderBitmapString(163, 6, (void *)font,"Vidas:");
-	renderBitmapString(165, 1, (void *)font,text);
-	}else{
-	renderBitmapString(163, 11, (void *)font,"Player2");
-	renderBitmapString(164, 6, (void *)font,"Tecle");	
-	renderBitmapString(164.5, 1, (void *)font,"Enter");	
-	
+	if (temP2) {
+		NomeDoFilme = "";
+		std::stringstream Result2;
+		Result2 << Player2->getQtdVida();
+		NomeDoFilme = NomeDoFilme + " " + Result2.str();
+		text = NomeDoFilme.c_str();
+		renderBitmapString(163, 11, (void *)font, "Player2");
+		renderBitmapString(163, 6, (void *)font, "Vidas:");
+		renderBitmapString(165, 1, (void *)font, text);
+	}
+	else {
+		renderBitmapString(163, 11, (void *)font, "Player2");
+		renderBitmapString(164, 6, (void *)font, "Tecle");
+		renderBitmapString(164.5, 1, (void *)font, "Enter");
+
 	}
 
 
@@ -402,7 +399,7 @@ bool Tela::semColisao(TiroExp *T, float incremento, char direcao, int indiceT) {
 
 					if (T->getEP1()) { Player->recebePontos(T->getPotencia()); }
 					else { Player2->recebePontos(T->getPotencia()); }
-				
+
 				}
 				return false;
 
@@ -432,7 +429,7 @@ bool Tela::semColisao(TiroExp *T, float incremento, char direcao, int indiceT) {
 
 	for (int i = 0; i < tiros.size(); i++) {
 		if (i == indiceT)continue;
-		if (tiros[i]->getStatus()=='i')continue;
+		if (tiros[i]->getStatus() == 'i')continue;
 		float posBlocoX = tiros[i]->getPosiOrigemX(),
 			posBlocoY = tiros[i]->getPosiOrigemY(),
 			dimXB = tiros[i]->getDimX(),
@@ -440,16 +437,16 @@ bool Tela::semColisao(TiroExp *T, float incremento, char direcao, int indiceT) {
 		if (direcao == 'd') {
 			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
 				&& ((posCentroX + 0.65*dimYT + incremento) > posBlocoX) && ((posCentroX + 0.65*dimYT + incremento) < posBlocoX + dimXB))) {
-					tiros[i]->setStatus('i');
-					return false;
+				tiros[i]->setStatus('i');
+				return false;
 
 			}
 		}
 		else if (direcao == 'e') {
 			if ((((((posCentroY - 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY - 0.5*dimYT) >= posBlocoY)) || (((posCentroY + 0.5*dimXT) <= (posBlocoY + dimYB)) && ((posCentroY + 0.5*dimYT) >= posBlocoY)))
 				&& ((posCentroX - 0.65*dimYT - incremento) < posBlocoX + dimXB) && ((posCentroX - 0.65*dimYT - incremento) > posBlocoX))) {
-					tiros[i]->setStatus('i');
-					return false;
+				tiros[i]->setStatus('i');
+				return false;
 
 			}
 		}
@@ -457,8 +454,8 @@ bool Tela::semColisao(TiroExp *T, float incremento, char direcao, int indiceT) {
 			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
 				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
 				&& ((posCentroY + 0.65*dimYT + incremento) > posBlocoY) && ((posCentroY + 0.65*dimYT + incremento) < posBlocoY + dimYB))) {
-					tiros[i]->setStatus('i');
-					return false;
+				tiros[i]->setStatus('i');
+				return false;
 
 			}
 		}
@@ -466,8 +463,8 @@ bool Tela::semColisao(TiroExp *T, float incremento, char direcao, int indiceT) {
 			if ((((((posCentroX - 0.5*dimXT) <= (posBlocoX + dimXB)) && ((posCentroX - 0.5*dimXT) >= posBlocoX)) ||
 				(((posCentroX + 0.5*dimYT) <= (posBlocoX + dimXB)) && ((posCentroX + 0.5*dimXT) >= posBlocoX)))
 				&& ((posCentroY - 0.65*dimYT - incremento) > posBlocoY) && ((posCentroY - 0.65*dimYT - incremento) < posBlocoY + dimYB))) {
-					tiros[i]->setStatus('i');
-					return false;
+				tiros[i]->setStatus('i');
+				return false;
 
 			}
 		}
@@ -499,9 +496,9 @@ void Tela::desenhaTankes() {
 			}
 
 		}
-		else if (tankes[i]->getStatus() != 'i'){ 
+		else if (tankes[i]->getStatus() != 'i') {
 			tankes[i]->desenha();
-			if(i>1)Atira(i);
+			if (i > 1)Atira(i);
 		}
 	}
 	glPopMatrix();
@@ -547,21 +544,21 @@ void Tela::MoveTankMetodo1(Tank *t, float incremento, int indiceTank) {
 		}
 		else {
 			//while (true) {
-				srand(clock()*indiceTank); 
-				int r = (rand() % 100) + 1;
-				cout<<"\n"<<r<<"\n";
-				if (r < 34 && semColisao(t, incremento, 'b', indiceTank)) {
-					t->viraBaixo(incremento, true);
-					//break;
-				}
-				else if (r >= 34 && r < 67 && semColisao(t, incremento, 'e', indiceTank)) {
-					t->viraEsquerda(incremento, true);
-					//break;
-				}
-				else if (r >= 67 && semColisao(t, incremento, 'd', indiceTank)) {
-					t->viraDireita(incremento, true);
-					//break;
-				}
+			srand(clock()*indiceTank);
+			int r = (rand() % 100) + 1;
+			cout << "\n" << r << "\n";
+			if (r < 34 && semColisao(t, incremento, 'b', indiceTank)) {
+				t->viraBaixo(incremento, true);
+				//break;
+			}
+			else if (r >= 34 && r < 67 && semColisao(t, incremento, 'e', indiceTank)) {
+				t->viraEsquerda(incremento, true);
+				//break;
+			}
+			else if (r >= 67 && semColisao(t, incremento, 'd', indiceTank)) {
+				t->viraDireita(incremento, true);
+				//break;
+			}
 			//}
 		}
 	}
@@ -571,19 +568,19 @@ void Tela::MoveTankMetodo1(Tank *t, float incremento, int indiceTank) {
 		}
 		else {
 			//while (true) {
-				int r = (rand() % 100) + 1;
-				if (r < 34 && semColisao(t, incremento, 'c', indiceTank)) {
-					t->viraCima(incremento, true);
-					//break;
-				}
-				else if (r >= 34 && r < 67 && semColisao(t, incremento, 'e', indiceTank)) {
-					t->viraEsquerda(incremento, true);
-					//break;
-				}
-				else if (r >= 67 && semColisao(t, incremento, 'd', indiceTank)) {
-					t->viraDireita(incremento, true);
-					//break;
-				}
+			int r = (rand() % 100) + 1;
+			if (r < 34 && semColisao(t, incremento, 'c', indiceTank)) {
+				t->viraCima(incremento, true);
+				//break;
+			}
+			else if (r >= 34 && r < 67 && semColisao(t, incremento, 'e', indiceTank)) {
+				t->viraEsquerda(incremento, true);
+				//break;
+			}
+			else if (r >= 67 && semColisao(t, incremento, 'd', indiceTank)) {
+				t->viraDireita(incremento, true);
+				//break;
+			}
 			//}
 		}
 	}
@@ -593,19 +590,19 @@ void Tela::MoveTankMetodo1(Tank *t, float incremento, int indiceTank) {
 		}
 		else {
 			//while (true) {
-				int r = (rand() % 100) + 1;
-				if (r < 34 && semColisao(t, incremento, 'b', indiceTank)) {
-					t->viraBaixo(incremento, true);
-					//break;
-				}
-				else if (r >= 34 && r < 67 && semColisao(t, incremento, 'e', indiceTank)) {
-					t->viraEsquerda(incremento, true);
-					//break;
-				}
-				else if (r >= 67 && semColisao(t, incremento, 'c', indiceTank)) {
-					t->viraCima(incremento, true);
-					//break;
-				}
+			int r = (rand() % 100) + 1;
+			if (r < 34 && semColisao(t, incremento, 'b', indiceTank)) {
+				t->viraBaixo(incremento, true);
+				//break;
+			}
+			else if (r >= 34 && r < 67 && semColisao(t, incremento, 'e', indiceTank)) {
+				t->viraEsquerda(incremento, true);
+				//break;
+			}
+			else if (r >= 67 && semColisao(t, incremento, 'c', indiceTank)) {
+				t->viraCima(incremento, true);
+				//break;
+			}
 			//}
 		}
 	}
@@ -615,19 +612,19 @@ void Tela::MoveTankMetodo1(Tank *t, float incremento, int indiceTank) {
 		}
 		else {
 			//while (true) {
-				int r = (rand() % 100) + 1;
-				if (r < 34 && semColisao(t, incremento, 'b', indiceTank)) {
-					t->viraBaixo(incremento, true);
+			int r = (rand() % 100) + 1;
+			if (r < 34 && semColisao(t, incremento, 'b', indiceTank)) {
+				t->viraBaixo(incremento, true);
 				//	break;
-				}
-				else if (r >= 34 && r < 67 && semColisao(t, incremento, 'c', indiceTank)) {
-					t->viraCima(incremento, true);
+			}
+			else if (r >= 34 && r < 67 && semColisao(t, incremento, 'c', indiceTank)) {
+				t->viraCima(incremento, true);
 				//	break;
-				}
-				else if (r >= 67 && semColisao(t, incremento, 'd', indiceTank)) {
-					t->viraDireita(incremento, true);
-					//break;
-				}
+			}
+			else if (r >= 67 && semColisao(t, incremento, 'd', indiceTank)) {
+				t->viraDireita(incremento, true);
+				//break;
+			}
 			//}
 		}
 	}
@@ -725,8 +722,8 @@ void Tela::MoveTankPlayer(char direcao, float incremento) {
 void Tela::MoveTankInimigo(float incremento) {
 
 	for (int i = 2; i < tankes.size(); i++) {
-		if(tankes[i]->getTipo() == 3 || tankes[i]->getTipo() == 5)
-		MoveTankMetodo2(tankes[i], incremento, i);
+		if (tankes[i]->getTipo() == 3 || tankes[i]->getTipo() == 5)
+			MoveTankMetodo2(tankes[i], incremento, i);
 		else MoveTankMetodo1(tankes[i], incremento, i);
 	}
 }
@@ -812,7 +809,7 @@ bool Tela::entradaDisponivel(float x) {
 	if (!temP2)
 		inicio = 1;
 	for (int i = inicio; i < tankes.size(); i++) {
-		if (tankes[i]->getPosiX() <= x + 1.5 && tankes[i]->getPosiX() >= x + 1.5 -20 && tankes[i]->getPosiY() <= 252 && tankes[i]->getPosiY() >= 222) {
+		if (tankes[i]->getPosiX() <= x + 1.5 && tankes[i]->getPosiX() >= x + 1.5 - 20 && tankes[i]->getPosiY() <= 252 && tankes[i]->getPosiY() >= 222) {
 			return false;
 		}
 	}
@@ -830,7 +827,7 @@ Tank* Tela::getP2() {
 
 void Tela::setP1(Tank *t) {
 	t->setStatus('a');
-	t->viraCima(0,true);
+	t->viraCima(0, true);
 	t->setPosiX(128);
 	t->setPosiY(1);
 	t->reiniciaVida();

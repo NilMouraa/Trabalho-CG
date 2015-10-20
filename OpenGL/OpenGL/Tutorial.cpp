@@ -1,6 +1,7 @@
 #include "Tutorial.h"
 #include "Bloco.h"
 #include "Tank.h"
+#include "Bresenham.h" //alteração elisa
 Tutorial::Tutorial() {}
 void Tutorial::desenhaSeta(float posiX,float posiY,float angulo){
 	float altura=10;
@@ -186,8 +187,11 @@ void Tutorial::desenha() {
 	desenhaBlocos();
 	desenhaObjetos();
 	glPushMatrix();
-	glColor3f(1,1,1);
 	int font = (int)GLUT_BITMAP_TIMES_ROMAN_24;
+	Bresenham objB; //alteração elisa
+	glColor3f(1, 0, 0);
+	objB.elipsePreenchida(82, 217, 40, 10); // alteração elisa
+	glColor3f(1, 1, 1);
 	char *texto = "O B J E T I V O";
 	renderBitmapString(52.5, 214, (void *)font, texto);
 	texto = "O B J E T I V O";
@@ -245,7 +249,13 @@ void Tutorial::desenha() {
 	renderBitmapString(264.2, 23, (void *)font, texto);
 	texto = "V O L T A R";
 	renderBitmapString(264, 23.2, (void *)font, texto);
+	glColor3f(1, 1, 1);
+	objB.retangulo(254, 19, 323, 35); // alteração elisa
+
+	
+
 	glPopMatrix();
+
 }
 void Tutorial::renderBitmapString(float x, float y, void *font, const char *string) {
 	const char *c;

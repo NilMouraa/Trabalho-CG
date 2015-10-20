@@ -383,7 +383,7 @@ void  Tank::viraBaixo(float incremento, bool podeAndar) {
 
 void  Tank::recebeDano(float dano) {
 	vida -= dano;
-	if (vida <= 0) {
+	if ((vida <= 0) && (status =='a')) {
 		status = 'm';
 		qtdVidas--;
 		if (angulo == 0) {
@@ -401,8 +401,7 @@ void  Tank::recebeDano(float dano) {
 	}
 
 }
-
-void Tank::recebePontos(float p){
+void  Tank::recebePontos(float p){
 	qtdPontuacao+=p;
 	if(qtdPontuacao>=((vidasGanhas+1)*10000)){
 		qtdVidas++;	
@@ -410,29 +409,26 @@ void Tank::recebePontos(float p){
 	}
 
 }
-
 void  Tank::aumentaVida(float incremento) {
 	vida += incremento;
 }
-
 void  Tank::setQtdTiroEspec(int qtd) {
 	qtdTiroEspec = qtd;
 }
 
 void  Tank::setDimX(float tamanho) { dimX = tamanho; }
-
 void  Tank::setDimY(float tamanho) { dimY = tamanho; }
-void Tank::setPosiX(float x){
+void  Tank::setPosiX(float x){
 	posiX=x;
 }
-void Tank::setPosiY(float y){
+void  Tank::setPosiY(float y){
 	posiY=y;
 }
-void Tank::reiniciaVida(){
+void  Tank::reiniciaVida(){
 	vida=vidaCheia;
 }
 
-void  Tank::setStatus(char stat) {
+void   Tank::setStatus(char stat) {
 	status = stat;
 	if (stat == 'm') {
 		qtdVidas--;
@@ -508,18 +504,17 @@ float  Tank::getPosiOrigemY() {
 		return posiY -dimY;
 	}
 }
-
-int Tank::getTempoPraAtirar(){return tempoPraAtirar;}
+int    Tank::getTempoPraAtirar(){return tempoPraAtirar;}
 
 float  Tank::getPosiX() { return posiX; }
 float  Tank::getPosiY() { return posiY; }
 float  Tank::getAngulo() { return angulo; }
 float  Tank::getDimX() { return dimX; }
 float  Tank::getDimY() { return dimY; }
-char  Tank::getStatus() { return status; }
-int  Tank::getTipo() { return tipo; }
+char   Tank::getStatus() { return status; }
+int    Tank::getTipo() { return tipo; }
 float  Tank::getVida() { return vida; }
-int  Tank::getQtdVida() { return qtdVidas; }
+int    Tank::getQtdVida() { return qtdVidas; }
 float  Tank::getQtdPontuacao() { return qtdPontuacao; }
 
 
@@ -544,8 +539,7 @@ TiroEspecial* Tank::atiraEspecial() {
 	//}
 	return te;
 }
-
-TiroExp* Tank::atira(char tipo) {
+TiroExp*      Tank::atira(char tipo) {
 	//if (qtdTiroEspec > 0) {
 	TiroExp *te = NULL;
 
